@@ -32,36 +32,36 @@ const Venue = () => {
 
   const accommodations = [
     {
-      name: "Hotel Kalinga",
-      distance: "5 km from GIET University",
-      rating: "4.2/5",
-      priceRange: "₹3,500 - ₹5,000",
-      amenities: ["Free WiFi", "Restaurant", "AC Rooms", "Room Service"],
-      contact: "+91-6860-234567"
-    },
-    {
-      name: "GIET Guest House",
+      name: "Manipal University Guest House",
       distance: "On Campus",
       rating: "4.0/5",
-      priceRange: "₹2,000 - ₹3,000",
-      amenities: ["Basic Amenities", "Cafeteria", "AC Rooms", "Parking"],
-      contact: "+91-6860-123456"
+      priceRange: "₹2,500 - ₹3,500",
+      amenities: ["Free WiFi", "Restaurant", "AC Rooms", "Parking"],
+      contact: "+91-141-3999100"
     },
     {
-      name: "Hotel Surya",
-      distance: "8 km from GIET University",
-      rating: "3.8/5",
-      priceRange: "₹2,500 - ₹4,000",
-      amenities: ["Restaurant", "WiFi", "AC Rooms", "Travel Desk"],
-      contact: "+91-6860-345678"
-    },
-    {
-      name: "Raj Palace Hotel",
-      distance: "12 km from GIET University",
-      rating: "4.5/5",
-      priceRange: "₹4,000 - ₹6,500",
+      name: "Hotel Clarks Amer",
+      distance: "15 km from MUJ",
+      rating: "4.3/5",
+      priceRange: "₹4,500 - ₹6,500",
       amenities: ["Luxury Rooms", "Spa", "Multi-cuisine Restaurant", "Conference Facilities"],
-      contact: "+91-6860-456789"
+      contact: "+91-141-2543333"
+    },
+    {
+      name: "Holiday Inn Jaipur City Centre",
+      distance: "18 km from MUJ",
+      rating: "4.2/5",
+      priceRange: "₹3,800 - ₹5,500",
+      amenities: ["Restaurant", "WiFi", "AC Rooms", "Travel Desk"],
+      contact: "+91-141-4028888"
+    },
+    {
+      name: "Radisson Blu Jaipur",
+      distance: "20 km from MUJ",
+      rating: "4.5/5",
+      priceRange: "₹5,000 - ₹7,500",
+      amenities: ["Luxury Rooms", "Spa", "Multi-cuisine Restaurant", "Conference Facilities"],
+      contact: "+91-141-2708888"
     }
   ];
 
@@ -69,58 +69,58 @@ const Venue = () => {
     {
       icon: Plane,
       title: "By Air",
-      description: "Nearest Airport: Visakhapatnam Airport (120 km)",
+      description: "Nearest Airport: Jaipur International Airport (25 km)",
       details: [
-        "Direct flights from Delhi, Mumbai, Bangalore, Hyderabad",
-        "Taxi service available from airport (₹2,500-3,000)",
+        "Direct flights from Delhi, Mumbai, Bangalore, Hyderabad, Kolkata",
+        "Taxi service available from airport (₹800-1,200)",
         "Pre-paid taxi counters available at airport"
       ]
     },
     {
       icon: Train,
       title: "By Train",
-      description: "Nearest Railway Station: Rayagada (35 km)",
+      description: "Nearest Railway Station: Jaipur Junction (20 km)",
       details: [
-        "Regular trains from major cities",
-        "Taxi/bus service to GIET University",
-        "Auto-rickshaws available for local transport"
+        "Regular trains from major cities across India",
+        "Metro and taxi service to Manipal University Jaipur",
+        "Auto-rickshaws and cabs available for local transport"
       ]
     },
     {
       icon: Car,
       title: "By Road",
-      description: "Well connected by state and national highways",
+      description: "Well connected by national highways and expressways",
       details: [
-        "National Highway 59 connects to major cities",
-        "Bus services from Bhubaneswar (4 hours)",
-        "Self-drive options available"
+        "NH-48 connects to Delhi and Mumbai",
+        "Jaipur-Ajmer Express Highway for easy access",
+        "Bus services from major cities and self-drive options"
       ]
     }
   ];
 
   const attractions = [
     {
-      name: "Duduma Waterfalls",
-      distance: "45 km",
-      description: "Spectacular waterfalls and natural beauty",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      name: "Khandadhar Falls",
-      distance: "60 km",
-      description: "One of Odisha's highest waterfalls",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      name: "Belghar Sanctuary",
+      name: "Amber Fort",
       distance: "25 km",
-      description: "Wildlife sanctuary with diverse flora and fauna",
+      description: "Historic hilltop fort with stunning architecture",
       image: "/api/placeholder/400/300"
     },
     {
-      name: "Local Tribal Villages",
-      distance: "10-20 km",
-      description: "Experience local tribal culture and traditions",
+      name: "Hawa Mahal",
+      distance: "20 km",
+      description: "Iconic palace of winds with intricate facade",
+      image: "/api/placeholder/400/300"
+    },
+    {
+      name: "City Palace",
+      distance: "22 km",
+      description: "Royal residence with museums and courtyards",
+      image: "/api/placeholder/400/300"
+    },
+    {
+      name: "Jantar Mantar",
+      distance: "21 km",
+      description: "UNESCO World Heritage astronomical observatory",
       image: "/api/placeholder/400/300"
     }
   ];
@@ -142,11 +142,11 @@ const Venue = () => {
               Venue & Travel
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Join us at GIET University, Gunupur, Odisha - a premier educational institution nestled in the scenic landscapes of Eastern India.
+              Join us at Manipal University Jaipur - a premier educational institution located in the vibrant city of Jaipur, Rajasthan.
             </p>
             <div className="flex items-center justify-center space-x-2 text-muted-foreground">
               <MapPin className="h-5 w-5" />
-              <span className="text-lg">GIET University, Gunupur, Rayagada, Odisha, India - 765022</span>
+              <span className="text-lg">Jaipur-Ajmer Express Highway, Dehmi Kalan, Near GVK Toll Plaza, Jaipur, Rajasthan 303007, India</span>
             </div>
           </motion.div>
         </div>
@@ -162,13 +162,13 @@ const Venue = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-primary mb-6">About GIET University</h2>
+              <h2 className="text-3xl font-bold text-primary mb-6">About Manipal University Jaipur</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  GIET University is a leading technical institution in Odisha, known for its state-of-the-art infrastructure and commitment to academic excellence. The university provides an ideal setting for our international symposium with modern conference facilities and a peaceful campus environment.
+                  Manipal University Jaipur is a leading private university in Rajasthan, known for its world-class infrastructure and commitment to academic excellence. The university provides an ideal setting for our international conference with modern conference facilities and a vibrant campus environment.
                 </p>
                 <p>
-                  Located in Gunupur, Rayagada district, the university campus spans over 50 acres and features contemporary architecture, advanced technological facilities, and beautiful green spaces that create an inspiring atmosphere for academic discourse.
+                  Located on the Jaipur-Ajmer Express Highway, the university campus features contemporary architecture, advanced technological facilities, and beautiful green spaces that create an inspiring atmosphere for academic discourse and innovation.
                 </p>
                 <p>
                   The conference venue includes multiple auditoriums, seminar halls, and breakout rooms equipped with the latest audio-visual technology to ensure a seamless conference experience for all participants.
@@ -181,13 +181,19 @@ const Venue = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="aspect-video bg-muted rounded-lg flex items-center justify-center"
+              className="aspect-video bg-muted rounded-lg overflow-hidden"
             >
-              <div className="text-center">
-                <Camera className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">Campus Virtual Tour</p>
-                <Button variant="outline" className="mt-4">View 360° Campus</Button>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.8694285739997!2d75.5635153!3d26.846217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4850e05bee3b%3A0x1b996759e9a2e5c1!2sManipal%20University%20Jaipur!5e0!3m2!1sen!2sin!4v1701234567890!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Manipal University Jaipur Location"
+                className="w-full h-full"
+              />
             </motion.div>
           </div>
 
@@ -233,7 +239,7 @@ const Venue = () => {
           >
             <h2 className="text-3xl font-bold text-primary mb-4">How to Reach</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              GIET University is well-connected by air, rail, and road. Choose the most convenient option for your travel to Gunupur.
+              Manipal University Jaipur is well-connected by air, rail, and road. Choose the most convenient option for your travel to Jaipur.
             </p>
           </motion.div>
 
@@ -273,7 +279,7 @@ const Venue = () => {
       </section>
 
       {/* Accommodations */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -337,10 +343,10 @@ const Venue = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Local Attractions */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -384,7 +390,7 @@ const Venue = () => {
       </section>
 
       {/* Contact for Venue */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -399,16 +405,16 @@ const Venue = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
               <div>
                 <p className="font-medium">Local Arrangements</p>
-                <p className="text-muted-foreground">venue@isssc2025.org</p>
+                <p className="text-muted-foreground">venue@stesi2026.org</p>
               </div>
               <div>
                 <p className="font-medium">Travel Support</p>
-                <p className="text-muted-foreground">+91-6860-123456</p>
+                <p className="text-muted-foreground">+91-141-3999100</p>
               </div>
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

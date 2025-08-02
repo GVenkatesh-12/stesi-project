@@ -30,12 +30,12 @@ const CallForPapers = () => {
   ];
 
   const tracks = [
-    'Prototype & Product Models',
-    'Sustainable Energy Systems and Technologies',
-    'Signal Processing and Applications',
-    'Cybersecurity and Applications',
-    'AI and Machine Learning',
-    'Emerging Technologies',
+    'Smart Grids & Green Energy',
+    'Smart Technologies for Industries',
+    'IOT and Automation',
+    'Signal Processing & Intelligent Systems',
+    'Advanced Computing and Intelligent Technologies ',
+    'Materials Science and Engineering',
   ];
 
   return (
@@ -78,9 +78,9 @@ const CallForPapers = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Paper Submission Deadline', date: 'August 15, 2025', color: 'text-red-500' },
-              { title: 'Notification of Acceptance', date: 'August 31, 2025', color: 'text-orange-500' },
-              { title: 'Camera Ready Submission', date: 'September 15, 2025', color: 'text-blue-500' },
+              { title: 'Paper Submission Deadline', date: 'February 15, 2026', color: 'text-red-500' },
+              { title: 'Notification of Acceptance', date: 'August 15, 2026', color: 'text-orange-500' },
+              { title: 'Camera Ready Submission', date: 'April 30, 2026', color: 'text-blue-500' },
               { title: 'Conference Dates', date: 'July 22-23, 2026', color: 'text-green-500' },
             ].map((item, index) => (
               <motion.div
