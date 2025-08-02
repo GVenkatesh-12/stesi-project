@@ -29,7 +29,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">iS</span>
               </div>
-              <span className="text-xl font-bold">iSSSC 2025</span>
+              <span className="text-xl font-bold">STESI 2025</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               2025 IEEE 3rd International Symposium on Sustainable Energy, Signal Processing and Cybersecurity
