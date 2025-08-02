@@ -28,7 +28,7 @@ const HeroSection = () => {
         <img 
           src="/manipal-university-jaipur-logo-01.svg" 
           alt="Manipal University Jaipur Logo"
-          className="h-16 sm:h-20 lg:h-18 filter brightness-0 invert mt-10"
+          className="h-16 sm:h-18 lg:h-16 filter brightness-0 invert mt-10"
         />
       </motion.div>
 
@@ -40,7 +40,7 @@ const HeroSection = () => {
         >
 
           {/* Conference Title */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 font-heading leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-3 font-heading leading-tight">
             <span className="bg-gradient-to-r from-white via-conference-accent to-white bg-clip-text text-transparent">
               STESI 2026
             </span>
@@ -48,7 +48,7 @@ const HeroSection = () => {
           
           {/* Main Conference Title */}
           <motion.h2 
-            className="text-xl sm:text-2xl lg:text-3xl text-white/95 mb-4 font-medium leading-relaxed"
+            className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-white/95 mb-2 font-medium leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -57,19 +57,28 @@ const HeroSection = () => {
           </motion.h2>
           
           <motion.h3 
-            className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-2 font-medium leading-relaxed"
+            className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white/90 mb-2 font-medium leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            on Smart Technologies for Energy,
+            on
           </motion.h3>
           
           <motion.h3 
-            className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 font-medium leading-relaxed"
+            className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-white/90 mb-2 font-medium leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            Smart Technologies for Energy,
+          </motion.h3>
+          
+          <motion.h3 
+            className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-white/90 mb-6 font-medium leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
           >
             Sustainability & Industry
           </motion.h3>
