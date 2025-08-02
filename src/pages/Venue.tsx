@@ -156,6 +156,7 @@ const Venue = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="bg-gradient-card rounded-lg p-8 shadow-card">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -163,7 +164,7 @@ const Venue = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold text-primary mb-6">About Manipal University Jaipur</h2>
-              <div className="space-y-4 text-muted-foreground">
+              <div className="space-y-4 leading-relaxed">
                 <p>
                   Manipal University Jaipur is a leading private university in Rajasthan, known for its world-class infrastructure and commitment to academic excellence. The university provides an ideal setting for our international conference with modern conference facilities and a vibrant campus environment.
                 </p>
@@ -174,14 +175,16 @@ const Venue = () => {
                   The conference venue includes multiple auditoriums, seminar halls, and breakout rooms equipped with the latest audio-visual technology to ensure a seamless conference experience for all participants.
                 </p>
               </div>
+              
             </motion.div>
+            </div>
             
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="aspect-video bg-muted rounded-lg overflow-hidden"
+              className="h-full bg-muted rounded-lg overflow-hidden"
             >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.8694285739997!2d75.5635153!3d26.846217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4850e05bee3b%3A0x1b996759e9a2e5c1!2sManipal%20University%20Jaipur!5e0!3m2!1sen!2sin!4v1701234567890!5m2!1sen!2sin"
