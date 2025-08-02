@@ -13,7 +13,7 @@ const CountdownSection = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ months: 0, days: 0, hours: 0, minutes: 0 });
 
   useEffect(() => {
-    const targetDate = new Date('2025-11-06T00:00:00');
+    const targetDate = new Date('2026-07-22T00:00:00');
 
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -52,10 +52,10 @@ const CountdownSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
-            STESI 2025
+            STESI 2026
           </h2>
-          <p className="text-xl text-conference-secondary font-semibold">
-            November 06, 2025
+          <p className="text-2xl text-blue-900 font-bold">
+            July 22, 2026
           </p>
         </motion.div>
 

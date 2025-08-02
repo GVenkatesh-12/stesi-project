@@ -63,7 +63,7 @@ const Registration = () => {
     { event: "Early Bird Registration", date: "August 31, 2025", status: "open" },
     { event: "Regular Registration", date: "September 30, 2025", status: "upcoming" },
     { event: "Late Registration", date: "October 15, 2025", status: "upcoming" },
-    { event: "On-site Registration", date: "November 06, 2025", status: "upcoming" }
+    { event: "On-site Registration", date: "July 22, 2026", status: "upcoming" }
   ];
 
   return (

@@ -44,7 +44,7 @@ const Navigation = () => {
               <span className="text-primary-foreground font-bold text-lg">iS</span>
             </div>
             <div className="hidden sm:block">
-              <span className="text-xl font-bold text-primary">STESI 2025</span>
+                              <span className="text-xl font-bold text-primary">STESI 2026</span>
             </div>
           </Link>
 

@@ -15,7 +15,7 @@ const Footer = () => {
     { event: 'Paper Submission', date: 'August 15, 2025' },
     { event: 'Notification', date: 'August 31, 2025' },
     { event: 'Camera Ready', date: 'September 15, 2025' },
-    { event: 'Conference', date: 'November 06-08, 2025' },
+    { event: 'Conference', date: 'July 22-23, 2026' },
   ];
 
   return (
@@ -29,7 +29,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">iS</span>
               </div>
-              <span className="text-xl font-bold">STESI 2025</span>
+                              <span className="text-xl font-bold">STESI 2026</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               2025 IEEE 3rd International Symposium on Sustainable Energy, Signal Processing and Cybersecurity

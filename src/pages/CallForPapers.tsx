@@ -81,7 +81,7 @@ const CallForPapers = () => {
               { title: 'Paper Submission Deadline', date: 'August 15, 2025', color: 'text-red-500' },
               { title: 'Notification of Acceptance', date: 'August 31, 2025', color: 'text-orange-500' },
               { title: 'Camera Ready Submission', date: 'September 15, 2025', color: 'text-blue-500' },
-              { title: 'Conference Dates', date: 'November 06-08, 2025', color: 'text-green-500' },
+              { title: 'Conference Dates', date: 'July 22-23, 2026', color: 'text-green-500' },
             ].map((item, index) => (
               <motion.div
                 key={item.title}

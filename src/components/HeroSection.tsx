@@ -18,46 +18,79 @@ const HeroSection = () => {
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/20 to-primary/40" />
       
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      {/* University Logo - Top Left Corner */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        className="absolute top-8 left-8 z-20"
+      >
+        <img 
+          src="/manipal-university-jaipur-logo-01.svg" 
+          alt="Manipal University Jaipur Logo"
+          className="h-16 sm:h-20 lg:h-18 filter brightness-0 invert mt-10"
+        />
+      </motion.div>
+
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
+
           {/* Conference Title */}
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-6 font-heading">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 font-heading leading-tight">
             <span className="bg-gradient-to-r from-white via-conference-accent to-white bg-clip-text text-transparent">
-              STESI 2025
+              STESI 2026
             </span>
           </h1>
           
-          {/* Subtitle */}
+          {/* Main Conference Title */}
           <motion.h2 
-            className="text-xl sm:text-2xl lg:text-3xl text-white/90 mb-4 font-medium"
+            className="text-xl sm:text-2xl lg:text-3xl text-white/95 mb-4 font-medium leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            2025 IEEE 3rd International Symposium
+            International Conference
           </motion.h2>
           
           <motion.h3 
-            className="text-lg sm:text-xl lg:text-2xl text-white/80 mb-8"
+            className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-2 font-medium leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            on Smart Technologies for Energy,
+          </motion.h3>
+          
+          <motion.h3 
+            className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 font-medium leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            on Sustainable Energy, Signal Processing and Cybersecurity
+            Sustainability & Industry
           </motion.h3>
           
-          {/* Event Dates */}
+          {/* Event Dates and Mode */}
           <motion.div 
-            className="text-lg sm:text-xl text-conference-accent font-semibold mb-12"
+            className="text-lg sm:text-xl text-conference-accent font-semibold mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            November 06–08, 2025 • GIET University, Gunupur, Odisha
+            July 22-23, 2026
+          </motion.div>
+          
+          <motion.div 
+            className="text-base sm:text-lg text-white/80 font-medium mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            (Hybrid Mode)
           </motion.div>
           
           {/* CTA Button */}
