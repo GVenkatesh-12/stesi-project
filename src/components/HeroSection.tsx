@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThreeBackground } from './ThreeBackground';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
-  const scrollToNext = () => {
-    const nextSection = document.getElementById('countdown-section');
-    nextSection?.scrollIntoView({ behavior: 'smooth' });
+  const navigate = useNavigate();
+
+  const goToAbout = () => {
+    navigate('/about');
   };
 
   return (
@@ -65,12 +67,12 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Button
-              onClick={scrollToNext}
+              onClick={goToAbout}
               size="lg"
               className="bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-glow"
             >
               Learn More
-              <ChevronDown className="ml-2 h-5 w-5" />
+              <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
           </motion.div>
         </motion.div>

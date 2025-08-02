@@ -4,68 +4,35 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Check, CreditCard, Users, FileText, Coffee, Wifi } from 'lucide-react';
 
 const Registration = () => {
-  const registrationTypes = [
+  const registrationPricing = [
     {
-      title: "IEEE Member",
-      price: "$450",
-      originalPrice: "$550",
-      category: "Professional",
-      features: [
-        "Access to all technical sessions",
-        "Conference proceedings (digital)",
-        "Welcome reception",
-        "Coffee breaks and networking",
-        "Lunch for all days",
-        "Certificate of participation",
-        "IEEE member discount applied"
-      ],
-      popular: true
+      category: "Research Scholars UG and PG Students",
+      ieeeMember: "3,500 INR",
+      nonIeeeMember: "4,000 INR"
     },
     {
-      title: "Non-IEEE Member",
-      price: "$550",
-      category: "Professional",
-      features: [
-        "Access to all technical sessions",
-        "Conference proceedings (digital)",
-        "Welcome reception",
-        "Coffee breaks and networking",
-        "Lunch for all days",
-        "Certificate of participation"
-      ],
-      popular: false
+      category: "Academicians",
+      ieeeMember: "4,000 INR",
+      nonIeeeMember: "4,500 INR"
     },
     {
-      title: "Student (IEEE)",
-      price: "$250",
-      originalPrice: "$350",
-      category: "Student",
-      features: [
-        "Access to all technical sessions",
-        "Conference proceedings (digital)",
-        "Welcome reception",
-        "Coffee breaks and networking",
-        "Lunch for all days",
-        "Student ID required"
-      ],
-      popular: false
+      category: "Industry",
+      ieeeMember: "6,000 INR",
+      nonIeeeMember: "6,500 INR"
     },
     {
-      title: "Student (Non-IEEE)",
-      price: "$350",
-      category: "Student",
-      features: [
-        "Access to all technical sessions",
-        "Conference proceedings (digital)",
-        "Welcome reception",
-        "Coffee breaks and networking",
-        "Lunch for all days",
-        "Student ID required"
-      ],
-      popular: false
+      category: "Foreign Student Participants",
+      ieeeMember: "USD 200",
+      nonIeeeMember: "USD 250"
+    },
+    {
+      category: "Foreign Academicians",
+      ieeeMember: "USD 300",
+      nonIeeeMember: "USD 350"
     }
   ];
 
@@ -100,7 +67,7 @@ const Registration = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}
@@ -135,57 +102,38 @@ const Registration = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-primary mb-4">Registration Options</h2>
+            <h2 className="text-3xl font-bold text-primary mb-4">Registration Pricing</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Choose the registration type that best fits your needs. All registrations include full conference access and materials.
+              Choose the registration category that best fits your profile. IEEE members enjoy discounted rates on all registration categories.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {registrationTypes.map((type, index) => (
-              <motion.div
-                key={type.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                {type.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                    <Badge className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground">
-                      Most Popular
-                    </Badge>
+          <div className="overflow-x-auto bg-white mb-3 rounded-lg">
+            <Table className="mb-8">
+              <TableHeader className="bg-muted/50">
+                <TableRow>
+                  <TableHead className="text-left font-semibold">Category</TableHead>
+                  <TableHead className="text-center font-semibold">IEEE Member</TableHead>
+                  <TableHead className="text-center font-semibold">Non-IEEE Member</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {registrationPricing.map((item, index) => (
+                  <TableRow key={item.category} className="hover:bg-muted/30">
+                    <TableCell className="font-medium">{item.category}</TableCell>
+                    <TableCell className="text-center font-semibold text-primary">{item.ieeeMember}</TableCell>
+                    <TableCell className="text-center font-semibold">{item.nonIeeeMember}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
                   </div>
-                )}
-                <Card className={`h-full ${type.popular ? 'border-primary shadow-lg scale-105' : 'border-border/50'} bg-gradient-card transition-all duration-300 hover:shadow-lg`}>
-                  <CardHeader className="text-center">
-                    <Badge variant="outline" className="mx-auto mb-2">{type.category}</Badge>
-                    <CardTitle className="text-xl mb-2">{type.title}</CardTitle>
-                    <div className="space-y-1">
-                      <div className="text-3xl font-bold text-primary">{type.price}</div>
-                      {type.originalPrice && (
-                        <div className="text-sm text-muted-foreground line-through">{type.originalPrice}</div>
-                      )}
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <ul className="space-y-2">
-                      {type.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start space-x-2 text-sm">
-                          <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button className="w-full" variant={type.popular ? "default" : "outline"}>
-                      <CreditCard className="h-4 w-4 mr-2" />
+
+          <div className="text-center">
+            <Button size="lg" className="px-8 py-3">
+              <CreditCard className="h-5 w-5 mr-2" />
                       Register Now
                     </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

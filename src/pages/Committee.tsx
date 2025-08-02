@@ -6,96 +6,205 @@ import { Badge } from '@/components/ui/badge';
 import { Mail, User } from 'lucide-react';
 
 const Committee = () => {
-  const organizingCommittee = [
+  const chiefPatrons = [
     {
-      name: "Dr. Rajesh Kumar",
-      title: "General Chair",
-      affiliation: "GIET University",
-      email: "rajesh@giet.edu",
-      expertise: "Sustainable Energy Systems"
+      name: "Dr. Satya Prakash Panda",
+      title: "President, GIET University"
     },
     {
-      name: "Prof. Sarah Johnson",
-      title: "Program Chair",
-      affiliation: "MIT",
-      email: "sarah.johnson@mit.edu",
-      expertise: "Signal Processing"
+      name: "Dr. Chandra Dhwaj Panda",
+      title: "Vice President, GIET University"
     },
     {
-      name: "Dr. Michael Chen",
-      title: "Technical Chair",
-      affiliation: "Stanford University",
-      email: "mchen@stanford.edu",
-      expertise: "Cybersecurity"
-    },
-    {
-      name: "Dr. Priya Sharma",
-      title: "Publication Chair",
-      affiliation: "IIT Delhi",
-      email: "priya@iitd.ac.in",
-      expertise: "Digital Signal Processing"
-    },
-    {
-      name: "Prof. James Wilson",
-      title: "Finance Chair",
-      affiliation: "UC Berkeley",
-      email: "jwilson@berkeley.edu",
-      expertise: "Energy Economics"
-    },
-    {
-      name: "Dr. Lisa Zhang",
-      title: "Local Arrangements Chair",
-      affiliation: "GIET University",
-      email: "lisa@giet.edu",
-      expertise: "Event Management"
+      name: "Dr. Jagadish Panda",
+      title: "Director General, GIET University"
     }
   ];
 
-  const technicalCommittee = [
+  const patrons = [
     {
-      name: "Dr. Ahmed Hassan",
-      affiliation: "Cairo University",
-      expertise: "Renewable Energy"
+      name: "Dr. A V N L Sharma",
+      title: "Vice Chancellor, GIET University"
     },
     {
-      name: "Prof. Emma Thompson",
-      affiliation: "Oxford University",
-      expertise: "Machine Learning"
+      name: "Dr. N V Jagannadha Rao",
+      title: "Registrar, GIET University"
+    }
+  ];
+
+  const executiveSteeringCommittee = [
+    {
+      name: "Dr. K V S Hari",
+      title: "Director, Centre for Brain Research, IISC Bengaluru"
     },
     {
-      name: "Dr. Hiroshi Tanaka",
-      affiliation: "Tokyo Institute of Technology",
-      expertise: "IoT Security"
+      name: "Mr. Puneet Mishra",
+      title: "Vice Chair (Technical Activities), IEEE India Council"
     },
     {
-      name: "Prof. Maria Rodriguez",
-      affiliation: "Universidad Politécnica de Madrid",
-      expertise: "Smart Grids"
+      name: "Dr. Suparna Kar Chowdhury",
+      title: "Chair IEEE Kolkata Section"
     },
     {
-      name: "Dr. Robert Lee",
-      affiliation: "Carnegie Mellon University",
-      expertise: "Cryptography"
+      name: "Dr. Chinmaya Ku Panigrahi",
+      title: "Vice-Chair, IEEE Bhubaneswar Section"
     },
     {
-      name: "Prof. Anita Patel",
-      affiliation: "IIT Bombay",
-      expertise: "Power Electronics"
+      name: "Dr. Dulu Patnaik",
+      title: "Dean SOET, GIET University"
+    }
+  ];
+
+  const honoraryChair = [
+    {
+      name: "Dr. L M Pattnaik",
+      title: "Pro-Chancellor, GIET University"
+    }
+  ];
+
+  const generalChairs = [
+    {
+      name: "Dr. Bibhuti Bhusan Biswal",
+      title: "Vice Chancellor, OUTR Bhubaneswar"
     },
     {
-      name: "Dr. Klaus Mueller",
-      affiliation: "Technical University of Munich",
-      expertise: "Energy Storage"
+      name: "Dr. Pratap Kumar Panigrahi",
+      title: "Professor, GIET University"
+    }
+  ];
+
+  const technicalProgramChairs = [
+    {
+      name: "Dr. Bibhudatta Sahoo",
+      title: "NIT Rourkela"
     },
     {
-      name: "Prof. Jennifer Wu",
-      affiliation: "Tsinghua University",
-      expertise: "Network Security"
+      name: "Dr. Nibaran Das",
+      title: "Jadavpur University, WB"
+    },
+    {
+      name: "Dr. Niranjan Ray",
+      title: "KIIT Bhubaneswar"
+    },
+    {
+      name: "Dr. Ranjan Kumar Pradhan",
+      title: "OUTR Bhubaneswar"
+    }
+  ];
+
+  const otherCommitteeMembers = [
+    {
+      name: "Prof. G Satya Prasad",
+      title: "Conference Chair",
+      affiliation: "GIET University"
+    },
+    {
+      name: "Dr. Michael Packianather",
+      title: "Publication Chair",
+      affiliation: "Cardiff University, UK"
+    },
+    {
+      name: "Dr. Ayas Kanta Swain",
+      title: "Publication Chair",
+      affiliation: "NIT Rourkela"
+    },
+    {
+      name: "Dr. Debabrata Nayak",
+      title: "Industrial Track Chair",
+      affiliation: "PWC India"
+    },
+    {
+      name: "Dr. Srikant Mahapatra",
+      title: "Industrial Track Chair",
+      affiliation: "TCS Bhubaneswar"
+    },
+    {
+      name: "Dr. Srikant Misra",
+      title: "Finance Chair",
+      affiliation: "GIET University"
+    },
+    {
+      name: "Dr. Arun Kumar",
+      title: "Tutorial Chair",
+      affiliation: "NIT Rourkela"
+    },
+    {
+      name: "Dr. Puneet Kumar Jain",
+      title: "Tutorial Chair",
+      affiliation: "NIT Rourkela"
+    },
+    {
+      name: "Dr. Vandana Bhattacharjee",
+      title: "Women in Engineering Chair",
+      affiliation: "BIT Mesra"
+    }
+  ];
+
+  const technicalProgramCommittee = [
+    {
+      name: "Dr. Suresh Mikkili",
+      affiliation: "NIT Goa"
+    },
+    {
+      name: "Dr. S K Tripathy",
+      affiliation: "NIT Silchar"
+    },
+    {
+      name: "Dr. S L Shivadarshan",
+      affiliation: "NIT Warangal"
+    },
+    {
+      name: "Dr. Shelly Vadhera",
+      affiliation: "NIT Kurukshetra"
+    },
+    {
+      name: "Dr. Durbadal Mandal",
+      affiliation: "NIT Durgapur"
+    },
+    {
+      name: "Dr. Kriti Bhushan",
+      affiliation: "NIT Kurukshetra"
+    },
+    {
+      name: "Dr. S N Deepa",
+      affiliation: "NIT Calicut"
+    },
+    {
+      name: "Dr. Mitul Kumar Ahirwal",
+      affiliation: "MANIT Bhopal"
+    },
+    {
+      name: "Dr. Ashok Kumar",
+      affiliation: "NIT Hamirpur"
+    },
+    {
+      name: "Dr. C. Vyjayanthi",
+      affiliation: "NIT Goa"
+    },
+    {
+      name: "Dr. B. Surendiran",
+      affiliation: "NIT Puducherry"
+    },
+    {
+      name: "Dr. Satyabrata Das",
+      affiliation: "VSSUT, Sambalpur"
+    },
+    {
+      name: "Dr. Ravi Sankar Barpanda",
+      affiliation: "VIT, AP"
+    },
+    {
+      name: "Dr. V P Harigovindan",
+      affiliation: "NIT Puducherry"
+    },
+    {
+      name: "Dr. K Satya Babu",
+      affiliation: "IIIT, Kurnool"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}
@@ -117,7 +226,7 @@ const Committee = () => {
         </div>
       </section>
 
-      {/* Organizing Committee */}
+      {/* Chief Patrons */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -127,14 +236,251 @@ const Committee = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-primary mb-4">Organizing Committee</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              The organizing committee is responsible for the overall planning and execution of the symposium.
-            </p>
+            <h2 className="text-3xl font-bold text-primary mb-4">Chief Patron(s)</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {chiefPatrons.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <User className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto">Chief Patron</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Patrons */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">Patron(s)</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            {patrons.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <User className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto">Patron</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Executive Steering Committee */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">Executive Steering Committee</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {organizingCommittee.map((member, index) => (
+            {executiveSteeringCommittee.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <User className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto">Executive Steering</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Honorary Chair */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">Honorary Chair</h2>
+          </motion.div>
+
+          <div className="max-w-md mx-auto">
+            {honoraryChair.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <User className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto">Honorary Chair</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* General Chairs */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">General Chair(s)</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            {generalChairs.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <User className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto">General Chair</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Program Chairs */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">Technical Program Chair(s)</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {technicalProgramChairs.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <User className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto">Technical Program Chair</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Other Committee Members */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">Other Committee Members</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {otherCommitteeMembers.map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 40 }}
@@ -150,13 +496,8 @@ const Committee = () => {
                     <CardTitle className="text-lg">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto">{member.title}</Badge>
                   </CardHeader>
-                  <CardContent className="text-center space-y-2">
+                  <CardContent className="text-center">
                     <p className="text-sm text-muted-foreground">{member.affiliation}</p>
-                    <p className="text-xs text-primary font-medium">{member.expertise}</p>
-                    <div className="flex items-center justify-center space-x-1 text-xs text-muted-foreground">
-                      <Mail className="h-3 w-3" />
-                      <span>{member.email}</span>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -177,12 +518,12 @@ const Committee = () => {
           >
             <h2 className="text-3xl font-bold text-primary mb-4">Technical Program Committee</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our technical program committee comprises leading experts who ensure the quality and relevance of conference content.
+              The International Advisory Board consists of renowned researchers and academicians from around the world who provide strategic guidance and advice for the conference.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {technicalCommittee.map((member, index) => (
+            {technicalProgramCommittee.map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 40 }}
@@ -196,8 +537,7 @@ const Committee = () => {
                       <User className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="font-semibold text-sm mb-1">{member.name}</h3>
-                    <p className="text-xs text-muted-foreground mb-2">{member.affiliation}</p>
-                    <Badge variant="outline" className="text-xs">{member.expertise}</Badge>
+                    <p className="text-xs text-muted-foreground">{member.affiliation}</p>
                   </CardContent>
                 </Card>
               </motion.div>
