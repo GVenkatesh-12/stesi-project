@@ -52,7 +52,7 @@ const CountdownSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-4">
-            iSSSC 2025
+            STESI 2025
           </h2>
           <p className="text-xl text-conference-secondary font-semibold">
             November 06, 2025

@@ -27,7 +27,7 @@ const HeroSection = () => {
           {/* Conference Title */}
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-6 font-heading">
             <span className="bg-gradient-to-r from-white via-conference-accent to-white bg-clip-text text-transparent">
-              iSSSC 2025
+              STESI 2025
             </span>
           </h1>
           
