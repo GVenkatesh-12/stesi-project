@@ -18,6 +18,15 @@ import CameraReady from "./pages/CameraReady";
 import Templates from "./pages/Templates";
 import NotFound from "./pages/NotFound";
 
+// Committee pages
+import PatronsGeneralChairs from "./pages/committee/PatronsGeneralChairs";
+import OrganizingCommittee from "./pages/committee/OrganizingCommittee";
+import AdvisoryCommittees from "./pages/committee/AdvisoryCommittees";
+import TechnicalProgramCommittee from "./pages/committee/TechnicalProgramCommittee";
+import PublicationPlenaryChairs from "./pages/committee/PublicationPlenaryChairs";
+import SupportingCommittees from "./pages/committee/SupportingCommittees";
+import WomenInEngineering from "./pages/committee/WomenInEngineering";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -34,6 +43,13 @@ const App = () => (
           <Route path="/camera-ready" element={<CameraReady />} />
           <Route path="/templates" element={<Templates />} />
           <Route path="/committee" element={<Committee />} />
+          <Route path="/committee/patrons-general-chairs" element={<PatronsGeneralChairs />} />
+          <Route path="/committee/organizing-committee" element={<OrganizingCommittee />} />
+          <Route path="/committee/advisory-committees" element={<AdvisoryCommittees />} />
+          <Route path="/committee/technical-program-committee" element={<TechnicalProgramCommittee />} />
+          <Route path="/committee/publication-plenary-chairs" element={<PublicationPlenaryChairs />} />
+          <Route path="/committee/supporting-committees" element={<SupportingCommittees />} />
+          <Route path="/committee/women-in-engineering" element={<WomenInEngineering />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/accepted-papers" element={<AcceptedPapers />} />

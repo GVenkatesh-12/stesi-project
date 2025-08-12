@@ -1,0 +1,119 @@
+import { motion } from 'framer-motion';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { User } from 'lucide-react';
+
+const SupportingCommittees = () => {
+  const publicityCommittee = [
+    {
+      name: "Dr. Peeyush Garg",
+      title: "Publicity Committee"
+    },
+    {
+      name: "Dr. R. C. Bansal",
+      title: "Publicity Committee"
+    },
+    {
+      name: "Dr. Vinay Kumar Jadoun",
+      title: "Publicity Committee"
+    },
+    {
+      name: "Dr. Gulshan Sharma",
+      title: "Publicity Committee"
+    },
+    {
+      name: "Dr. Senthil Krishnamurthy",
+      title: "Publicity Committee"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen">
+      <Navigation />
+      
+      <section className="pt-24 pb-12 bg-gradient-to-b from-primary/5 to-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
+              Supporting Committees
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Meet the dedicated teams that provide essential support and ensure the smooth operation of STESI 2026.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">
+              Publicity Committee
+            </h2>
+            <p className="text-muted-foreground">Promoting STESI 2026 and reaching out to the global research community</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+            {publicityCommittee.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <User className="h-8 w-8 text-white" />
+                    </div>
+                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto bg-green-100 text-green-800">Publicity Committee</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">Additional Support</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our supporting committees work tirelessly behind the scenes to ensure every aspect of STESI 2026 runs smoothly, 
+              from technical support to logistics coordination.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default SupportingCommittees;

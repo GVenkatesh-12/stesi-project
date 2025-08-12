@@ -9,38 +9,66 @@ import { MapPin, Calendar, User, ExternalLink } from 'lucide-react';
 const Speakers = () => {
   const keynoteSpeakers = [
     {
-      name: "Dr. Elena Rodriguez",
-      title: "Chief Technology Officer",
-      organization: "Global Energy Solutions Inc.",
-      image: "/api/placeholder/300/300",
-      bio: "Dr. Rodriguez is a leading expert in renewable energy systems with over 15 years of experience in sustainable technology development. She has published over 100 papers and holds 25 patents in energy storage and smart grid technologies.",
-      topic: "The Future of Sustainable Energy: From Grid to Edge",
-      expertise: ["Renewable Energy", "Smart Grids", "Energy Storage"],
-      awards: ["IEEE Fellow", "Energy Innovator Award 2023"]
+      name: "Prof. Dr. André Eugenio Lazzaretti",
+      title: "Professor",
+      organization: "Federal University of Technology - Paraná (UTFPR), Brazil",
+      image: "/speaker1.png",
+      bio: "Prof. Dr. André Eugenio Lazzaretti is a distinguished researcher and professor at UTFPR, specializing in pattern recognition, machine learning, digital signal processing, embedded systems, and instrumentation. He has published extensively in top-tier journals and conferences, with over 100 peer-reviewed publications. His research focuses on developing innovative algorithms for signal processing applications, particularly in biomedical engineering and industrial automation. Dr. Lazzaretti has supervised numerous Ph.D. and M.Sc. students and has been actively involved in international research collaborations.",
+      topic: "Advances in Pattern Recognition and Machine Learning for Signal Processing",
+      expertise: ["Pattern Recognition", "Machine Learning", "Digital Signal Processing", "Embedded Systems", "Instrumentation", "Biomedical Engineering"],
+      awards: ["IEEE Senior Member", "Distinguished Researcher Award UTFPR", "Best Paper Award IEEE SPS", "Research Excellence Award"]
     },
     {
-      name: "Prof. David Kim",
-      title: "Director of AI Research",
-      organization: "Stanford University",
-      image: "/api/placeholder/300/300",
-      bio: "Professor Kim is renowned for his groundbreaking work in signal processing and machine learning. His research has revolutionized the field of adaptive signal processing with applications in telecommunications and biomedical engineering.",
-      topic: "AI-Driven Signal Processing: Opportunities and Challenges",
-      expertise: ["Machine Learning", "Signal Processing", "Neural Networks"],
-      awards: ["Turing Award Nominee", "IEEE Signal Processing Society Award"]
+      name: "Fausto Pedro García Márquez",
+      title: "Professor",
+      organization: "University of Castilla-La Mancha, Spain",
+      image: "/speaker2.png",
+      bio: "Fausto Pedro García Márquez is a leading expert in Artificial Intelligence, Maintenance, Management, Renewable Energy, Transport, Advanced Analytics, and Data Science. He holds a Ph.D. in Industrial Engineering and has published over 200 research papers in high-impact journals. His work focuses on integrating AI technologies across multiple domains to create sustainable and efficient solutions. Dr. García Márquez has led numerous international research projects and has been recognized for his contributions to renewable energy optimization and smart transportation systems.",
+      topic: "AI-Driven Solutions for Renewable Energy and Smart Transportation Systems",
+      expertise: ["Artificial Intelligence", "Maintenance", "Management", "Renewable Energy", "Transport", "Advanced Analytics", "Data Science", "Industrial Engineering"],
+      awards: ["Research Excellence Award UCLM", "AI Innovation Prize", "Best Researcher Award", "IEEE Senior Member", "Outstanding Contribution Award"]
     },
     {
-      name: "Dr. Sarah Mitchell",
-      title: "Cybersecurity Research Lead",
-      organization: "Microsoft Research",
-      image: "/api/placeholder/300/300",
-      bio: "Dr. Mitchell is a globally recognized cybersecurity expert specializing in quantum-resistant cryptography and secure communications. She has advised governments and Fortune 500 companies on cybersecurity strategy.",
-      topic: "Quantum-Safe Cybersecurity for Critical Infrastructure",
-      expertise: ["Quantum Cryptography", "Network Security", "Critical Infrastructure"],
-      awards: ["Cybersecurity Excellence Award", "NSF CAREER Award"]
+      name: "Prof Rajesh Kumar",
+      title: "Professor",
+      organization: "Malaviya National Institute of Technology Jaipur, India",
+      image: "/speaker3.png",
+      bio: "Prof Rajesh Kumar is a renowned researcher in Artificial Intelligence, Machine Intelligence, Bio and Nature inspired Algorithms, Healthcare, and Energy. He has published over 150 research papers in international journals and conferences. His research spans across multiple disciplines, focusing on innovative AI solutions for real-world challenges. Prof. Kumar has supervised more than 25 Ph.D. students and has been actively involved in developing bio-inspired algorithms for healthcare applications and energy optimization. He has received several national and international awards for his contributions to AI research.",
+      topic: "Bio-Inspired AI Algorithms for Healthcare and Energy Applications",
+      expertise: ["Artificial Intelligence", "Machine Intelligence", "Bio-inspired Algorithms", "Healthcare", "Energy", "Optimization", "Neural Networks"],
+      awards: ["Distinguished Professor Award MNIT", "AI Research Excellence Award", "Best Teacher Award", "IEEE Senior Member", "Outstanding Researcher Award"]
+    },
+    {
+      name: "Almoataz Youssef Abdelaziz Mohamed",
+      title: "Professor",
+      organization: "Future University in Egypt, Cairo, Egypt",
+      image: "/speaker4.png",
+      bio: "Almoataz Youssef Abdelaziz Mohamed is a leading expert in applications of artificial intelligence, evolutionary and heuristic optimization techniques applied to power systems operation, planning, and control. He has published extensively in top-tier power systems journals and has been recognized for his innovative approaches to power system optimization. His research has revolutionized power system management through AI integration, particularly in renewable energy integration and smart grid applications. Dr. Mohamed has supervised numerous graduate students and has been involved in several international research collaborations.",
+      topic: "AI and Evolutionary Optimization in Power System Operation and Control",
+      expertise: ["Artificial Intelligence", "Evolutionary Algorithms", "Heuristic Optimization", "Power Systems", "Power System Operation", "Power System Planning", "Power System Control", "Smart Grids"],
+      awards: ["Power Systems Excellence Award", "AI in Energy Innovation Prize", "Best Researcher Award", "IEEE Senior Member", "Outstanding Contribution to Power Systems"]
     }
   ];
 
   const invitedSpeakers = [
+    {
+      name: "Dr. Elena Rodriguez",
+      organization: "Global Energy Solutions Inc.",
+      topic: "The Future of Sustainable Energy: From Grid to Edge",
+      expertise: "Renewable Energy"
+    },
+    {
+      name: "Prof. David Kim",
+      organization: "Stanford University",
+      topic: "AI-Driven Signal Processing: Opportunities and Challenges",
+      expertise: "Machine Learning"
+    },
+    {
+      name: "Dr. Sarah Mitchell",
+      organization: "Microsoft Research",
+      topic: "Quantum-Safe Cybersecurity for Critical Infrastructure",
+      expertise: "Cybersecurity"
+    },
     {
       name: "Dr. Ahmed Hassan",
       organization: "Cairo University",
@@ -58,24 +86,6 @@ const Speakers = () => {
       organization: "IBM Research",
       topic: "Edge Computing Security Frameworks",
       expertise: "Edge Computing"
-    },
-    {
-      name: "Prof. Maria Santos",
-      organization: "University of São Paulo",
-      topic: "IoT Security in Smart Cities",
-      expertise: "IoT Security"
-    },
-    {
-      name: "Dr. James Wilson",
-      organization: "Google DeepMind",
-      topic: "Neural Signal Processing Applications",
-      expertise: "Neural Networks"
-    },
-    {
-      name: "Prof. Anna Kowalski",
-      organization: "Warsaw University of Technology",
-      topic: "Renewable Energy Grid Integration",
-      expertise: "Power Systems"
     }
   ];
 
@@ -85,13 +95,13 @@ const Speakers = () => {
       sessions: [
         {
           time: "9:00 AM",
-          speaker: "Dr. Elena Rodriguez",
-          topic: "Opening Keynote: The Future of Sustainable Energy"
+          speaker: "Prof. Dr. André Eugenio Lazzaretti",
+          topic: "Advances in Pattern Recognition and Machine Learning for Signal Processing"
         },
         {
           time: "2:00 PM",
-          speaker: "Dr. Ahmed Hassan",
-          topic: "Blockchain Applications in Energy Trading"
+          speaker: "Fausto Pedro García Márquez",
+          topic: "AI-Driven Solutions for Renewable Energy and Smart Transportation Systems"
         }
       ]
     },
@@ -100,13 +110,13 @@ const Speakers = () => {
       sessions: [
         {
           time: "9:00 AM",
-          speaker: "Prof. David Kim",
-          topic: "AI-Driven Signal Processing: Opportunities and Challenges"
+          speaker: "Prof Rajesh Kumar",
+          topic: "Bio-Inspired AI Algorithms for Healthcare and Energy Applications"
         },
         {
           time: "2:00 PM",
-          speaker: "Prof. Lisa Chen",
-          topic: "5G Signal Processing Architectures"
+          speaker: "Almoataz Youssef Abdelaziz Mohamed",
+          topic: "AI and Evolutionary Optimization in Power System Operation and Control"
         }
       ]
     },
@@ -115,13 +125,13 @@ const Speakers = () => {
       sessions: [
         {
           time: "9:00 AM",
-          speaker: "Dr. Sarah Mitchell",
-          topic: "Quantum-Safe Cybersecurity for Critical Infrastructure"
+          speaker: "Dr. Elena Rodriguez",
+          topic: "The Future of Sustainable Energy: From Grid to Edge"
         },
         {
           time: "2:00 PM",
-          speaker: "Dr. Robert Taylor",
-          topic: "Edge Computing Security Frameworks"
+          speaker: "Prof. David Kim",
+          topic: "AI-Driven Signal Processing: Opportunities and Challenges"
         }
       ]
     }
@@ -141,10 +151,10 @@ const Speakers = () => {
             className="text-center"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Distinguished Speakers
+              Plenary Speakers
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Learn from world-renowned experts and thought leaders in sustainable energy, signal processing, and cybersecurity at iSSSC 2025.
+              Learn from world-renowned experts and thought leaders in artificial intelligence, machine learning, power systems, and sustainable energy at STESI 2026.
             </p>
           </motion.div>
         </div>
@@ -160,10 +170,10 @@ const Speakers = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-primary mb-4">Keynote Speakers</h2>
+            {/* <h2 className="text-3xl font-bold text-primary mb-4">Keynote Speakers</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our keynote speakers are industry pioneers who will share cutting-edge insights and future directions in their respective fields.
-            </p>
+              Our keynote speakers are industry pioneers who will share cutting-edge insights and future directions in artificial intelligence, machine learning, and power systems.
+            </p> */}
           </motion.div>
 
           <div className="space-y-12">
@@ -180,8 +190,21 @@ const Speakers = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
                       {/* Speaker Image */}
                       <div className="lg:col-span-1">
-                        <div className="aspect-square bg-muted rounded-lg flex items-center justify-center">
-                          <User className="h-24 w-24 text-muted-foreground" />
+                        <div className="aspect-square bg-muted rounded-lg overflow-hidden">
+                          <img 
+                            src={speaker.image} 
+                            alt={speaker.name}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = 'none';
+                              const fallback = target.parentElement?.querySelector('.fallback-icon');
+                              if (fallback) fallback.classList.remove('hidden');
+                            }}
+                          />
+                          <div className="fallback-icon hidden w-full h-full flex items-center justify-center">
+                            <User className="h-24 w-24 text-muted-foreground" />
+                          </div>
                         </div>
                       </div>
                       
@@ -232,7 +255,7 @@ const Speakers = () => {
       </section>
 
       {/* Invited Speakers */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -276,10 +299,10 @@ const Speakers = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Speaking Schedule */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -335,7 +358,7 @@ const Speakers = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

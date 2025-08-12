@@ -184,7 +184,7 @@ const Venue = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="h-full bg-muted rounded-lg overflow-hidden"
+              className="aspect-video bg-muted rounded-lg overflow-hidden"
             >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.8694285739997!2d75.5635153!3d26.846217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4850e05bee3b%3A0x1b996759e9a2e5c1!2sManipal%20University%20Jaipur!5e0!3m2!1sen!2sin!4v1701234567890!5m2!1sen!2sin"
