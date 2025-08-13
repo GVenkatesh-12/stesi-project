@@ -102,7 +102,7 @@ const About = () => {
             >
               <div className="bg-gradient-card rounded-lg p-8 shadow-card">
               <h2 className="text-3xl font-bold text-primary mb-6">
-                Conference Overview
+              Overview
               </h2>
               <div className="space-y-4 leading-relaxed">
                 <p>
@@ -122,7 +122,7 @@ const About = () => {
               viewport={{ once: true }}
               className="bg-gradient-card rounded-lg p-8 shadow-card"
             >
-              <h3 className="text-2xl font-bold text-primary mb-4">Conference Details</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4 text-center">Conference Details</h3>
               <div className="space-y-4">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-conference-secondary">22nd-23rd</div>
@@ -133,7 +133,7 @@ const About = () => {
                   <div className="text-sm text-muted-foreground">Department of Electrical Engineering</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-conference-secondary">6</div>
+                  <div className="text-2xl font-bold text-conference-secondary">7</div>
                   <div className="text-sm text-muted-foreground">Conference Tracks</div>
                 </div>
               </div>
@@ -149,7 +149,7 @@ const About = () => {
             className="mb-16"
           >
             <h2 className="text-3xl font-bold text-primary mb-6 text-center">
-              Conference Aims and Objectives
+            Aims and Objectives
             </h2>
             <div className="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-lg border border-border/50">
               <div className="space-y-4 text-foreground">

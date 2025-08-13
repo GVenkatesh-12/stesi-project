@@ -84,6 +84,7 @@ const CallForPapers = () => {
     'Signal Processing & Intelligent Systems',
     'Advanced Computing and Intelligent Technologies ',
     'Materials Science and Engineering',
+    'Energy Policy, Regulation, and Electricity Markets',
   ];
 
   return (

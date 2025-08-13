@@ -24,6 +24,7 @@ const AdvisoryCommittees = () => {
   ];
 
   const steeringCommittee = [
+    { name: "Dr. V. Ramgopal Rao", title: "Group Vice-Chancellor, BITS Pilani, Jhunjhunu (Dist) Rajasthan" },
     { name: "Dr. Nikhil Gupta", title: "MNIT Jaipur" },
     { name: "Dr. Sanjib Ganguly", title: "IIT Guwahati" },
     { name: "Dr. Prerna Gaur", title: " Netaji Subhash University of Technology, New Delhi" }

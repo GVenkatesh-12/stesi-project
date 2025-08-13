@@ -39,13 +39,41 @@ const TechnicalProgramCommittee = () => {
     { name: "Dr. Soham Dutta", affiliation: "OATI Hyderabad Office, India" }
   ];
 
-  const getCountryIcon = (affiliation: string) => {
-    if (affiliation.includes('Egypt')) return '🇪🇬';
-    if (affiliation.includes('South Africa')) return '🇿🇦';
-    if (affiliation.includes('China')) return '🇨🇳';
-    if (affiliation.includes('Spain')) return '🇪🇸';
-    if (affiliation.includes('USA') || affiliation.includes('California')) return '🇺🇸';
-    return '🇮🇳';
+  const getCountryInfo = (affiliation: string) => {
+    if (affiliation.includes('Egypt')) return { code: 'EG', name: 'Egypt', flagUrl: 'https://flagcdn.com/w40/eg.png' };
+    if (affiliation.includes('South Africa')) return { code: 'ZA', name: 'South Africa', flagUrl: 'https://flagcdn.com/w40/za.png' };
+    if (affiliation.includes('China')) return { code: 'CN', name: 'China', flagUrl: 'https://flagcdn.com/w40/cn.png' };
+    if (affiliation.includes('Spain')) return { code: 'ES', name: 'Spain', flagUrl: 'https://flagcdn.com/w40/es.png' };
+    if (affiliation.includes('USA') || affiliation.includes('California')) return { code: 'US', name: 'USA', flagUrl: 'https://flagcdn.com/w40/us.png' };
+    return { code: 'IN', name: 'India', flagUrl: 'https://flagcdn.com/w40/in.png' };
+  };
+
+  const CountryFlag = ({ countryInfo }: { countryInfo: { code: string; name: string; flagUrl: string } }) => {
+    return (
+      <div className="flex items-center justify-center">
+        <div className="relative flex-shrink-0">
+          <img
+            src={countryInfo.flagUrl}
+            alt={`${countryInfo.name} flag`}
+            className="w-7 h-5 rounded-sm shadow-sm object-contain"
+            style={{ minWidth: '28px', minHeight: '20px' }}
+            onError={(e) => {
+              // Fallback to country code if image fails to load
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              const fallback = target.nextElementSibling as HTMLElement;
+              if (fallback) fallback.style.display = 'inline-block';
+            }}
+          />
+          <span 
+            className="text-xs font-medium text-muted-foreground bg-muted px-1.5 py-0.5 rounded hidden"
+            style={{ display: 'none' }}
+          >
+            {countryInfo.code}
+          </span>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -100,10 +128,10 @@ const TechnicalProgramCommittee = () => {
                     <Badge variant="secondary" className="mx-auto bg-primary/10 text-primary">Committee Member</Badge>
                   </CardHeader>
                   <CardContent className="text-center pb-6">
-                                         <div className="flex items-center justify-center gap-2">
-                       <span className="text-lg flag-emoji">{getCountryIcon(member.affiliation)}</span>
-                       <p className="text-xs text-muted-foreground">{member.affiliation}</p>
-                     </div>
+                    <div className="flex items-center justify-center gap-3">
+                      <CountryFlag countryInfo={getCountryInfo(member.affiliation)} />
+                      <p className="text-xs text-muted-foreground leading-relaxed">{member.affiliation}</p>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>

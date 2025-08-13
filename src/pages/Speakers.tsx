@@ -19,7 +19,7 @@ const Speakers = () => {
       awards: ["IEEE Senior Member", "Distinguished Researcher Award UTFPR", "Best Paper Award IEEE SPS", "Research Excellence Award"]
     },
     {
-      name: "Fausto Pedro García Márquez",
+      name: "Prof. Fausto Pedro García Márquez",
       title: "Professor",
       organization: "University of Castilla-La Mancha, Spain",
       image: "/speaker2.png",
@@ -29,7 +29,7 @@ const Speakers = () => {
       awards: ["Research Excellence Award UCLM", "AI Innovation Prize", "Best Researcher Award", "IEEE Senior Member", "Outstanding Contribution Award"]
     },
     {
-      name: "Prof Rajesh Kumar",
+      name: "Prof. Rajesh Kumar",
       title: "Professor",
       organization: "Malaviya National Institute of Technology Jaipur, India",
       image: "/speaker3.png",
@@ -39,7 +39,7 @@ const Speakers = () => {
       awards: ["Distinguished Professor Award MNIT", "AI Research Excellence Award", "Best Teacher Award", "IEEE Senior Member", "Outstanding Researcher Award"]
     },
     {
-      name: "Almoataz Youssef Abdelaziz Mohamed",
+      name: "Prof. Almoataz Youssef Abdelaziz Mohamed",
       title: "Professor",
       organization: "Future University in Egypt, Cairo, Egypt",
       image: "/speaker4.png",
@@ -194,7 +194,7 @@ const Speakers = () => {
                           <img 
                             src={speaker.image} 
                             alt={speaker.name}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-lg"
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
                               target.style.display = 'none';

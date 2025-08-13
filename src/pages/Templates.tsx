@@ -168,7 +168,7 @@ const Templates = () => {
             {/* add a hyperlink with button to the official IEEE website */}
             <Button variant="conference" className="mt-4" asChild>
               <a href="https://www.ieee.org/conferences/publishing/templates" target="_blank" rel="noopener noreferrer">
-                IEEE Author Center
+                Official IEEE Author Center
               </a>
             </Button>
           </motion.div>

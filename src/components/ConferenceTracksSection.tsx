@@ -115,6 +115,18 @@ const ConferenceTracksSection = () => {
       gradient: 'from-amber-50 to-amber-100 dark:from-amber-950 dark:to-amber-900',
       accent: 'border-amber-200 dark:border-amber-800',
     },
+    {
+      title: 'TRACK VII: ENERGY POLICY, REGULATION, AND ELECTRICITY MARKETS',
+      topics: [
+        'Electricity Market Design and Operation',
+        'Energy Policy and Regulatory Frameworks',
+        'Decarbonization and Energy Transition Strategies',
+        'Demand Response and Consumer Participation',
+        'Cross-Border and Regional Energy Trade',
+      ],
+      gradient: 'from-teal-50 to-teal-100 dark:from-teal-950 dark:to-teal-900',
+      accent: 'border-teal-200 dark:border-teal-800',
+    },
   ];
 
   return (

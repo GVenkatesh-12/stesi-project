@@ -72,6 +72,17 @@ const TrackChairs = () => {
       accent: "border-amber-200 dark:border-amber-800",
       badgeColor: "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200",
     },
+    {
+      id: 7,
+      title: "Energy Policy, Regulation, and Electricity Markets",
+      chair: "Dr. Dipti Saxena",
+      chairInstitution: "MNIT Jaipur",
+      coChair: "Dr. Sunanda Sinha",
+      coChairInstitution: "MNIT Jaipur",
+      gradient: "from-teal-50 to-teal-100 dark:from-teal-950 dark:to-teal-900",
+      accent: "border-teal-200 dark:border-teal-800",
+      badgeColor: "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200",
+    },
   ];
 
   return (
