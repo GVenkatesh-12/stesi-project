@@ -52,12 +52,14 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-glow rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">iS</span>
-            </div>
-            <div className="hidden sm:block">
+            <img 
+              src="/manipal-university-jaipur-logo-01.svg" 
+              alt="Manipal University Jaipur Logo"
+              className="h-12 w-auto"
+            />
+            {/* <div className="hidden sm:block">
                               <span className="text-xl font-bold text-primary">STESI 2026</span>
-            </div>
+            </div> */}
           </Link>
 
           {/* Desktop Navigation */}
