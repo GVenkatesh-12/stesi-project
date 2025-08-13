@@ -27,7 +27,7 @@ const Templates = () => {
       name: "IEEE Word Template",
       description: "Microsoft Word template with IEEE formatting",
       format: "DOCX",
-      size: "300 KB",
+      size: "30 KB",
       lastUpdated: "2024",
       recommended: false,
       filePath: "/conference-template-a4.docx",
