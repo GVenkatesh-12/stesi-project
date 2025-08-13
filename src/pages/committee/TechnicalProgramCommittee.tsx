@@ -24,7 +24,7 @@ const TechnicalProgramCommittee = () => {
     { name: "Dr. Saurabh Ratra", affiliation: "Punjab Agricultural University, Ludhiana" },
     { name: "Dr. Amit Kumar Garg", affiliation: "IIIT Kota India" },
     { name: "Dr. Nikhil Deep Gupta", affiliation: "VNIT, Nagpur India" },
-    { name: "Dr. Manoj Kumawta", affiliation: "NIT Delhi, India" },
+    { name: "Dr. Manoj Kumawat", affiliation: "NIT Delhi, India" },
     { name: "Dr. Sachin Sharma", affiliation: "MIT, India" },
     { name: "Dr. Suman Sharma", affiliation: "SKIT M&G Jaipur, Rajasthan, India" },
     { name: "Dr. Rayees Ahmad Thokar", affiliation: "Maharishi Markandeshwar University (MMU) Mullana, Ambala, Haryana" },
@@ -34,7 +34,9 @@ const TechnicalProgramCommittee = () => {
     { name: "Dr. Saurav Raj", affiliation: "ICT Jalna, Maharashtra, India" },
     { name: "Dr. Srikant Misra", affiliation: "GIET University, Gunupur, India" },
     { name: "Dr. Arnab Pal", affiliation: "Silicon Institute of Technology, Bhubaneswar, India" },
-    { name: "Dr. Nihar Karmakar", affiliation: "Adamas University, Kolkata, India" }
+    { name: "Dr. Nihar Karmakar", affiliation: "Adamas University, Kolkata, India" },
+    { name: "Parth Shah", affiliation: "HITACHI Energy, California, USA" },
+    { name: "Dr. Soham Dutta", affiliation: "OATI Hyderabad Office, India" }
   ];
 
   const getCountryIcon = (affiliation: string) => {
@@ -42,6 +44,7 @@ const TechnicalProgramCommittee = () => {
     if (affiliation.includes('South Africa')) return '🇿🇦';
     if (affiliation.includes('China')) return '🇨🇳';
     if (affiliation.includes('Spain')) return '🇪🇸';
+    if (affiliation.includes('USA') || affiliation.includes('California')) return '🇺🇸';
     return '🇮🇳';
   };
 

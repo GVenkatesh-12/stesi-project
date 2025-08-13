@@ -3,30 +3,78 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { FileText, Calendar, Users, Award, Download } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { FileText, Calendar, Users, Award, Download, CheckCircle, AlertTriangle, ExternalLink } from 'lucide-react';
 
 const CallForPapers = () => {
   const submissionGuidelines = [
     {
       icon: FileText,
-      title: 'Paper Format',
-      description: 'Papers must be written in English and follow IEEE conference format. Maximum 6 pages including references.',
+      title: 'IEEE Paper Format',
+      description: 'Papers must follow IEEE conference format with maximum 6 pages including references. Use official IEEE templates.',
     },
     {
       icon: Users,
-      title: 'Review Process',
-      description: 'All submissions will undergo rigorous peer review by three expert reviewers in the respective fields.',
+      title: 'Double-Blind Review',
+      description: 'All submissions undergo double-blind peer review by three expert reviewers. Maximum 5 papers per reviewer.',
     },
     {
       icon: Award,
-      title: 'Publication',
+      title: 'IEEE Xplore Publication',
       description: 'Accepted papers will be published in IEEE Xplore Digital Library and indexed in major databases.',
     },
     {
       icon: Calendar,
-      title: 'Presentation',
+      title: 'Presentation Requirement',
       description: 'Authors of accepted papers must register and present their work at the conference.',
     },
+  ];
+
+  const detailedRequirements = [
+    {
+      category: "Paper Formatting",
+      requirements: [
+        "IEEE conference format (two-column layout)",
+        "Maximum 6 pages including references",
+        "Times New Roman, 10pt font for body text",
+        "Single line spacing with 0.75 inch margins",
+        "No page numbers, headers, or footers",
+        "Figures and tables must be high resolution (300 DPI minimum)"
+      ]
+    },
+    {
+      category: "Submission Requirements",
+      requirements: [
+        "Submit via Microsoft CMT submission system",
+        "PDF format only (no Word documents)",
+        "Remove author names and affiliations for blind review",
+        "Include complete references in IEEE citation style",
+        "Minimum 15 references recommended",
+        "Abstract: 150-200 words maximum"
+      ]
+    },
+    {
+      category: "Review Process",
+      requirements: [
+        "Double-blind peer review by three experts",
+        "Maximum 5 papers assigned per reviewer",
+        "Plagiarism check via Turnitin (max 15% similarity)",
+        "Technical quality and relevance assessment",
+        "Notification of acceptance/rejection with feedback",
+        "Camera-ready submission after acceptance"
+      ]
+    },
+    {
+      category: "Publication Standards",
+      requirements: [
+        "IEEE Xplore Digital Library publication",
+        "IEEE conference proceedings indexing",
+        "DOI assignment for each paper",
+        "Copyright transfer to IEEE required",
+        "Open access through IEEE Xplore",
+        "Professional indexing in major databases"
+      ]
+    }
   ];
 
   const tracks = [
@@ -55,7 +103,7 @@ const CallForPapers = () => {
               Call for Papers
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Submit your research contributions to iSSSC 2025 and join the global community of researchers advancing sustainable technologies.
+              Submit your research contributions to STESI 2026 and join the global community of researchers advancing Smart Technologies for Energy, Sustainability & Industry.
             </p>
           </motion.div>
         </div>
@@ -79,8 +127,8 @@ const CallForPapers = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: 'Paper Submission Deadline', date: 'February 15, 2026', color: 'text-red-500' },
-              { title: 'Notification of Acceptance', date: 'August 15, 2026', color: 'text-orange-500' },
-              { title: 'Camera Ready Submission', date: 'April 30, 2026', color: 'text-blue-500' },
+              { title: 'Notification of Acceptance', date: 'April 15, 2026', color: 'text-orange-500' },
+              { title: 'Camera Ready Submission', date: 'May 30, 2026', color: 'text-blue-500' },
               { title: 'Conference Dates', date: 'July 22-23, 2026', color: 'text-green-500' },
             ].map((item, index) => (
               <motion.div
@@ -148,13 +196,86 @@ const CallForPapers = () => {
             })}
           </div>
 
+          {/* Detailed Requirements */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h3 className="text-2xl font-bold text-primary mb-6 text-center">
+              Detailed Submission Requirements
+            </h3>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {detailedRequirements.map((section, index) => (
+                <motion.div
+                  key={section.category}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="h-full bg-gradient-card border border-border/50 shadow-card">
+                    <CardHeader>
+                      <CardTitle className="text-xl text-primary">{section.category}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2">
+                        {section.requirements.map((requirement, reqIndex) => (
+                          <li key={reqIndex} className="flex items-start space-x-2 text-sm">
+                            <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground">{requirement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Plagiarism Policy */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <Card className="bg-gradient-card border border-border/50 shadow-card">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <AlertTriangle className="h-6 w-6 text-amber-500" />
+                  <CardTitle className="text-xl text-primary">Plagiarism Policy</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <p className="text-muted-foreground">
+                    All submitted papers will undergo plagiarism detection using Turnitin. Papers with similarity index exceeding <strong>15%</strong> will be rejected automatically.
+                  </p>
+                  <div className="flex items-center space-x-2">
+                    <Badge variant="destructive">Maximum Similarity: 15%</Badge>
+                    <Badge variant="secondary">Tool: Turnitin</Badge>
+                    <Badge variant="outline">Automatic Rejection</Badge>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Note:</strong> Self-citations and common phrases are excluded from similarity calculations.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
           {/* Submission Tracks */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-card rounded-lg p-8 shadow-card"
+            className="bg-gradient-card rounded-lg p-8 shadow-card mb-12"
           >
             <h3 className="text-2xl font-bold text-primary mb-6 text-center">
               Conference Tracks
@@ -169,21 +290,64 @@ const CallForPapers = () => {
             </div>
           </motion.div>
 
+          {/* Templates and Submission Links */}
+          {/* <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-gradient-card rounded-lg p-8 shadow-card mb-12"
+          >
+            <h3 className="text-2xl font-bold text-primary mb-6 text-center">
+              Templates & Submission System
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="text-center">
+                <h4 className="text-lg font-semibold mb-3">IEEE Paper Templates</h4>
+                <p className="text-muted-foreground mb-4">
+                  Download official IEEE templates to ensure proper formatting
+                </p>
+                <Button variant="outline" className="w-full" asChild>
+                  <a href="/templates" className="flex items-center justify-center">
+                    <Download className="h-4 w-4 mr-2" />
+                    Download Templates
+                  </a>
+                </Button>
+              </div>
+              <div className="text-center">
+                <h4 className="text-lg font-semibold mb-3">Microsoft CMT Submission</h4>
+                <p className="text-muted-foreground mb-4">
+                  Submit your paper through our official submission system
+                </p>
+                <Button className="w-full" asChild>
+                  <a href="https://cmt3.research.microsoft.com/STESI2026" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                    Submit Paper
+                    <ExternalLink className="h-4 w-4 ml-2" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </motion.div> */}
+
           {/* Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mt-12 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center"
+            className="text-center space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center"
           >
-            <Button size="lg" variant="conference" className="w-full sm:w-auto">
-              Submit Paper
-              <FileText className="ml-2 h-5 w-5" />
+            <Button size="lg" variant="conference" className="w-full sm:w-auto" asChild>
+              <a href="https://cmt3.research.microsoft.com/STESI2026" target="_blank" rel="noopener noreferrer">
+                Submit Paper via CMT
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto">
-              Download Template
-              <Download className="ml-2 h-5 w-5" />
+            <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
+              <a href="/templates">
+                Download IEEE Templates
+                <Download className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </motion.div>
         </div>

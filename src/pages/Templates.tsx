@@ -166,7 +166,7 @@ const Templates = () => {
               IEEE Conference Format Required
             </Badge>
             {/* add a hyperlink with button to the official IEEE website */}
-            <Button variant="outline" className="text-primary mt-4" asChild>
+            <Button variant="conference" className="mt-4" asChild>
               <a href="https://www.ieee.org/conferences/publishing/templates" target="_blank" rel="noopener noreferrer">
                 IEEE Author Center
               </a>
