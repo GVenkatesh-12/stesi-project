@@ -9,19 +9,23 @@ const PublicationPlenaryChairs = () => {
   const publicationCommittee = [
     {
       name: "Dr. Rajeeb Dey",
-      title: "Publication Committee"
+      title: "NIT Silchar"
+    },
+    {
+      name: "Dr. Kapil Pareek",
+      title: "MNIT Jaipur"
     },
     {
       name: "Dr. Arvind R Singh",
-      title: "Publication Committee"
+      title: "Hanjian Normal University, China"
     },
     {
       name: "Dr. Neeraj Kanwar",
-      title: "Publication Committee"
+      title: "Manipal University Jaipur"
     },
     {
       name: "Dr. Bishwajit Dey",
-      title: "Publication Committee"
+      title: "Manipal University Jaipur"
     }
   ];
 
@@ -137,7 +141,8 @@ const PublicationPlenaryChairs = () => {
                     <Badge variant="secondary" className="mx-auto bg-purple-100 text-purple-800">Plenary Chair</Badge>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  {/* Removed for now */}
+                    {/* <p className="text-sm text-muted-foreground">{member.title}</p> */}
                   </CardContent>
                 </Card>
               </motion.div>

@@ -8,24 +8,32 @@ import { User } from 'lucide-react';
 const SupportingCommittees = () => {
   const publicityCommittee = [
     {
-      name: "Dr. Peeyush Garg",
-      title: "Publicity Committee"
+      name: "Dr. R. C. Bansal",
+      title: "University of Sharjah, UAE"
     },
     {
-      name: "Dr. R. C. Bansal",
-      title: "Publicity Committee"
+      name: "Dr. Aneesh Prabhakar",
+      title: "MNIT Jaipur"
     },
     {
       name: "Dr. Vinay Kumar Jadoun",
-      title: "Publicity Committee"
+      title: "Manipal Institute of Technology, Manipal, Karnataka"
+    },
+    {
+      name: "Dr. Parul Mathuria",
+      title: "MNIT Jaipur"
     },
     {
       name: "Dr. Gulshan Sharma",
-      title: "Publicity Committee"
+      title: "University of Johannesburg, South Africa"
     },
     {
       name: "Dr. Senthil Krishnamurthy",
-      title: "Publicity Committee"
+      title: "Cape Peninsula University of Technology, Cape Town, South Africa"
+    },
+    {
+      name: "Dr. Peeyush Garg",
+      title: "Manipal University, Jaipur"
     }
   ];
 
