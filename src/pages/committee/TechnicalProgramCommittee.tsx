@@ -35,7 +35,7 @@ const TechnicalProgramCommittee = () => {
     { name: "Dr. Srikant Misra", affiliation: "GIET University, Gunupur, India" },
     { name: "Dr. Arnab Pal", affiliation: "Silicon Institute of Technology, Bhubaneswar, India" },
     { name: "Dr. Nihar Karmakar", affiliation: "Adamas University, Kolkata, India" },
-    { name: "Parth Shah", affiliation: "HITACHI Energy, California, USA" },
+    { name: "Mr. Parth Shah", affiliation: "HITACHI Energy, California, USA" },
     { name: "Dr. Soham Dutta", affiliation: "OATI Hyderabad Office, India" }
   ];
 
