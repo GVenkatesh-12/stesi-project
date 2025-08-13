@@ -1,63 +1,27 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Mail, Phone, MapPin, Clock, Send, User, MessageSquare } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { Mail, Phone, MapPin, Clock, User } from 'lucide-react';
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    category: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
-    });
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      category: '',
-      message: ''
-    });
-  };
-
-  const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
   const contactInfo = [
     {
       icon: Mail,
       title: "General Inquiries",
-      details: ["info@isssc2025.org", "Registration: register@isssc2025.org"],
+      details: ["stesi2026.muj@gmail.com", "Registration: stesi2026.muj@gmail.com"],
       description: "For general conference information and registration support"
     },
     {
       icon: Phone,
       title: "Phone Support",
-      details: ["+91-6860-123456", "+91-6860-234567"],
+      details: ["+91-141-3999100", "+91-141-3999200"],
       description: "Available Monday to Friday, 9:00 AM - 6:00 PM IST"
     },
     {
       icon: MapPin,
       title: "Conference Venue",
-      details: ["GIET University", "Gunupur, Rayagada, Odisha 765022, India"],
+      details: ["Manipal University Jaipur", "Jaipur-Ajmer Express Highway, Dehmi Kalan, Near GVK Toll Plaza, Jaipur, Rajasthan 303007, India"],
       description: "Beautiful campus with state-of-the-art conference facilities"
     },
     {
@@ -71,26 +35,26 @@ const Contact = () => {
   const departments = [
     {
       department: "Technical Program Committee",
-      contact: "Dr. Sarah Johnson",
-      email: "technical@isssc2025.org",
+      contact: "Dr. Neeraj Kanwar",
+      email: "technical@stesi2026.org",
       responsibilities: ["Paper submissions", "Review process", "Technical content"]
     },
     {
       department: "Registration & Finance",
-      contact: "Prof. James Wilson",
-      email: "register@isssc2025.org",
+      contact: "Dr. Amit Saraswat",
+      email: "register@stesi2026.org",
       responsibilities: ["Registration queries", "Payment issues", "Invoices"]
     },
     {
       department: "Local Arrangements",
-      contact: "Dr. Lisa Zhang",
-      email: "venue@isssc2025.org",
+      contact: "Dr. Divya Rishi Shrivastava",
+      email: "venue@stesi2026.org",
       responsibilities: ["Accommodation", "Transportation", "Local tours"]
     },
     {
       department: "Publicity & Media",
-      contact: "Dr. Michael Chen",
-      email: "media@isssc2025.org",
+      contact: "Dr. Bishwajit Dey",
+      email: "media@stesi2026.org",
       responsibilities: ["Press relations", "Marketing", "Sponsorship"]
     }
   ];
@@ -98,7 +62,7 @@ const Contact = () => {
   const faqs = [
     {
       question: "What is the registration deadline?",
-      answer: "Early bird registration ends on August 31, 2025. Regular registration continues until October 15, 2025."
+      answer: "Early bird registration ends on March 31, 2026. Regular registration continues until June 15, 2026."
     },
     {
       question: "Are virtual presentations allowed?",
@@ -131,117 +95,40 @@ const Contact = () => {
               Contact Us
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Get in touch with the iSSSC 2025 organizing team. We're here to help with any questions about the conference, registration, or submissions.
+              Get in touch with the STESI 2026 organizing team. We're here to help with any questions about the conference, registration, or submissions.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Form and Info */}
+      {/* Contact Information */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-gradient-card border border-border/50 shadow-card">
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <MessageSquare className="h-5 w-5 text-primary" />
-                    <span>Send us a Message</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Full Name *</Label>
-                        <Input
-                          id="name"
-                          value={formData.name}
-                          onChange={(e) => handleChange('name', e.target.value)}
-                          placeholder="Your full name"
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email Address *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => handleChange('email', e.target.value)}
-                          placeholder="your.email@example.com"
-                          required
-                        />
-                      </div>
-                    </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">Contact Information</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Reach out to us through any of the following channels for assistance.
+            </p>
+          </motion.div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="category">Inquiry Category</Label>
-                      <Select value={formData.category} onValueChange={(value) => handleChange('category', value)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select a category" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="registration">Registration & Payment</SelectItem>
-                          <SelectItem value="technical">Technical Program</SelectItem>
-                          <SelectItem value="submission">Paper Submission</SelectItem>
-                          <SelectItem value="venue">Venue & Travel</SelectItem>
-                          <SelectItem value="sponsorship">Sponsorship</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Subject *</Label>
-                      <Input
-                        id="subject"
-                        value={formData.subject}
-                        onChange={(e) => handleChange('subject', e.target.value)}
-                        placeholder="Brief subject of your inquiry"
-                        required
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
-                      <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => handleChange('message', e.target.value)}
-                        placeholder="Please provide details about your inquiry..."
-                        rows={6}
-                        required
-                      />
-                    </div>
-
-                    <Button type="submit" className="w-full">
-                      <Send className="h-4 w-4 mr-2" />
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              {contactInfo.map((info, index) => {
-                const IconComponent = info.icon;
-                return (
-                  <Card key={info.title} className="bg-card border border-border/50 shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {contactInfo.map((info, index) => {
+              const IconComponent = info.icon;
+              return (
+                <motion.div
+                  key={info.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="h-full bg-card border border-border/50 shadow-sm">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -259,15 +146,15 @@ const Contact = () => {
                       </div>
                     </CardContent>
                   </Card>
-                );
-              })}
-            </motion.div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Department Contacts */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -321,10 +208,10 @@ const Contact = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -335,7 +222,7 @@ const Contact = () => {
           >
             <h2 className="text-3xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Find quick answers to common questions about iSSSC 2025.
+              Find quick answers to common questions about STESI 2026.
             </p>
           </motion.div>
 
@@ -358,10 +245,10 @@ const Contact = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Social Media and Emergency Contact */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -371,7 +258,7 @@ const Contact = () => {
           >
             <h2 className="text-3xl font-bold text-primary mb-4">Stay Connected</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Follow us for the latest updates and announcements about iSSSC 2025.
+              Follow us for the latest updates and announcements about STESI 2026.
             </p>
             <div className="space-y-6">
               <div>
@@ -380,12 +267,12 @@ const Contact = () => {
               </div>
               <div>
                 <p className="font-medium">Social Media</p>
-                <p className="text-muted-foreground">Follow @iSSSC2025 for updates</p>
+                <p className="text-muted-foreground">Follow @STESI2026 for updates</p>
               </div>
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

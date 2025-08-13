@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { User } from 'lucide-react';
+
 
 const SupportingCommittees = () => {
   const publicityCommittee = [
@@ -74,7 +74,7 @@ const SupportingCommittees = () => {
             <p className="text-muted-foreground">Promoting STESI 2026 and reaching out to the global research community</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
             {publicityCommittee.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -84,14 +84,12 @@ const SupportingCommittees = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+
+                    <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-green-100 text-green-800">Publicity Committee</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>
@@ -101,7 +99,7 @@ const SupportingCommittees = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -117,7 +115,7 @@ const SupportingCommittees = () => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

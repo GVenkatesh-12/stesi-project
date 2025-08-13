@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { User } from 'lucide-react';
 
 const TechnicalProgramCommittee = () => {
   const technicalCommittee = [
@@ -83,7 +82,7 @@ const TechnicalProgramCommittee = () => {
             <p className="text-muted-foreground">Representing leading institutions from around the world</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {technicalCommittee.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -93,17 +92,15 @@ const TechnicalProgramCommittee = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center pb-3">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/40 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-sm leading-tight">{member.name}</CardTitle>
+                  <CardHeader className="text-center pb-3 pt-6">
+                    <CardTitle className="text-sm leading-tight mb-3">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto bg-primary/10 text-primary">Committee Member</Badge>
                   </CardHeader>
-                  <CardContent className="text-center pt-0">
-                    <div className="flex items-center justify-center gap-2 mb-2">
-                      <span className="text-2xl">{getCountryIcon(member.affiliation)}</span>
-                    </div>
-                    <p className="text-xs text-muted-foreground leading-tight">{member.affiliation}</p>
+                  <CardContent className="text-center pb-6">
+                                         <div className="flex items-center justify-center gap-2">
+                       <span className="text-lg flag-emoji">{getCountryIcon(member.affiliation)}</span>
+                       <p className="text-xs text-muted-foreground">{member.affiliation}</p>
+                     </div>
                   </CardContent>
                 </Card>
               </motion.div>

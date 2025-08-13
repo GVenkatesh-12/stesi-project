@@ -3,29 +3,29 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { User, Users, Heart, Award } from 'lucide-react';
+import { Users, Heart, Award } from 'lucide-react';
 
 const WomenInEngineering = () => {
   const wieChairs = [
     {
       name: "Dr. Prerna Gaur",
-      title: "WIE Chair"
+      title: "Netaji Subhash University of Technology, New Delhi"
     },
     {
       name: "Dr. Asha Rani",
-      title: "WIE Chair"
+      title: "NIT Silchar"
     },
     {
       name: "Dr. Ravita Lamba",
-      title: "WIE Chair"
+      title: "IIT Roorkee"
     },
     {
       name: "Dr. Dipti Saxena",
-      title: "WIE Chair"
+      title: "MNIT Jaipur"
     },
     {
       name: "Dr. Sunanda Sinha",
-      title: "WIE Chair"
+      title: "MNIT Jaipur"
     }
   ];
 
@@ -66,7 +66,7 @@ const WomenInEngineering = () => {
             <p className="text-muted-foreground">Leading initiatives to promote diversity and inclusion in engineering</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
             {wieChairs.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -76,14 +76,12 @@ const WomenInEngineering = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+
+                    <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-pink-100 text-pink-800">WIE Chair</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>

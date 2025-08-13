@@ -9,25 +9,25 @@ import { CheckCircle, Upload, FileText, Calendar, AlertCircle, Download } from '
 const CameraReady = () => {
   const timeline = [
     {
-      date: "August 31, 2025",
+      date: "April 15, 2026",
       milestone: "Notification of Acceptance",
       description: "Authors receive notification of paper acceptance",
       status: "completed"
     },
     {
-      date: "September 15, 2025",
+      date: "April 30, 2026",
       milestone: "Camera-Ready Submission Deadline",
       description: "Final versions of accepted papers must be submitted",
       status: "upcoming"
     },
     {
-      date: "September 20, 2025",
+      date: "Coming Soon",
       milestone: "Copyright Transfer",
       description: "IEEE copyright forms must be completed",
       status: "upcoming"
     },
     {
-      date: "October 1, 2025",
+      date: "Coming Soon",
       milestone: "Final Publication",
       description: "Papers processed for IEEE Xplore publication",
       status: "upcoming"
@@ -37,12 +37,12 @@ const CameraReady = () => {
   const requirements = [
     {
       title: "Page Limit",
-      description: "6 pages maximum for regular papers, 4 pages for short papers",
+      description: "6 pages maximum for regular papers",
       icon: FileText
     },
     {
       title: "Format",
-      description: "IEEE conference template (Letter size, double column)",
+      description: "IEEE conference template",
       icon: FileText
     },
     {
@@ -139,7 +139,7 @@ const CameraReady = () => {
             <div className="flex items-center justify-center space-x-4">
               <Badge variant="secondary" className="text-lg px-4 py-2">
                 <Calendar className="h-4 w-4 mr-2" />
-                Deadline: September 15, 2025
+                Deadline: April 30, 2026
               </Badge>
               <Badge variant="outline" className="text-lg px-4 py-2">
                 IEEE Format Required
@@ -368,7 +368,7 @@ const CameraReady = () => {
       </section>
 
       {/* Download Templates and Submit */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
@@ -437,10 +437,10 @@ const CameraReady = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Support */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -468,7 +468,7 @@ const CameraReady = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

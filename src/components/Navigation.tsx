@@ -36,6 +36,7 @@ const Navigation = () => {
         { name: 'Publication & Plenary Chairs', path: '/committee/publication-plenary-chairs' },
         { name: 'Supporting Committees', path: '/committee/supporting-committees' },
         { name: 'Women in Engineering', path: '/committee/women-in-engineering' },
+        { name: 'Track Chairs', path: '/committee/track-chairs' },
       ],
     },
     { name: 'Registration', path: '/registration' },

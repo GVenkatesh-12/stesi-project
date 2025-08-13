@@ -69,19 +69,21 @@ const Venue = () => {
     {
       icon: Plane,
       title: "By Air",
-      description: "Nearest Airport: Jaipur International Airport (25 km)",
+      description: "Nearest Airport: Jaipur International Airport (JAI) - 25 km",
       details: [
         "Direct flights from Delhi, Mumbai, Bangalore, Hyderabad, Kolkata",
+        "International connections via Delhi and Mumbai",
         "Taxi service available from airport (₹800-1,200)",
-        "Pre-paid taxi counters available at airport"
+        "Pre-paid taxi counters and ride-sharing apps available"
       ]
     },
     {
       icon: Train,
       title: "By Train",
-      description: "Nearest Railway Station: Jaipur Junction (20 km)",
+      description: "Nearest Railway Station: Jaipur Junction (JP) - 20 km",
       details: [
-        "Regular trains from major cities across India",
+        "Regular trains from major cities: Delhi, Mumbai, Bangalore, Kolkata",
+        "Rajdhani Express and Shatabdi Express services available",
         "Metro and taxi service to Manipal University Jaipur",
         "Auto-rickshaws and cabs available for local transport"
       ]
@@ -91,9 +93,10 @@ const Venue = () => {
       title: "By Road",
       description: "Well connected by national highways and expressways",
       details: [
-        "NH-48 connects to Delhi and Mumbai",
+        "NH-48 connects to Delhi (280 km) and Mumbai (1,200 km)",
         "Jaipur-Ajmer Express Highway for easy access",
-        "Bus services from major cities and self-drive options"
+        "Regular bus services from Delhi, Mumbai, and other major cities",
+        "Self-drive options available with good road conditions"
       ]
     }
   ];
@@ -102,26 +105,26 @@ const Venue = () => {
     {
       name: "Amber Fort",
       distance: "25 km",
-      description: "Historic hilltop fort with stunning architecture",
-      image: "/api/placeholder/400/300"
+      description: "Historic hilltop fort with stunning Rajput architecture and panoramic views",
+      image: "/Amber fort.png"
     },
     {
       name: "Hawa Mahal",
       distance: "20 km",
-      description: "Iconic palace of winds with intricate facade",
-      image: "/api/placeholder/400/300"
+      description: "Iconic palace of winds with intricate honeycomb facade and royal heritage",
+      image: "/Hawa mahal.png"
     },
     {
       name: "City Palace",
       distance: "22 km",
-      description: "Royal residence with museums and courtyards",
-      image: "/api/placeholder/400/300"
+      description: "Royal residence with museums, courtyards, and blend of Rajasthani and Mughal architecture",
+      image: "/City Palace.png"
     },
     {
       name: "Jantar Mantar",
       distance: "21 km",
-      description: "UNESCO World Heritage astronomical observatory",
-      image: "/api/placeholder/400/300"
+      description: "UNESCO World Heritage astronomical observatory with 19 architectural instruments",
+      image: "/Jantar mantar.png"
     }
   ];
 
@@ -142,7 +145,7 @@ const Venue = () => {
               Venue & Travel
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Join us at Manipal University Jaipur - a premier educational institution located in the vibrant city of Jaipur, Rajasthan.
+              Join us at Manipal University Jaipur - a premier educational institution located in the vibrant Pink City of Jaipur, Rajasthan.
             </p>
             <div className="flex items-center justify-center space-x-2 text-muted-foreground">
               <MapPin className="h-5 w-5" />
@@ -187,7 +190,7 @@ const Venue = () => {
               className="aspect-video bg-muted rounded-lg overflow-hidden"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.8694285739997!2d75.5635153!3d26.846217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4850e05bee3b%3A0x1b996759e9a2e5c1!2sManipal%20University%20Jaipur!5e0!3m2!1sen!2sin!4v1701234567890!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2850.6828598070338!2d75.5626594!3d26.84386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4850e05bee9b%3A0x1b8d67402d4eb863!2sManipal%20University%20Jaipur!5e1!3m2!1sen!2sin!4v1755078279944!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -281,73 +284,6 @@ const Venue = () => {
         </div>
       </section>
 
-      {/* Accommodations */}
-      {/* <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-primary mb-4">Recommended Accommodations</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              We've partnered with local hotels to offer special rates for conference attendees. Book early to secure the best deals.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {accommodations.map((hotel, index) => (
-              <motion.div
-                key={hotel.name}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader>
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <CardTitle className="text-xl text-primary">{hotel.name}</CardTitle>
-                        <div className="flex items-center space-x-2 mt-1">
-                          <MapPin className="h-4 w-4 text-muted-foreground" />
-                          <span className="text-sm text-muted-foreground">{hotel.distance}</span>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <Badge variant="secondary">{hotel.rating}</Badge>
-                        <div className="text-sm font-medium text-primary mt-1">{hotel.priceRange}</div>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Amenities</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {hotel.amenities.map((amenity) => (
-                          <Badge key={amenity} variant="outline" className="text-xs">
-                            {amenity}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-sm text-muted-foreground">
-                        <Hotel className="h-4 w-4 inline mr-1" />
-                        {hotel.contact}
-                      </div>
-                      <Button variant="outline" size="sm">Book Now</Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* Local Attractions */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -360,7 +296,7 @@ const Venue = () => {
           >
             <h2 className="text-3xl font-bold text-primary mb-4">Explore the Region</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Extend your stay and discover the natural beauty and rich cultural heritage of Odisha. Perfect for post-conference exploration.
+              Extend your stay and discover the rich cultural heritage and architectural marvels of Jaipur, the Pink City of India. Perfect for post-conference exploration.
             </p>
           </motion.div>
 
@@ -374,8 +310,13 @@ const Venue = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-card border border-border/50 shadow-sm hover:shadow-md transition-all duration-300">
-                  <div className="aspect-video bg-muted rounded-t-lg flex items-center justify-center">
-                    <Camera className="h-8 w-8 text-muted-foreground" />
+                  <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
+                    <img 
+                      src={attraction.image} 
+                      alt={attraction.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
                   <CardContent className="p-4">
                     <h3 className="font-semibold text-primary mb-1">{attraction.name}</h3>
@@ -392,30 +333,79 @@ const Venue = () => {
         </div>
       </section>
 
-      {/* Contact for Venue */}
-      {/* <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Additional Attractions */}
+      {/* <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-primary mb-4">Need Venue Assistance?</h2>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Our local arrangements team is here to help you with travel planning, accommodation bookings, and any venue-related queries.
+            <h2 className="text-3xl font-bold text-primary mb-4">More to Explore</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Jaipur offers a perfect blend of history, culture, and modern amenities for conference attendees.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <div>
-                <p className="font-medium">Local Arrangements</p>
-                <p className="text-muted-foreground">venue@stesi2026.org</p>
-              </div>
-              <div>
-                <p className="font-medium">Travel Support</p>
-                <p className="text-muted-foreground">+91-141-3999100</p>
-              </div>
-            </div>
           </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-gradient-card rounded-lg p-8 shadow-card"
+            >
+              <h3 className="text-2xl font-bold text-primary mb-4">Cultural Experiences</h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Traditional Markets:</strong> Johari Bazaar for jewelry, Bapu Bazaar for textiles</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Local Cuisine:</strong> Dal Baati Churma, Ghewar, Laal Maas</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Folk Performances:</strong> Traditional Rajasthani music and dance</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Handicrafts:</strong> Blue pottery, block printing, gemstone work</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-gradient-card rounded-lg p-8 shadow-card"
+            >
+              <h3 className="text-2xl font-bold text-primary mb-4">Practical Information</h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Best Time:</strong> October to March (pleasant weather)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Local Transport:</strong> Metro, buses, auto-rickshaws, cabs</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Currency:</strong> Indian Rupee (INR)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span><strong>Language:</strong> Hindi, English widely spoken</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
         </div>
       </section> */}
 

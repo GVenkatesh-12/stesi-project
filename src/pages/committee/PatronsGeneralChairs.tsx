@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { User } from 'lucide-react';
 
 const PatronsGeneralChairs = () => {
   const chiefPatron = {
@@ -19,26 +18,26 @@ const PatronsGeneralChairs = () => {
   const coPatrons = [
     {
       name: "Prof. Karunakar A Kotegar",
-      title: "Co-Patron"
+      title: "Pro-President, Manipal University Jaipur"
     },
     {
       name: "Prof. Amit Soni",
-      title: "Co-Patron"
+      title: "Registrar, Manipal University Jaipur"
     },
     {
       name: "Dr. Nitu Bhatnagar",
-      title: "Co-Patron"
+      title: "Provost, Manipal University Jaipur"
     }
   ];
 
   const generalChairs = [
     {
       name: "Prof. Kuldip Singh Sangwan",
-      title: "General Chair"
+      title: "Dean - FoSTA, Manipal University Jaipur"
     },
     {
       name: "Dr. Ravi Kant Gupta",
-      title: "General Chair"
+      title: "Associate Dean, SoE, Manipal University Jaipur"
     }
   ];
 
@@ -88,14 +87,11 @@ const PatronsGeneralChairs = () => {
               viewport={{ once: true }}
             >
               <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                <CardHeader className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <User className="h-10 w-10 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">{chiefPatron.name}</CardTitle>
+                <CardHeader className="text-center pt-6">
+                  <CardTitle className="text-xl mb-3">{chiefPatron.name}</CardTitle>
                   <Badge variant="secondary" className="mx-auto bg-yellow-100 text-yellow-800">Chief Patron</Badge>
                 </CardHeader>
-                <CardContent className="text-center">
+                <CardContent className="text-center pb-6">
                   <p className="text-sm text-muted-foreground">{chiefPatron.title}</p>
                 </CardContent>
               </Card>
@@ -127,14 +123,11 @@ const PatronsGeneralChairs = () => {
               viewport={{ once: true }}
             >
               <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                <CardHeader className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <User className="h-10 w-10 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">{patron.name}</CardTitle>
+                <CardHeader className="text-center pt-6">
+                  <CardTitle className="text-xl mb-3">{patron.name}</CardTitle>
                   <Badge variant="secondary" className="mx-auto bg-blue-100 text-blue-800">Patron</Badge>
                 </CardHeader>
-                <CardContent className="text-center">
+                <CardContent className="text-center pb-6">
                   <p className="text-sm text-muted-foreground">{patron.title}</p>
                 </CardContent>
               </Card>
@@ -158,7 +151,7 @@ const PatronsGeneralChairs = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {coPatrons.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -168,14 +161,11 @@ const PatronsGeneralChairs = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-green-100 text-green-800">Co-Patron</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>
@@ -200,7 +190,7 @@ const PatronsGeneralChairs = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
             {generalChairs.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -210,14 +200,11 @@ const PatronsGeneralChairs = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-purple-100 text-purple-800">General Chair</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>

@@ -12,9 +12,10 @@ const Templates = () => {
       name: "IEEE LaTeX Template",
       description: "Official IEEE conference template for LaTeX users",
       format: "LaTeX",
-      size: "2.5 MB",
-      lastUpdated: "August 2025",
+      size: "700 KB",
+      lastUpdated: "2024",
       recommended: true,
+      filePath: "/conference-latex-template_10-17-19.zip",
       features: [
         "Automatic formatting",
         "Bibliography management",
@@ -26,9 +27,10 @@ const Templates = () => {
       name: "IEEE Word Template",
       description: "Microsoft Word template with IEEE formatting",
       format: "DOCX",
-      size: "1.2 MB",
-      lastUpdated: "August 2025",
+      size: "300 KB",
+      lastUpdated: "2024",
       recommended: false,
+      filePath: "/conference-template-a4.docx",
       features: [
         "Pre-formatted styles",
         "Header and footer setup",
@@ -36,20 +38,7 @@ const Templates = () => {
         "Easy to use interface"
       ]
     },
-    {
-      name: "LibreOffice Template",
-      description: "Open-source template for LibreOffice Writer",
-      format: "ODT",
-      size: "0.8 MB",
-      lastUpdated: "July 2025",
-      recommended: false,
-      features: [
-        "IEEE compliant formatting",
-        "Free and open source",
-        "Cross-platform compatibility",
-        "Basic style templates"
-      ]
-    }
+    
   ];
 
   const supplementaryMaterials = [
@@ -145,6 +134,15 @@ const Templates = () => {
     "Including page numbers or headers"
   ];
 
+  const handleDownload = (filePath: string, fileName: string) => {
+    const link = document.createElement('a');
+    link.href = filePath;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -162,11 +160,17 @@ const Templates = () => {
               Paper Templates
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Download official IEEE templates and formatting guidelines for your iSSSC 2025 paper submission. Ensure your paper meets all requirements for successful publication.
+              Download official IEEE templates and formatting guidelines for your STESI 2026 paper submission. Ensure your paper meets all requirements for successful publication.
             </p>
             <Badge variant="secondary" className="text-lg px-4 py-2">
               IEEE Conference Format Required
             </Badge>
+            {/* add a hyperlink with button to the official IEEE website */}
+            <Button variant="outline" className="text-primary mt-4" asChild>
+              <a href="https://www.ieee.org/conferences/publishing/templates" target="_blank" rel="noopener noreferrer">
+                IEEE Author Center
+              </a>
+            </Button>
           </motion.div>
         </div>
       </section>
@@ -187,7 +191,7 @@ const Templates = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {templates.map((template, index) => (
               <motion.div
                 key={template.name}
@@ -238,7 +242,11 @@ const Templates = () => {
                       </ul>
                     </div>
                     
-                    <Button className="w-full" variant={template.recommended ? "default" : "outline"}>
+                    <Button 
+                      className="w-full" 
+                      variant={template.recommended ? "default" : "outline"}
+                      onClick={() => handleDownload(template.filePath, template.name)}
+                    >
                       <Download className="h-4 w-4 mr-2" />
                       Download Template
                     </Button>
@@ -251,7 +259,7 @@ const Templates = () => {
       </section>
 
       {/* Supplementary Materials */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -299,10 +307,10 @@ const Templates = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Formatting Guidelines */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -345,10 +353,10 @@ const Templates = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Common Mistakes */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -389,10 +397,10 @@ const Templates = () => {
             </CardContent>
           </Card>
         </div>
-      </section>
+      </section> */}
 
       {/* Help and Support */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -430,7 +438,7 @@ const Templates = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

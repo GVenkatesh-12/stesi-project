@@ -6,31 +6,31 @@ const ImportantDatesSection = () => {
   const dates = [
     {
       title: 'First Call for Papers',
-      date: '20th June 2025',
+      date: 'September 1, 2025',
       icon: FileText,
       color: 'text-blue-500',
     },
     {
       title: 'Last Date for Submission',
-      date: '15th Feb. 2026',
+      date: 'February 15, 2026',
       icon: Calendar,
       color: 'text-red-500',
     },
     {
       title: 'Notification of Acceptance',
-      date: '15th April 2026',
+      date: 'April 15, 2026',
       icon: CheckCircle,
       color: 'text-green-500',
     },
     {
       title: 'Camera Ready Paper Submission',
-      date: '30th April 2026',
+      date: 'April 30, 2026',
       icon: Camera,
       color: 'text-purple-500',
     },
     {
       title: 'Registration Starts',
-      date: '5th May 2026',
+      date: 'May 5, 2026',
       icon: UserPlus,
       color: 'text-orange-500',
     },

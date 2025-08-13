@@ -15,7 +15,7 @@ const CallForPapers = () => {
     {
       icon: Users,
       title: 'Review Process',
-      description: 'All submissions will undergo rigorous peer review by expert reviewers in the respective fields.',
+      description: 'All submissions will undergo rigorous peer review by three expert reviewers in the respective fields.',
     },
     {
       icon: Award,

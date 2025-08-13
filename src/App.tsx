@@ -26,6 +26,7 @@ import TechnicalProgramCommittee from "./pages/committee/TechnicalProgramCommitt
 import PublicationPlenaryChairs from "./pages/committee/PublicationPlenaryChairs";
 import SupportingCommittees from "./pages/committee/SupportingCommittees";
 import WomenInEngineering from "./pages/committee/WomenInEngineering";
+import TrackChairs from "./pages/committee/TrackChairs";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/committee/publication-plenary-chairs" element={<PublicationPlenaryChairs />} />
           <Route path="/committee/supporting-committees" element={<SupportingCommittees />} />
           <Route path="/committee/women-in-engineering" element={<WomenInEngineering />} />
+          <Route path="/committee/track-chairs" element={<TrackChairs />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/accepted-papers" element={<AcceptedPapers />} />

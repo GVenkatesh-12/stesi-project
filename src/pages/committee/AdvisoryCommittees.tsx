@@ -3,31 +3,30 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { User } from 'lucide-react';
 
 const AdvisoryCommittees = () => {
   const instituteAdvisoryCommittee = [
-    { name: "Dr. Amit Soni", title: "Institute Advisory Committee" },
-    { name: "Prof. Kuldip Singh Sangwan", title: "Institute Advisory Committee" }
+    { name: "Dr. Amit Soni", title: "Manipal University Jaipur" },
+    { name: "Prof. Kuldip Singh Sangwan", title: "Manipal University Jaipur" }
   ];
 
   const nationalAdvisoryCommittee = [
-    { name: "Dr. K. R. Niazi", title: "National Advisory Committee" },
-    { name: "Dr. Chandan Kumar", title: "National Advisory Committee" },
-    { name: "Dr. Rajib Dey", title: "National Advisory Committee" },
-    { name: "Dr. Trapti Jain", title: "National Advisory Committee" }
+    { name: "Dr. K. R. Niazi", title: "MNIT Jaipur" },
+    { name: "Dr. Chandan Kumar", title: "IIT Guwahati" },
+    { name: "Dr. Rajib Dey", title: "NIT Silchar" },
+    { name: "Dr. Trapti Jain", title: "IIT Indore" }
   ];
 
   const internationalAdvisoryCommittee = [
-    { name: "Dr. Rajesh Kumar", title: "International Advisory Committee" },
-    { name: "Dr. Ramesh Bansal", title: "International Advisory Committee" },
-    { name: "Prof. Almoataz Youssef Abdelaziz", title: "International Advisory Committee" }
+    { name: "Dr. Rajesh Kumar", title: "University of Johannesburg, South Africa" },
+    { name: "Dr. Ramesh Bansal", title: "University in Sharjah, United Arab Emirates" },
+    { name: "Prof. Almoataz Youssef Abdelaziz", title: "Ain Shams University, Egypt" }
   ];
 
   const steeringCommittee = [
-    { name: "Dr. Nikhil Gupta", title: "Steering Committee" },
-    { name: "Dr. Sanjib Ganguly", title: "Steering Committee" },
-    { name: "Dr. Prerna Gaur", title: "Steering Committee" }
+    { name: "Dr. Nikhil Gupta", title: "MNIT Jaipur" },
+    { name: "Dr. Sanjib Ganguly", title: "IIT Guwahati" },
+    { name: "Dr. Prerna Gaur", title: " Netaji Subhash University of Technology, New Delhi" }
   ];
 
   return (
@@ -66,7 +65,7 @@ const AdvisoryCommittees = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
             {instituteAdvisoryCommittee.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -76,14 +75,11 @@ const AdvisoryCommittees = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-blue-100 text-blue-800">Institute Advisory</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>
@@ -107,7 +103,7 @@ const AdvisoryCommittees = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {nationalAdvisoryCommittee.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -117,15 +113,12 @@ const AdvisoryCommittees = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-sm leading-tight mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-green-100 text-green-800">National Advisory</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
-                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  <CardContent className="text-center pb-6">
+                    <p className="text-xs text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -148,7 +141,7 @@ const AdvisoryCommittees = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {internationalAdvisoryCommittee.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -158,14 +151,11 @@ const AdvisoryCommittees = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-purple-100 text-purple-800">International Advisory</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>
@@ -189,7 +179,7 @@ const AdvisoryCommittees = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {steeringCommittee.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -199,14 +189,11 @@ const AdvisoryCommittees = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-orange-100 text-orange-800">Steering Committee</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>

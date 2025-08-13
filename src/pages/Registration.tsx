@@ -60,10 +60,10 @@ const Registration = () => {
   ];
 
   const importantDates = [
-    { event: "Early Bird Registration", date: "August 31, 2025", status: "open" },
-    { event: "Regular Registration", date: "September 30, 2025", status: "upcoming" },
-    { event: "Late Registration", date: "October 15, 2025", status: "upcoming" },
-    { event: "On-site Registration", date: "July 22, 2026", status: "upcoming" }
+    { event: "Early Bird Registration", date: "March 31, 2026", status: "open" },
+    { event: "Regular Registration", date: "May 31, 2026", status: "upcoming" },
+    { event: "Late Registration", date: "June 15, 2026", status: "upcoming" },
+    { event: "On-site Registration", date: "July 22-23, 2026", status: "upcoming" }
   ];
 
   return (
@@ -83,10 +83,10 @@ const Registration = () => {
               Registration
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Secure your spot at iSSSC 2025. Choose from our flexible registration options and join the premier symposium on sustainable energy, signal processing, and cybersecurity.
+              Secure your spot at STESI 2026. Choose from our flexible registration options and join the premier conference on Smart Technologies for Energy, Sustainability & Industry.
             </p>
             <Badge variant="secondary" className="text-lg px-4 py-2">
-              Early Bird Pricing Available Until August 31, 2025
+              Registration Starts on May 5, 2026
             </Badge>
           </motion.div>
         </div>
@@ -130,10 +130,10 @@ const Registration = () => {
                   </div>
 
           <div className="text-center">
-            <Button size="lg" className="px-8 py-3">
+            {/* <Button size="lg" className="px-8 py-3">
               <CreditCard className="h-5 w-5 mr-2" />
                       Register Now
-                    </Button>
+                    </Button> */}
           </div>
         </div>
       </section>
@@ -184,7 +184,7 @@ const Registration = () => {
       </section>
 
       {/* Important Dates */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -228,10 +228,10 @@ const Registration = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Information */}
-      <section className="py-16 bg-muted/30">
+      {/* <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -246,16 +246,16 @@ const Registration = () => {
             <div className="space-y-4">
               <div>
                 <p className="font-medium">Registration Support</p>
-                <p className="text-muted-foreground">register@isssc2025.org</p>
+                <p className="text-muted-foreground">stesi2026.muj@gmail.com</p>
               </div>
               <div>
                 <p className="font-medium">Phone Support</p>
-                <p className="text-muted-foreground">+91-6860-123456 (9 AM - 6 PM IST)</p>
+                <p className="text-muted-foreground">+91-141-3999100 (9 AM - 6 PM IST)</p>
               </div>
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>
