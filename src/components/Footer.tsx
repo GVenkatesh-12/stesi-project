@@ -30,9 +30,9 @@ const Footer = () => {
           {/* Conference Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">iS</span>
-              </div>
+              </div> */}
                               <span className="text-xl font-bold">STESI 2026</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
