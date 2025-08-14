@@ -28,7 +28,7 @@ const HeroSection = () => {
         <img 
           src="/mug-logo-nbg-white.png" 
           alt="Manipal University Jaipur Logo"
-          className="h-16 sm:h-18 lg:h-20 filter brightness-0 invert mt-10"
+          className="h-20 sm:h-20 lg:h-20 filter brightness-0 invert mt-10"
         />
       </motion.div>
 
