@@ -53,9 +53,9 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/manipal-university-jaipur-logo-01.svg" 
+              src="/muj-logo-nbg.png" 
               alt="Manipal University Jaipur Logo"
-              className="h-12 w-auto"
+              className="h-[74px] w-auto"
             />
             {/* <div className="hidden sm:block">
                               <span className="text-xl font-bold text-primary">STESI 2026</span>
