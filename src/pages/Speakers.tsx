@@ -31,12 +31,12 @@ const Speakers = () => {
     {
       name: "Prof. Rajesh Kumar",
       title: "Professor",
-      organization: "Malaviya National Institute of Technology Jaipur, India",
+      organization: "Department of Human Anatomy and Physiology, University of Johannesburg, South Africa",
       image: "/speaker3.png",
-      bio: "Prof Rajesh Kumar is a renowned researcher in Artificial Intelligence, Machine Intelligence, Bio and Nature inspired Algorithms, Healthcare, and Energy. He has published over 150 research papers in international journals and conferences. His research spans across multiple disciplines, focusing on innovative AI solutions for real-world challenges. Prof. Kumar has supervised more than 25 Ph.D. students and has been actively involved in developing bio-inspired algorithms for healthcare applications and energy optimization. He has received several national and international awards for his contributions to AI research.",
-      topic: "Bio-Inspired AI Algorithms for Healthcare and Energy Applications",
-      expertise: ["Artificial Intelligence", "Machine Intelligence", "Bio-inspired Algorithms", "Healthcare", "Energy", "Optimization", "Neural Networks"],
-      awards: ["Distinguished Professor Award MNIT", "AI Research Excellence Award", "Best Teacher Award", "IEEE Senior Member", "Outstanding Researcher Award"]
+      bio: "Prof. Rajesh Kumar is a distinguished Professor in the Department of Human Anatomy and Physiology at the University of Johannesburg. He is a leading researcher with an h-index of 43 and over 6,481 citations to his work. His research interests encompass Artificial Intelligence, Machine Intelligence, Bio and Nature-inspired Algorithms, Healthcare, and Energy. Prof. Kumar has co-authored several significant publications in 2025, including work on non-destructive methods for predicting concrete's compressive strength using hyper-tuned machine learning techniques, twisting controller applications for power management in solar PV systems, and AI-based path planning techniques for flexible bevel-tipped needles in healthcare diagnostics. His research contributions align with multiple United Nations Sustainable Development Goals, demonstrating his commitment to addressing global challenges through innovative AI solutions.",
+      topic: "AI-Powered Healthcare Diagnostics and Sustainable Energy Solutions",
+      expertise: ["Artificial Intelligence", "Machine Intelligence", "Bio-inspired Algorithms", "Healthcare", "Energy", "Machine Learning", "Power Management", "Solar PV Systems", "Healthcare Diagnostics", "Sustainable Development"],
+      awards: ["h-index 43", "6,481+ Citations", "Research Excellence in AI", "Contributions to UN SDGs", "IEEE Member", "Outstanding Researcher Award"]
     },
     {
       name: "Prof. Almoataz Youssef Abdelaziz Mohamed",
@@ -50,44 +50,44 @@ const Speakers = () => {
     }
   ];
 
-  const invitedSpeakers = [
-    {
-      name: "Dr. Elena Rodriguez",
-      organization: "Global Energy Solutions Inc.",
-      topic: "The Future of Sustainable Energy: From Grid to Edge",
-      expertise: "Renewable Energy"
-    },
-    {
-      name: "Prof. David Kim",
-      organization: "Stanford University",
-      topic: "AI-Driven Signal Processing: Opportunities and Challenges",
-      expertise: "Machine Learning"
-    },
-    {
-      name: "Dr. Sarah Mitchell",
-      organization: "Microsoft Research",
-      topic: "Quantum-Safe Cybersecurity for Critical Infrastructure",
-      expertise: "Cybersecurity"
-    },
-    {
-      name: "Dr. Ahmed Hassan",
-      organization: "Cairo University",
-      topic: "Blockchain Applications in Energy Trading",
-      expertise: "Blockchain Technology"
-    },
-    {
-      name: "Prof. Lisa Chen",
-      organization: "MIT",
-      topic: "5G Signal Processing Architectures",
-      expertise: "Wireless Communications"
-    },
-    {
-      name: "Dr. Robert Taylor",
-      organization: "IBM Research",
-      topic: "Edge Computing Security Frameworks",
-      expertise: "Edge Computing"
-    }
-  ];
+  // const invitedSpeakers = [
+  //   {
+  //     name: "Dr. Elena Rodriguez",
+  //     organization: "Global Energy Solutions Inc.",
+  //     topic: "The Future of Sustainable Energy: From Grid to Edge",
+  //     expertise: "Renewable Energy"
+  //   },
+  //   {
+  //     name: "Prof. David Kim",
+  //     organization: "Stanford University",
+  //     topic: "AI-Driven Signal Processing: Opportunities and Challenges",
+  //     expertise: "Machine Learning"
+  //   },
+  //   {
+  //     name: "Dr. Sarah Mitchell",
+  //     organization: "Microsoft Research",
+  //     topic: "Quantum-Safe Cybersecurity for Critical Infrastructure",
+  //     expertise: "Cybersecurity"
+  //   },
+  //   {
+  //     name: "Dr. Ahmed Hassan",
+  //     organization: "Cairo University",
+  //     topic: "Blockchain Applications in Energy Trading",
+  //     expertise: "Blockchain Technology"
+  //   },
+  //   {
+  //     name: "Prof. Lisa Chen",
+  //     organization: "MIT",
+  //     topic: "5G Signal Processing Architectures",
+  //     expertise: "Wireless Communications"
+  //   },
+  //   {
+  //     name: "Dr. Robert Taylor",
+  //     organization: "IBM Research",
+  //     topic: "Edge Computing Security Frameworks",
+  //     expertise: "Edge Computing"
+  //   }
+  // ];
 
   const schedule = [
     {
