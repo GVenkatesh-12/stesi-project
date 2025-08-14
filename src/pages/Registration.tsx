@@ -112,123 +112,123 @@ const Registration = () => {
               </TableHeader>
               <TableBody>
                 {/* Indian Participants Section */}
-                <TableRow className="bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200">
-                  <TableCell colSpan={5} className="text-center text-base font-bold text-blue-900 py-3 px-4 border-b-2 border-blue-300">
+                <TableRow className="bg-gradient-to-r from-blue-100 to-blue-200 hover:from-blue-200 hover:to-blue-300">
+                  <TableCell colSpan={5} className="text-center text-base font-bold text-blue-900 py-3 px-4 border-b-2 border-blue-400">
                     Indian Participants
                   </TableCell>
                 </TableRow>
                 
-                <TableRow className="hover:bg-gray-50 border-b border-gray-100">
-                  <TableCell className="font-semibold text-gray-800 pl-6 py-3 px-4 border-r border-gray-200">
+                <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-white">
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
                     Student
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
                     ₹6,000
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
                     ₹8,000
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-700 text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3 border-r border-gray-300">
                     ₹8,000
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-700 text-base py-3 px-3">
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3">
                     ₹10,000
                   </TableCell>
                 </TableRow>
                 
-                <TableRow className="hover:bg-gray-50 border-b border-gray-100">
-                  <TableCell className="font-semibold text-gray-800 pl-6 py-3 px-4 border-r border-gray-200">
+                <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-gray-50">
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
                     Academician
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-200" colSpan={2}>
+                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
                     ₹11,000
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-700 text-base py-3 px-3 border-r border-gray-200" colSpan={2}>
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
                     ₹13,000
                   </TableCell>
                 </TableRow>
                 
-                <TableRow className="hover:bg-gray-50 border-b border-gray-100">
-                  <TableCell className="font-semibold text-gray-800 pl-6 py-3 px-4 border-r border-gray-200">
+                <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-white">
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
                     Industry
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-200" colSpan={2}>
+                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
                     ₹13,000
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-700 text-base py-3 px-3 border-r border-gray-200" colSpan={2}>
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
                     ₹15,000
                   </TableCell>
                 </TableRow>
                 
-                <TableRow className="hover:bg-gray-50 border-b border-gray-100">
-                  <TableCell className="font-semibold text-gray-800 pl-6 py-3 px-4 border-r border-gray-200">
+                <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-gray-50">
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
                     Attendee
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-400 text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-gray-500 text-base py-3 px-3 border-r border-gray-300">
                     -
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
                     ₹2,000
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-400 text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-gray-500 text-base py-3 px-3 border-r border-gray-300">
                     -
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-700 text-base py-3 px-3">
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3">
                     ₹5,000
                   </TableCell>
                 </TableRow>
 
                 {/* Foreign Participants Section */}
-                <TableRow className="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200">
-                  <TableCell colSpan={5} className="text-center text-base font-bold text-green-900 py-3 px-4 border-b-2 border-green-300">
+                <TableRow className="bg-gradient-to-r from-green-100 to-green-200 hover:from-green-200 hover:to-green-300">
+                  <TableCell colSpan={5} className="text-center text-base font-bold text-green-900 py-3 px-4 border-b-2 border-green-400">
                     Foreign Participants
                   </TableCell>
                 </TableRow>
                 
-                <TableRow className="hover:bg-gray-50 border-b border-gray-100">
-                  <TableCell className="font-semibold text-gray-800 pl-6 py-3 px-4 border-r border-gray-200">
+                <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-white">
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
                     Student
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
                     $100
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
                     $120
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-700 text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3 border-r border-gray-300">
                     $120
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-700 text-base py-3 px-3">
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3">
                     $150
                   </TableCell>
                 </TableRow>
                 
-                <TableRow className="hover:bg-gray-50 border-b border-gray-100">
-                  <TableCell className="font-semibold text-gray-800 pl-6 py-3 px-4 border-r border-gray-200">
+                <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-gray-50">
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
                     Academician
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-200" colSpan={2}>
+                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
                     $200
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-700 text-base py-3 px-3 border-r border-gray-200" colSpan={2}>
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
                     $250
                   </TableCell>
                 </TableRow>
                 
-                <TableRow className="hover:bg-gray-50 border-b border-gray-100">
-                  <TableCell className="font-semibold text-gray-800 pl-6 py-3 px-4 border-r border-gray-200">
+                <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-white">
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
                     Attendee
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-400 text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-gray-500 text-base py-3 px-3 border-r border-gray-300">
                     -
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
                     $50
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-400 text-base py-3 px-3 border-r border-gray-200">
+                  <TableCell className="text-center font-bold text-gray-500 text-base py-3 px-3 border-r border-gray-300">
                     -
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-700 text-base py-3 px-3">
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3">
                     $100
                   </TableCell>
                 </TableRow>

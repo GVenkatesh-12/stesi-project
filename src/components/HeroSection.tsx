@@ -26,9 +26,9 @@ const HeroSection = () => {
         className="absolute top-8 left-8 z-20"
       >
         <img 
-          src="/manipal-university-jaipur-logo-01.svg" 
+          src="/mug-logo-nbg-white.png" 
           alt="Manipal University Jaipur Logo"
-          className="h-16 sm:h-18 lg:h-16 filter brightness-0 invert mt-10"
+          className="h-16 sm:h-18 lg:h-20 filter brightness-0 invert mt-10"
         />
       </motion.div>
 
