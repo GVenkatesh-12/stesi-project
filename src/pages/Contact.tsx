@@ -9,7 +9,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "General Inquiries",
-      details: ["stesi2026.muj@gmail.com", "Registration: stesi2026.muj@gmail.com"],
+      details: ["stesi@jaipur.manipal.edu", "Registration: stesi@jaipur.manipal.edu"],
       description: "For general conference information and registration support"
     },
     {
