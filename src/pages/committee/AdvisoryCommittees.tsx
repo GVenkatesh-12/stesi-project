@@ -20,7 +20,10 @@ const AdvisoryCommittees = () => {
   const internationalAdvisoryCommittee = [
     { name: "Dr. Rajesh Kumar", title: "University of Johannesburg, South Africa" },
     { name: "Dr. Ramesh Bansal", title: "University in Sharjah, United Arab Emirates" },
-    { name: "Prof. Almoataz Youssef Abdelaziz", title: "Ain Shams University, Egypt" }
+    { name: "Prof. Almoataz Youssef Abdelaziz", title: "Ain Shams University, Egypt" },
+    { name: "Prof. Dipti Srinivasan", title: "National University of Singapore (NUS), Singapore" },
+    { name: "Prof. Lalit Goel", title: "Nanyang Technological University (NTU), Singapore" },
+    { name: "Prof. Akshay Kumar Rathore", title: "National University of Singapore (NUS), Singapore" }
   ];
 
   const steeringCommittee = [
