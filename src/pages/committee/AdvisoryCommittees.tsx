@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 const AdvisoryCommittees = () => {
   const instituteAdvisoryCommittee = [
     { name: "Dr. Amit Soni", title: "Manipal University Jaipur" },
-    { name: "Prof. Kuldip Singh Sangwan", title: "Manipal University Jaipur" }
+    { name: "Dr. Kuldip Singh Sangwan", title: "Manipal University Jaipur" }
   ];
 
   const nationalAdvisoryCommittee = [
@@ -20,10 +20,10 @@ const AdvisoryCommittees = () => {
   const internationalAdvisoryCommittee = [
     { name: "Dr. Rajesh Kumar", title: "University of Johannesburg, South Africa" },
     { name: "Dr. Ramesh Bansal", title: "University in Sharjah, United Arab Emirates" },
-    { name: "Prof. Almoataz Youssef Abdelaziz", title: "Ain Shams University, Egypt" },
-    { name: "Prof. Dipti Srinivasan", title: "National University of Singapore (NUS), Singapore" },
-    { name: "Prof. Lalit Goel", title: "Nanyang Technological University (NTU), Singapore" },
-    { name: "Prof. Akshay Kumar Rathore", title: "National University of Singapore (NUS), Singapore" }
+    { name: "Dr. Almoataz Youssef Abdelaziz", title: "Ain Shams University, Egypt" },
+    { name: "Dr. Dipti Srinivasan", title: "National University of Singapore (NUS), Singapore" },
+    { name: "Dr. Lalit Goel", title: "Nanyang Technological University (NTU), Singapore" },
+    { name: "Dr. Akshay Kumar Rathore", title: "National University of Singapore (NUS), Singapore" }
   ];
 
   const steeringCommittee = [

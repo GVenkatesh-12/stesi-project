@@ -42,7 +42,7 @@ const TrackChairs = () => {
     {
       id: 4,
       title: "Signal Processing & Intelligent Systems",
-      chair: "Mr. Peeyush Garg",
+      chair: "Dr. Peeyush Garg",
       chairInstitution: "Manipal University Jaipur",
       coChair: "Dr. Arvind R. Singh",
       coChairInstitution: "Hanjiang Normal University, China",
@@ -53,8 +53,8 @@ const TrackChairs = () => {
     {
       id: 5,
       title: "Advanced Computing and Intelligent Technologies",
-      chair: "Dr. Amit Saraswat",
-      chairInstitution: "Manipal University Jaipur",
+      chair: "Dr. Mahipal Bhukya",
+      chairInstitution: " Manipal Institute of Technology, Bangalore",
       coChair: "Dr. Jyoti Grover",
       coChairInstitution: "MNIT, Jaipur",
       gradient: "from-red-50 to-red-100 dark:from-red-950 dark:to-red-900",

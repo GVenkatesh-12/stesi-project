@@ -15,33 +15,33 @@ const Committee = () => {
 
   const patrons = [
     {
-      name: "Prof. N. N. Sharma",
+      name: "Dr. N. N. Sharma",
       title: "President MUJ"
     }
   ];
 
   const coPatrons = [
     {
-      name: "Prof. Karunakar A Kotegar",
+      name: "Dr. Karunakar A Kotegar",
       title: "Pro President MUJ"
     },
     {
-      name: "Prof. Amit Soni",
+      name: "Dr. Amit Soni",
       title: "Registrar MUJ"
     },
     {
-      name: "Prof. Nitu Bhatnagar",
+      name: "Dr. Nitu Bhatnagar",
       title: "Provost MUJ"
     }
   ];
 
   const generalChairs = [
     {
-      name: "Prof. Kuldip Singh Sangwan",
+      name: "Dr. Kuldip Singh Sangwan",
       title: "Dean-FoSTA, MUJ"
     },
     {
-      name: "Prof. Ravi Kant Gupta",
+      name: "Dr. Ravi Kant Gupta",
       title: "Associate Dean-SoE, MUJ"
     }
   ];

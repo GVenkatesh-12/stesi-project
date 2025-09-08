@@ -83,9 +83,18 @@ const About = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
               About STESI 2026
             </h1>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
               International Conference on Smart Technologies for Energy, Sustainability & Industry
             </p>
+            <div className="relative bg-gradient-to-r from-primary/10 to-conference-accent/10 rounded-lg p-6 border border-primary/20 overflow-hidden">
+              {/* Shiny animation overlay */}
+              <div className="absolute inset-0 -top-2 -left-2 -right-2 -bottom-2 bg-gradient-to-r from-transparent via-white/80 to-transparent transform -skew-x-12 animate-shine"></div>
+              <p className="relative text-lg sm:text-xl font-bold text-primary text-center z-10">
+                <span className="text-2xl sm:text-3xl">"</span>
+                Innovative Smart Technologies Driving Energy Transition, Sustainable Development, and Industrial Transformation
+                <span className="text-2xl sm:text-3xl">"</span>
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>

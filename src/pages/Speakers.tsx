@@ -9,17 +9,17 @@ import { MapPin, Calendar, User, ExternalLink } from 'lucide-react';
 const Speakers = () => {
   const keynoteSpeakers = [
     {
-      name: "Prof. Dr. André Eugenio Lazzaretti",
+      name: "Dr. André Eugenio Lazzaretti",
       title: "Professor",
       organization: "Federal University of Technology - Paraná (UTFPR), Brazil",
       image: "/speaker1.png",
-      bio: "Prof. Dr. André Eugenio Lazzaretti is a distinguished researcher and professor at UTFPR, specializing in pattern recognition, machine learning, digital signal processing, embedded systems, and instrumentation. He has published extensively in top-tier journals and conferences, with over 100 peer-reviewed publications. His research focuses on developing innovative algorithms for signal processing applications, particularly in biomedical engineering and industrial automation. Dr. Lazzaretti has supervised numerous Ph.D. and M.Sc. students and has been actively involved in international research collaborations.",
+      bio: "Dr. André Eugenio Lazzaretti is a distinguished researcher and professor at UTFPR, specializing in pattern recognition, machine learning, digital signal processing, embedded systems, and instrumentation. He has published extensively in top-tier journals and conferences, with over 100 peer-reviewed publications. His research focuses on developing innovative algorithms for signal processing applications, particularly in biomedical engineering and industrial automation. Dr. Lazzaretti has supervised numerous Ph.D. and M.Sc. students and has been actively involved in international research collaborations.",
       topic: "Advances in Pattern Recognition and Machine Learning for Signal Processing",
       expertise: ["Pattern Recognition", "Machine Learning", "Digital Signal Processing", "Embedded Systems", "Instrumentation", "Biomedical Engineering"],
       awards: ["IEEE Senior Member", "Distinguished Researcher Award UTFPR", "Best Paper Award IEEE SPS", "Research Excellence Award"]
     },
     {
-      name: "Prof. Fausto Pedro García Márquez",
+      name: "Dr. Fausto Pedro García Márquez",
       title: "Professor",
       organization: "University of Castilla-La Mancha, Spain",
       image: "/speaker2.png",
@@ -29,17 +29,17 @@ const Speakers = () => {
       awards: ["Research Excellence Award UCLM", "AI Innovation Prize", "Best Researcher Award", "IEEE Senior Member", "Outstanding Contribution Award"]
     },
     {
-      name: "Prof. Rajesh Kumar",
+      name: "Dr. Rajesh Kumar",
       title: "Professor",
       organization: "Department of Human Anatomy and Physiology, University of Johannesburg, South Africa",
       image: "/speaker3.png",
-      bio: "Prof. Rajesh Kumar is a distinguished Professor in the Department of Human Anatomy and Physiology at the University of Johannesburg. He is a leading researcher with an h-index of 43 and over 6,481 citations to his work. His research interests encompass Artificial Intelligence, Machine Intelligence, Bio and Nature-inspired Algorithms, Healthcare, and Energy. Prof. Kumar has co-authored several significant publications in 2025, including work on non-destructive methods for predicting concrete's compressive strength using hyper-tuned machine learning techniques, twisting controller applications for power management in solar PV systems, and AI-based path planning techniques for flexible bevel-tipped needles in healthcare diagnostics. His research contributions align with multiple United Nations Sustainable Development Goals, demonstrating his commitment to addressing global challenges through innovative AI solutions.",
+      bio: "Dr. Rajesh Kumar is a distinguished Professor in the Department of Human Anatomy and Physiology at the University of Johannesburg. He is a leading researcher with an h-index of 43 and over 6,481 citations to his work. His research interests encompass Artificial Intelligence, Machine Intelligence, Bio and Nature-inspired Algorithms, Healthcare, and Energy. Prof. Kumar has co-authored several significant publications in 2025, including work on non-destructive methods for predicting concrete's compressive strength using hyper-tuned machine learning techniques, twisting controller applications for power management in solar PV systems, and AI-based path planning techniques for flexible bevel-tipped needles in healthcare diagnostics. His research contributions align with multiple United Nations Sustainable Development Goals, demonstrating his commitment to addressing global challenges through innovative AI solutions.",
       topic: "AI-Powered Healthcare Diagnostics and Sustainable Energy Solutions",
       expertise: ["Artificial Intelligence", "Machine Intelligence", "Bio-inspired Algorithms", "Healthcare", "Energy", "Machine Learning", "Power Management", "Solar PV Systems", "Healthcare Diagnostics", "Sustainable Development"],
       awards: ["h-index 43", "6,481+ Citations", "Research Excellence in AI", "Contributions to UN SDGs", "IEEE Member", "Outstanding Researcher Award"]
     },
     {
-      name: "Prof. Almoataz Youssef Abdelaziz Mohamed",
+      name: "Dr. Almoataz Youssef Abdelaziz Mohamed",
       title: "Professor",
       organization: "Future University in Egypt, Cairo, Egypt",
       image: "/speaker4.png",
