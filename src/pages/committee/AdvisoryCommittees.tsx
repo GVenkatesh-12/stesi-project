@@ -23,7 +23,11 @@ const AdvisoryCommittees = () => {
     { name: "Dr. Almoataz Youssef Abdelaziz", title: "Ain Shams University, Egypt" },
     { name: "Dr. Dipti Srinivasan", title: "National University of Singapore (NUS), Singapore" },
     { name: "Dr. Lalit Goel", title: "Nanyang Technological University (NTU), Singapore" },
-    { name: "Dr. Akshay Kumar Rathore", title: "National University of Singapore (NUS), Singapore" }
+    { name: "Dr. Akshay Kumar Rathore", title: "National University of Singapore (NUS), Singapore" },
+    { name: "Dr. Biplab Sikdar", title: "National University of Singapore (NUS), Singapore" },
+    { name: "Dr. Mohan Lal Kolhe", title: "University of Agder, Norway" },
+    { name: "Dr. Kashem Muttaqi", title: "University of Wollongong, Australia" },
+    { name: "Dr. Vinod Khadkikar", title: "Khalifa University, United Arab Emirates" }
   ];
 
   const steeringCommittee = [
