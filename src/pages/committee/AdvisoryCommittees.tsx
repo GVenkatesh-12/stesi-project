@@ -27,7 +27,9 @@ const AdvisoryCommittees = () => {
     { name: "Dr. Biplab Sikdar", title: "National University of Singapore (NUS), Singapore" },
     { name: "Dr. Mohan Lal Kolhe", title: "University of Agder, Norway" },
     { name: "Dr. Kashem Muttaqi", title: "University of Wollongong, Australia" },
-    { name: "Dr. Vinod Khadkikar", title: "Khalifa University, United Arab Emirates" }
+    { name: "Dr. Vinod Khadkikar", title: "Khalifa University, United Arab Emirates" },
+    { name: "Dr. Dr. Anurag Sharma", title: "Newcastle University, Singapore" },
+    { name: "Dr. Celia Shahnaz", title: "Bangladesh University of Engineering and Technology, Bangladesh" }
   ];
 
   const steeringCommittee = [
