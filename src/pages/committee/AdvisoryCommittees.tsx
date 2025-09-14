@@ -14,7 +14,26 @@ const AdvisoryCommittees = () => {
     { name: "Dr. K. R. Niazi", title: "MNIT Jaipur" },
     { name: "Dr. Chandan Kumar", title: "IIT Guwahati" },
     { name: "Dr. Rajib Dey", title: "NIT Silchar" },
-    { name: "Dr. Trapti Jain", title: "IIT Indore" }
+    { name: "Dr. Trapti Jain", title: "IIT Indore" },
+    { name: "Dr. G. Lloyds Raja", title: "NIT Patna" },
+    { name: "Dr. Rajive Tiwari", title: "MNIT Jaipur" },
+    { name: "Dr. Dwijasish Das", title: "IIT Mandi" },
+    { name: "Dr. Saurav Raj", title: "NIT Raipur" },
+    { name: "Dr. Korra Balu", title: "NIT Calicut" },
+    { name: "Dr. Ravi Bhushan", title: "NIT Jamshedpur" },
+    { name: "Dr. Ravi Raushan", title: "NIT Surathkal" },
+    { name: "Dr. Rohit Babu", title: "MMUT Gorakhpur" },
+    { name: "Dr. Ramesh Devarapalli", title: "IOC Bhubaneswar" },
+    { name: "Dr. Om Hari Gupta", title: "NIT Jamshedpur" },
+    { name: "Dr. Manoj Kumawat", title: "NIT Delhi" },
+    { name: "Dr. Shashikant Sharma", title: "IIIT Ranchi" },
+    { name: "Dr. Amit Garg", title: "IIIT Kota" },
+    { name: "Dr. Kailash Sharma", title: "NIT Jalandhar" },
+    { name: "Dr. Saheli Ray", title: "NIT Silchar" },
+    { name: "Dr. Sadhan Gope", title: "NIT Silchar" },
+    { name: "Dr. Surya Prakash", title: "NIT Jamshedpur" },
+    { name: "Dr. Sudipta Chakraborty", title: "NIT Silchar" },
+    { name: "Mr. Hemant Kr. Sharma", title: "DRDO, Delhi" }
   ];
 
   const internationalAdvisoryCommittee = [
