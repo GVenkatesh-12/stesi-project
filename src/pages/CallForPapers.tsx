@@ -9,9 +9,9 @@ import { FileText, Calendar, Users, Award, Download, CheckCircle, AlertTriangle,
 const CallForPapers = () => {
   const submissionGuidelines = [
     {
-      icon: FileText,
-      title: 'IEEE Paper Format',
-      description: 'Papers must follow IEEE conference format with maximum 6 pages including references. Use official IEEE templates.',
+      icon: Award,
+      title: 'IEEE Xplore Publication',
+      description: 'Accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore\'s scope and quality requirements.',
     },
     {
       icon: Users,
@@ -19,9 +19,9 @@ const CallForPapers = () => {
       description: 'All submissions undergo double-blind peer review by three expert reviewers. Maximum 5 papers per reviewer.',
     },
     {
-      icon: Award,
-      title: 'IEEE Xplore Publication',
-      description: 'Accepted papers will be published in IEEE Xplore Digital Library and indexed in major databases.',
+      icon: FileText,
+      title: 'IEEE Paper Format',
+      description: 'Papers must follow IEEE conference format with maximum 6 pages including references. Use official IEEE templates.',
     },
     {
       icon: Calendar,
