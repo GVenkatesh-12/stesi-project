@@ -36,7 +36,12 @@ const TechnicalProgramCommittee = () => {
     { name: "Dr. Arnab Pal", affiliation: "Silicon Institute of Technology, Bhubaneswar, India" },
     { name: "Dr. Nihar Karmakar", affiliation: "Adamas University, Kolkata, India" },
     { name: "Mr. Parth Shah", affiliation: "HITACHI Energy, California, USA" },
-    { name: "Dr. Soham Dutta", affiliation: "OATI Hyderabad Office, India" }
+    { name: "Dr. Soham Dutta", affiliation: "OATI Hyderabad Office, India" },
+    { name: "Dr. Satish Sharma", affiliation: "MNIT Jaipur" },
+    { name: "Dr. Pulakraj Aryan", affiliation: "Manipal University Jaipur" },
+    { name: "Dr. Gaurav Kansal", affiliation: "Manipal University Jaipur" },
+    { name: "Er. Ankit Garg", affiliation: "MNIT Jaipur" },
+    { name: "Dr. Manoj Debnath", affiliation: "Siksha 'O' Anusandhan Odisha" }
   ];
 
   const getCountryInfo = (affiliation: string) => {

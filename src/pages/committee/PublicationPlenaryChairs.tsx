@@ -26,6 +26,14 @@ const PublicationPlenaryChairs = () => {
     {
       name: "Dr. Bishwajit Dey",
       title: "Manipal University Jaipur"
+    },
+    {
+      name: "Dr. Satish Sharma",
+      title: "MNIT Jaipur"
+    },
+    {
+      name: "Dr. Manoj Debnath",
+      title: "Siksha 'O' Anusandhan Odisha"
     }
   ];
 
@@ -41,6 +49,10 @@ const PublicationPlenaryChairs = () => {
     {
       name: "Dr. Rajive Tiwari",
       title: "MNIT Jaipur"
+    },
+    {
+      name: "Dr. Sanjib Ganguly",
+      title: "IIT Guwahati"
     }
   ];
 
