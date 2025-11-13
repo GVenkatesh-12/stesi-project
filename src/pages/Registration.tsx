@@ -12,7 +12,7 @@ const Registration = () => {
     {
       icon: FileText,
       title: "IEEE Xplore Publication",
-      description: "All accepted papers will be published in IEEE Xplore digital library"
+      description: "Accepted papers will be submitted for inclusion into IEEE Xplore subject to meeting IEEE Xplore's scope and quality requirements."
     },
     {
       icon: Users,
