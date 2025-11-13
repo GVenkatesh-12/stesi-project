@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
+import SponsorsBanner from '@/components/SponsorsBanner';
 import CountdownSection from '@/components/CountdownSection';
 import ImportantDatesSection from '@/components/ImportantDatesSection';
 import ConferenceTracksSection from '@/components/ConferenceTracksSection';
@@ -10,6 +11,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <HeroSection />
+      <SponsorsBanner />
       <CountdownSection />
       <ImportantDatesSection />
       <ConferenceTracksSection />

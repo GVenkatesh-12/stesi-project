@@ -15,8 +15,8 @@ const CallForPapers = () => {
     },
     {
       icon: Users,
-      title: 'Double-Blind Review',
-      description: 'All submissions undergo double-blind peer review by three expert reviewers. Maximum 5 papers per reviewer.',
+      title: 'Single-Blind Review',
+      description: 'All submissions undergo single-blind peer review by three expert reviewers. Maximum 5 papers per reviewer.',
     },
     {
       icon: FileText,
@@ -56,7 +56,7 @@ const CallForPapers = () => {
     {
       category: "Review Process",
       requirements: [
-        "Double-blind peer review by three experts",
+        "Single-blind peer review by three experts",
         "Maximum 5 papers assigned per reviewer",
         "Plagiarism check via Turnitin (max 15% similarity)",
         "Technical quality and relevance assessment",

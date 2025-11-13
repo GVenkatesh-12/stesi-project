@@ -104,27 +104,75 @@ const Venue = () => {
   const attractions = [
     {
       name: "Amber Fort",
-      distance: "25 km",
+      distance: "~38 km",
       description: "Historic hilltop fort with stunning Rajput architecture and panoramic views",
       image: "/Amber fort.png"
     },
     {
       name: "Hawa Mahal",
-      distance: "20 km",
+      distance: "~32 km",
       description: "Iconic palace of winds with intricate honeycomb facade and royal heritage",
       image: "/Hawa mahal.png"
     },
     {
       name: "City Palace",
-      distance: "22 km",
+      distance: "~32 km",
       description: "Royal residence with museums, courtyards, and blend of Rajasthani and Mughal architecture",
       image: "/City Palace.png"
     },
     {
       name: "Jantar Mantar",
-      distance: "21 km",
+      distance: "~32 km",
       description: "UNESCO World Heritage astronomical observatory with 19 architectural instruments",
       image: "/Jantar mantar.png"
+    },
+    {
+      name: "Nahargarh Fort",
+      distance: "~39 km",
+      description: "Majestic fort overlooking Jaipur city, perfect for sunset views and photography",
+      image: "/Nahargarh Fort.png"
+    },
+    {
+      name: "Jal Mahal",
+      distance: "~36 km",
+      description: "Stunning water palace floating in the middle of Man Sagar Lake, a photographer's paradise",
+      image: "/Jal Mahal.png"
+    },
+    {
+      name: "Albert Hall Museum",
+      distance: "~32 km",
+      description: "Rajasthan's oldest museum showcasing Indo-Saracenic architecture and rich cultural artifacts",
+      image: "/Albert Hall Museum.png"
+    },
+    {
+      name: "Chokhi Dhani",
+      distance: "~43 km",
+      description: "Authentic Rajasthani cultural village offering traditional food, folk performances, and crafts",
+      image: "/Chokhi Dhani.png"
+    },
+    {
+      name: "Jaigarh Fort",
+      distance: "~40 km",
+      description: "Massive fort housing the world's largest cannon on wheels and offering breathtaking valley views",
+      image: "/Jaigarh Fort.png"
+    },
+    {
+      name: "Birla Mandir",
+      distance: "~28 km",
+      description: "Beautiful white marble temple dedicated to Lord Vishnu and Goddess Lakshmi, known for its intricate carvings",
+      image: "/Birla Mandir.png"
+    },
+    {
+      name: "Galtaji Temple",
+      distance: "~38 km",
+      description: "Ancient Hindu temple complex known as Monkey Temple, featuring natural springs and sacred pools",
+      image: "/Galtaji Temple.png"
+    },
+    {
+      name: "Patrika Gate",
+      distance: "~28 km",
+      description: "Vibrant and colorful gateway showcasing Rajasthan's architectural heritage and Instagram-worthy designs",
+      image: "/Patrika Gate.png"
     }
   ];
 
