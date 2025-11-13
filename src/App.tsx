@@ -14,6 +14,7 @@ import Speakers from "./pages/Speakers";
 import AcceptedPapers from "./pages/AcceptedPapers";
 import Venue from "./pages/Venue";
 import Contact from "./pages/Contact";
+import Sponsorship from "./pages/Sponsorship";
 import CameraReady from "./pages/CameraReady";
 import Templates from "./pages/Templates";
 import NotFound from "./pages/NotFound";
@@ -57,6 +58,7 @@ const App = () => (
           <Route path="/accepted-papers" element={<AcceptedPapers />} />
           <Route path="/venue" element={<Venue />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/sponsorship" element={<Sponsorship />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

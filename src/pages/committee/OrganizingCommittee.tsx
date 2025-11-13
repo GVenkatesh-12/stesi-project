@@ -36,8 +36,8 @@ const OrganizingCommittee = () => {
       title: "Manipal University Jaipur"
     },
     {
-      name: "Dr. Gulshan Sharma",
-      title: "University of Johannesburg, South Africa"
+      name: "Dr. Srikant Misra",
+      title: "GIET University, Gunupur, Odisha"
     }
   ];
 

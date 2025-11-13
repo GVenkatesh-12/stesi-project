@@ -44,6 +44,7 @@ const Navigation = () => {
     { name: 'Accepted Papers', path: '/accepted-papers' },
     { name: 'Venue', path: '/venue' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Sponsorship', path: '/sponsorship' },
   ];
 
   return (

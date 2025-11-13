@@ -41,7 +41,9 @@ const TechnicalProgramCommittee = () => {
     { name: "Dr. Pulakraj Aryan", affiliation: "Manipal University Jaipur" },
     { name: "Dr. Gaurav Kansal", affiliation: "Manipal University Jaipur" },
     { name: "Er. Ankit Garg", affiliation: "MNIT Jaipur" },
-    { name: "Dr. Manoj Debnath", affiliation: "Siksha 'O' Anusandhan Odisha" }
+    { name: "Dr. Manoj Debnath", affiliation: "Siksha 'O' Anusandhan Odisha" },
+    { name: "Dr. Aniruddha Bhattacharya", affiliation: "NIT Durgapur" },
+    { name: "Dr. Vinay Gupta", affiliation: "Manipal University Jaipur" }
   ];
 
   const getCountryInfo = (affiliation: string) => {

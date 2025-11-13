@@ -94,6 +94,25 @@ const Footer = () => {
                 <div className="font-medium mb-1">Technical Support</div>
                 <div className="text-primary-foreground/80">stesi@jaipur.manipal.edu</div>
               </div>
+              <div className="pt-4">
+                <p className="text-primary-foreground/80 mb-2 font-medium">Visitor Counter</p>
+                <div className="flex justify-center md:justify-start">
+                  <a
+                    href="https://info.flagcounter.com/B4AE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View detailed visitor statistics"
+                    className="inline-block"
+                  >
+                    <img
+                      src="https://s01.flagcounter.com/count2/B4AE/bg_2A2060/txt_FFFFFF/border_CCCCCC/columns_2/maxflags_8/viewers_0/labels_0/pageviews_1/flags_0/percent_0/"
+                      alt="Flag Counter showing visitor statistics"
+                      style={{ border: 0 }}
+                      className="w-32 sm:w-36 md:w-40 h-auto"
+                    />
+                  </a>
+                </div>
+              </div>
               {/* <div>
                 <div className="font-medium mb-1">Registration</div>
                 <div className="text-primary-foreground/80">register@isssc2025.org</div>
