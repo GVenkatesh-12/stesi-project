@@ -118,7 +118,7 @@ const About = () => {
                   The aim of this conference is to present a unified platform for advanced and multi-disciplinary research towards design of smart power and automated systems. As global energy systems transition toward sustainability, the integration of renewable energy sources, electric vehicles (EVs), and battery energy storage systems (BESS) is becoming increasingly crucial.
                 </p>
                 <p>
-                  This conference will provide a platform for exploring emerging technologies, strategies, and policies that enhance grid resilience, efficiency, and reliability. To forge interactions among active researchers, the department of Electrical Engineering, Faculty of Science, Technology and Architecture, Manipal University Jaipur, is proposing to organize a multidisciplinary International Conference on Smart Technologies for Energy, Sustainability & Industry (STESI 2026) on 22nd-23rd July 2026.
+                  This conference will provide a platform for exploring emerging technologies, strategies, and policies that enhance grid resilience, efficiency, and reliability. To forge interactions among active researchers, the department of Electrical Engineering, Faculty of Science, Technology and Architecture, Manipal University Jaipur, is organizing a multidisciplinary International Conference on Smart Technologies for Energy, Sustainability & Industry (STESI 2026) on 22nd-23rd July 2026.
                 </p>
               </div>
               </div>
