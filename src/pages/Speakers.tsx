@@ -29,14 +29,14 @@ const Speakers = () => {
       awards: ["Research Excellence Award UCLM", "AI Innovation Prize", "Best Researcher Award", "IEEE Senior Member", "Outstanding Contribution Award"]
     },
     {
-      name: "Dr. Rajesh Kumar",
+      name: "Dr. Rajesh Kumar (SMIEEE, Fellow IET(UK), Fellow IE(I), Fellow IETE, LMCSI, LMISTE)",
       title: "Professor",
-      organization: "Department of Human Anatomy and Physiology, University of Johannesburg, South Africa",
+      organization: "Department of Human Anatomy and Physiology, Faculty of Health Sciences, University of Johannesburg, South Africa and Department of Electrical Engineering, MNIT, Jaipur, India",
       image: "/speaker3.png",
-      bio: "Dr. Rajesh Kumar is a distinguished Professor in the Department of Human Anatomy and Physiology at the University of Johannesburg. He is a leading researcher with an h-index of 43 and over 6,481 citations to his work. His research interests encompass Artificial Intelligence, Machine Intelligence, Bio and Nature-inspired Algorithms, Healthcare, and Energy. Prof. Kumar has co-authored several significant publications in 2025, including work on non-destructive methods for predicting concrete's compressive strength using hyper-tuned machine learning techniques, twisting controller applications for power management in solar PV systems, and AI-based path planning techniques for flexible bevel-tipped needles in healthcare diagnostics. His research contributions align with multiple United Nations Sustainable Development Goals, demonstrating his commitment to addressing global challenges through innovative AI solutions.",
-      topic: "AI-Powered Healthcare Diagnostics and Sustainable Energy Solutions",
-      expertise: ["Artificial Intelligence", "Machine Intelligence", "Bio-inspired Algorithms", "Healthcare", "Energy", "Machine Learning", "Power Management", "Solar PV Systems", "Healthcare Diagnostics", "Sustainable Development"],
-      awards: ["h-index 43", "6,481+ Citations", "Research Excellence in AI", "Contributions to UN SDGs", "IEEE Member", "Outstanding Researcher Award"]
+      bio: "Dr. Rajesh Kumar is a Professor of Artificial Intelligence at the University of Johannesburg, South Africa and a Professor in the Department of Electrical Engineering at MNIT, Jaipur, India. He received his Ph.D. in Power Systems and Intelligent Systems from MNIT Jaipur and was a Postdoctoral Research Fellow at the National University of Singapore. His research interests focus on Intelligent Systems, Data Driven algorithms, Computational Neuroscience, Energy, and Healthcare. He holds 20 patents and has published over 750 research articles, supervised 28 Ph.D. and more than 60 master's theses, and delivered over 350 keynotes and expert talks. He has served as Associate Editor for several prestigious journals including IEEE Access, IET Renewable and Power Generation, and Swarm and Evolutionary Computation, and is currently an IEEE IAS Distinguished Lecturer 2024-25.",
+      topic: "Intelligent Systems, Data Driven Algorithms, Computational Neuroscience, Energy, and Healthcare",
+      expertise: ["Intelligent Systems", "Data Driven Algorithms", "Computational Neuroscience", "Energy", "Healthcare", "Power Systems", "Artificial Intelligence"],
+      awards: ["SMIEEE", "Fellow IET(UK)", "Fellow IE(I)", "Fellow IETE", "LMCSI", "LMISTE", "Career Award for Young Teachers (2002)", "IEEE IAS Distinguished Lecturer 2024-25", "20 Patents/Patent Applications", "750+ Research Articles", "28 Ph.D. Supervisions", "350+ Keynotes/Expert Talks"]
     },
     {
       name: "Dr. Almoataz Youssef Abdelaziz Mohamed",
