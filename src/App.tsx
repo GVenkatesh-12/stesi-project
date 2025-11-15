@@ -8,6 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop"; // ✅ Import the scroll han
 import Index from "./pages/Index";
 import About from "./pages/About";
 import CallForPapers from "./pages/CallForPapers";
+import SpecialSessions from "./pages/SpecialSessions";
 import Committee from "./pages/Committee";
 import Registration from "./pages/Registration";
 import Speakers from "./pages/Speakers";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/call-for-papers" element={<CallForPapers />} />
+          <Route path="/special-sessions" element={<SpecialSessions />} />
           <Route path="/camera-ready" element={<CameraReady />} />
           <Route path="/templates" element={<Templates />} />
           <Route path="/committee" element={<Committee />} />

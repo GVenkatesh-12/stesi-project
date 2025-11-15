@@ -22,6 +22,7 @@ const Navigation = () => {
       name: 'Authors',
       items: [
         { name: 'Call for Papers', path: '/call-for-papers' },
+        { name: 'Special Sessions', path: '/special-sessions' },
         { name: 'Camera-Ready Submission', path: '/camera-ready' },
         { name: 'Templates', path: '/templates' },
       ],
