@@ -33,7 +33,9 @@ const AdvisoryCommittees = () => {
     { name: "Dr. Sadhan Gope", title: "NIT Silchar" },
     { name: "Dr. Surya Prakash", title: "NIT Jamshedpur" },
     { name: "Dr. Sudipta Chakraborty", title: "NIT Silchar" },
-    { name: "Mr. Hemant Kr. Sharma", title: "DRDO, Delhi" }
+    { name: "Mr. Hemant Kr. Sharma", title: "DRDO, Delhi" },
+    { name: "Dr. Chandan Kr. Shiva", title: "SR University Warangal" },
+    { name: "Dr. Vedik Baseti", title: "SR University Warangal" }
   ];
 
   const internationalAdvisoryCommittee = [

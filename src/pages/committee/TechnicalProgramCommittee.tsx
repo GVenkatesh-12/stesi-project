@@ -43,7 +43,9 @@ const TechnicalProgramCommittee = () => {
     { name: "Er. Ankit Garg", affiliation: "MNIT Jaipur" },
     { name: "Dr. Manoj Debnath", affiliation: "Siksha 'O' Anusandhan Odisha" },
     { name: "Dr. Aniruddha Bhattacharya", affiliation: "NIT Durgapur" },
-    { name: "Dr. Vinay Gupta", affiliation: "Manipal University Jaipur" }
+    { name: "Dr. Vinay Gupta", affiliation: "Manipal University Jaipur" },
+    { name: "Dr. Chandan Kr. Shiva", affiliation: "SR University Warangal, India" },
+    { name: "Dr. Vedik Baseti", affiliation: "SR University Warangal, India" }
   ];
 
   const getCountryInfo = (affiliation: string) => {
