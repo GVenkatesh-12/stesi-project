@@ -37,6 +37,21 @@ const SupportingCommittees = () => {
     }
   ];
 
+  const specialSessionChairs = [
+    {
+      name: "Dr. Vedik Basetti",
+      title: "SR University, Warangal"
+    },
+    {
+      name: "Dr. Chandan Kr. Shiva",
+      title: "SR University, Warangal"
+    },
+    {
+      name: "Dr. Pulakraj Aryan",
+      title: "Manipal University Jaipur"
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -88,6 +103,47 @@ const SupportingCommittees = () => {
 
                     <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-green-100 text-green-800">Publicity Committee</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center pb-6">
+                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">
+              Special Session Chair
+            </h2>
+            {/* <p className="text-muted-foreground">Leading special session initiatives and coordination</p> */}
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 justify-items-center max-w-5xl mx-auto">
+            {specialSessionChairs.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="w-full max-w-sm"
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center pt-6">
+
+                    <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto bg-green-100 text-green-800">Special Session Chair</Badge>
                   </CardHeader>
                   <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
