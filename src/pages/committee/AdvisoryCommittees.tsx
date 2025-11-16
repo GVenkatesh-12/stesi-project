@@ -40,11 +40,11 @@ const AdvisoryCommittees = () => {
 
   const internationalAdvisoryCommittee = [
     { name: "Dr. Rajesh Kumar", title: "University of Johannesburg, South Africa" },
-    { name: "Dr. Ramesh Bansal", title: "University in Sharjah, United Arab Emirates" },
+    { name: "Dr. Akshay Kumar Rathore", title: "National University of Singapore (NUS), Singapore" },
     { name: "Dr. Almoataz Youssef Abdelaziz", title: "Ain Shams University, Egypt" },
     { name: "Dr. Dipti Srinivasan", title: "National University of Singapore (NUS), Singapore" },
     { name: "Dr. Lalit Goel", title: "Nanyang Technological University (NTU), Singapore" },
-    { name: "Dr. Akshay Kumar Rathore", title: "National University of Singapore (NUS), Singapore" },
+    { name: "Dr. Ramesh Bansal", title: "University in Sharjah, United Arab Emirates" },
     { name: "Dr. Biplab Sikdar", title: "National University of Singapore (NUS), Singapore" },
     { name: "Dr. Mohan Lal Kolhe", title: "University of Agder, Norway" },
     { name: "Dr. Kashem Muttaqi", title: "University of Wollongong, Australia" },
@@ -57,7 +57,8 @@ const AdvisoryCommittees = () => {
     { name: "Dr. V. Ramgopal Rao", title: "Group Vice-Chancellor, BITS Pilani, Jhunjhunu (Dist) Rajasthan" },
     { name: "Dr. Nikhil Gupta", title: "MNIT Jaipur" },
     { name: "Dr. Sanjib Ganguly", title: "IIT Guwahati" },
-    { name: "Dr. Prerna Gaur", title: " Netaji Subhash University of Technology, New Delhi" }
+    { name: "Dr. Prerna Gaur", title: " Netaji Subhash University of Technology, New Delhi" },
+    { name: "Dr. Dipti Srinivasan", title: "National University of Singapore (NUS), Singapore" }
   ];
 
   return (
