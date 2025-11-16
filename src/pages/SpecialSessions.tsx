@@ -45,6 +45,18 @@ const SpecialSessions = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8 flex justify-center"
+            >
+              <img 
+                src="/muj-logo-nbg.png" 
+                alt="Manipal University Jaipur Logo"
+                className="h-24 sm:h-28 lg:h-32 w-auto"
+              />
+            </motion.div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
               Call for Special Session Proposals
             </h1>
@@ -267,7 +279,7 @@ const SpecialSessions = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    A minimum of 8 accepted and registered papers with authors from at least 4 different institutions is required for each session. If a session has too few papers, accepted papers will be allocated to regular sessions wherever possible. In case of indication of weakly organized special sessions, the conference organizers will support the organizers with advice but reserve measures including cancellation of the respective special session.
+                    A minimum of 6 accepted and registered papers with authors from at least 4 different institutions is required for each session. If a session has too few papers, accepted papers will be allocated to regular sessions wherever possible. In case of indication of weakly organized special sessions, the conference organizers will support the organizers with advice but reserve measures including cancellation of the respective special session.
                   </p>
                 </CardContent>
               </Card>
@@ -282,7 +294,7 @@ const SpecialSessions = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    At least one organizer of the successful Special Sessions is expected to register for and attend the conference, as well as chair the corresponding sessions. Organizers of a successful Special Session will get one free full registration (per at least 8 accepted and registered papers not authored by the any of the organizers)
+                    At least one organizer of the successful Special Sessions is expected to register for and attend the conference, as well as chair the corresponding sessions. Organizers of a successful Special Session will get one free full registration (per at least 6 accepted and registered papers not authored by the any of the organizers)
                   </p>
                 </CardContent>
               </Card>
