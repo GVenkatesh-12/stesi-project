@@ -30,6 +30,7 @@ const SpecialSessions = () => {
     'An individual cannot be (co-) author of more than two papers submitted to the same Special Session.',
     'From one organizations maximum 2 organizers can be participated in one special session',
     'Maximum number of organizers in one session can be 4 and minimum 2',
+    'To promote global and industrial outreach of STESI 2026 and attract international affiliated papers, preferences will be given to the Special Sessions with at least one (1) internationally affiliated organizer and/or industry professional.',
   ];
 
   return (
