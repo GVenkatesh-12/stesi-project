@@ -35,7 +35,7 @@ const sponsorshipBenefits: {
       tier10k: false,
       tier25k: false,
       tier50k: false,
-      tier75k: true,
+      tier75k: false,
       tier100k: true,
       tier150k: true,
     },
@@ -55,12 +55,12 @@ const sponsorshipBenefits: {
   {
     label: 'Exhibition Booth details',
     values: {
-      tier10k: false,
-      tier25k: '2m x 3m',
-      tier50k: '3m x 3m',
-      tier75k: '3m x 3m',
-      tier100k: '6m x 3m',
-      tier150k: '6m x 6m',
+      tier10k: '5 ft x 10 ft',
+      tier25k: '10 ft x 10 ft',
+      tier50k: '20 ft x 10 ft',
+      tier75k: '30 ft x 10 ft',
+      tier100k: '30 ft x 10 ft',
+      tier150k: '40 ft x 10 ft',
     },
   },
   {
