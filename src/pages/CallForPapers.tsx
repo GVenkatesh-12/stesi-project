@@ -38,7 +38,7 @@ const CallForPapers = () => {
         "Maximum 6 pages including references",
         "Times New Roman, 10pt font for body text",
         "Single line spacing with 0.75 inch margins",
-        "No page numbers, headers, or footers",
+        "No page numbers, headers or footers in initial submission",
         "Figures and tables must be high resolution (300 DPI minimum)"
       ]
     },
@@ -46,10 +46,8 @@ const CallForPapers = () => {
       category: "Submission Requirements",
       requirements: [
         "Submit via Microsoft CMT submission system",
-        "PDF format only (no Word documents)",
-        "Remove author names and affiliations for blind review",
         "Include complete references in IEEE citation style",
-        "Minimum 15 references recommended",
+        "Minimum 15 references recommended not older than 5 years",
         "Abstract: 150-200 words maximum"
       ]
     },
@@ -57,7 +55,7 @@ const CallForPapers = () => {
       category: "Review Process",
       requirements: [
         "Single-blind peer review by three experts",
-        "Plagiarism check via Turnitin (max 15% similarity)",
+        "Plagiarism check via Turnitin (max 15% excluding bibliography/references)",
         "Technical quality and relevance assessment",
         "Notification of acceptance/rejection with feedback",
         "Camera-ready submission after acceptance"
@@ -70,7 +68,6 @@ const CallForPapers = () => {
         "IEEE conference proceedings indexing",
         "DOI assignment for each paper",
         "Copyright transfer to IEEE required",
-        "Open access through IEEE Xplore",
         "Professional indexing in major databases"
       ]
     }
