@@ -14,8 +14,8 @@ const SpecialSessions = () => {
   ];
 
   const importantDates = [
-    { title: 'Last date Submission of proposals', date: 'Coming soon...' },
-    { title: 'Notification of acceptance', date: 'Coming soon...' },
+    { title: 'Last date Submission of proposals', date: <>31<sup>st</sup> Dec 2025</> },
+    { title: 'Notification of acceptance', date: <>7<sup>th</sup> Jan 2026</> },
   ];
 
   const proposalContent = [
