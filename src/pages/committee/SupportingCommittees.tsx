@@ -24,6 +24,10 @@ const SupportingCommittees = () => {
       title: "MNIT Jaipur"
     },
     {
+      name: "Dr. Jupitara Hazarika",
+      title: "NIT Silchar"
+    },
+    {
       name: "Dr. Gulshan Sharma",
       title: "University of Johannesburg, South Africa"
     },

@@ -29,6 +29,7 @@ const TechnicalProgramCommittee = () => {
     { name: "Dr. Suman Sharma", affiliation: "SKIT M&G Jaipur, Rajasthan, India" },
     { name: "Dr. Rayees Ahmad Thokar", affiliation: "Maharishi Markandeshwar University (MMU) Mullana, Ambala, Haryana" },
     { name: "Dr. Jyotsna Singh", affiliation: "SKIT M&G Jaipur, Rajasthan, India" },
+    { name: "Dr. Jupitara Hazarika", affiliation: "NIT Silchar" },
     { name: "Dr. Rohit Babu", affiliation: "MMMUT Gorakhpur, India" },
     { name: "Dr. Ravi Bhushan", affiliation: "NIT Jamshedpur, India" },
     { name: "Dr. Saurav Raj", affiliation: "NIT Raipur, India" },
