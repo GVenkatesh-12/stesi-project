@@ -28,7 +28,7 @@ const OrganizingCommittee = () => {
 
   const financeChairs = [
     {
-      name: "Dr. Sunil Kumar Goyal",
+      name: "Mr. Samarendra Pratap Singh",
       title: "Manipal University Jaipur"
     },
     {
@@ -43,7 +43,7 @@ const OrganizingCommittee = () => {
 
   const registrationCommittee = [
     {
-      name: "Dr. Amit Saraswat",
+      name: "Dr. Manish Kumar Thukral",
       title: "Manipal University Jaipur"
     },
     {
@@ -58,7 +58,7 @@ const OrganizingCommittee = () => {
       title: "Manipal University Jaipur"
     },
     {
-      name: "Mr. Samarendra Pratap Singh",
+      name: "Dr. Peeyush Garg",
       title: "Manipal University Jaipur"
     }
   ];
