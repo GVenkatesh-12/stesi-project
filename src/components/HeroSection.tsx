@@ -32,6 +32,19 @@ const HeroSection = () => {
         />
       </motion.div>
 
+      {/* Conference ID - Top Right Corner (Desktop) / Below Logo (Mobile) */}
+      <motion.a
+        href="https://conferences.ieee.org/conferences_events/conferences/conferencedetails/70017"
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        className="absolute top-8 left-8 lg:left-auto lg:right-8 z-[60] mt-[120px] lg:mt-10 px-2 py-1 lg:px-4 lg:py-2 text-xs lg:text-sm bg-white/10 text-white border border-white/20 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer"
+      >
+        Conference ID - 70017
+      </motion.a>
+
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
