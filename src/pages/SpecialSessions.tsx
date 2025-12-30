@@ -68,6 +68,77 @@ const SpecialSessions = () => {
         </div>
       </section>
 
+      {/* List of Approved Special Sessions */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <Card className="bg-gradient-card border border-border/50 shadow-card">
+              <CardHeader>
+                <CardTitle className="text-2xl sm:text-3xl text-primary text-center">
+                  List of Approved Special Sessions
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-lg mb-6 text-center">
+                  The following special sessions have been approved for STESI 2026.
+                </p>
+                <div className="space-y-4">
+                  <div className="p-4 bg-background rounded-lg border border-border/50 hover:border-primary/50 transition-colors">
+                    <a 
+                      href="/SS_01_Sachidananda_Sen.pdf" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-primary hover:text-primary/80 transition-colors cursor-pointer block"
+                    >
+                      SS-01. Cyber-Physical Systems and Smart Urban Infrastructures for Sustainable Future Cities
+                    </a>
+                  </div>
+
+                  <div className="p-4 bg-background rounded-lg border border-border/50 hover:border-primary/50 transition-colors">
+                    <a 
+                      href="/SS_02_Subhendu_Sahoo.pdf" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-primary hover:text-primary/80 transition-colors cursor-pointer block"
+                    >
+                      SS-02. AI-Driven Optimization and Fault-Tolerant Control in Smart Energy and Sustainable Industry Systems
+                    </a>
+                  </div>
+
+                  <div className="p-4 bg-background rounded-lg border border-border/50 hover:border-primary/50 transition-colors">
+                    <a 
+                      href="/SS_03_Satyendra_Singh.pdf" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-primary hover:text-primary/80 transition-colors cursor-pointer block"
+                    >
+                      SS-03. Smart and Sustainable Power Systems: AI-Enabled WAMS and Electric Vehicles
+                    </a>
+                  </div>
+
+                  <div className="p-4 bg-background rounded-lg border border-border/50 hover:border-primary/50 transition-colors">
+                    <a 
+                      href="/SS_04_Saurav_Raj.pdf" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-primary hover:text-primary/80 transition-colors cursor-pointer block"
+                    >
+                      SS-04. AI-Driven Control, Protection, and Resilience of Smart and Sustainable Power Grids
+                    </a>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Introduction Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

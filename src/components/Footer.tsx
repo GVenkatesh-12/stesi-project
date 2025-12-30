@@ -41,7 +41,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>Manipal University, Jaipur, Rajasthan</span>
+                <span>Manipal University Jaipur, Rajasthan</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
