@@ -132,6 +132,17 @@ const SpecialSessions = () => {
                       SS-04. AI-Driven Control, Protection, and Resilience of Smart and Sustainable Power Grids
                     </a>
                   </div>
+
+                  <div className="p-4 bg-background rounded-lg border border-border/50 hover:border-primary/50 transition-colors">
+                    <a 
+                      href="/SS_05_Nishant_Kumar.pdf" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-primary hover:text-primary/80 transition-colors cursor-pointer block"
+                    >
+                      SS-05. Emerging Trends in Industry 5.0: Intelligent Automation, Power Electronics, AI, Image/Signal Processing, and Sustainable Technologies
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
