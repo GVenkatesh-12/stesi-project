@@ -154,6 +154,17 @@ const SpecialSessions = () => {
                       SS-06. From Assets to Ecosystems: Lifecycle Intelligence and Governance of Power Infrastructure
                     </a>
                   </div>
+
+                  <div className="p-4 bg-background rounded-lg border border-border/50 hover:border-primary/50 transition-colors">
+                    <a 
+                      href="/SS_07_Amit_Yadav.pdf" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-primary hover:text-primary/80 transition-colors cursor-pointer block"
+                    >
+                      SS-07. Computational Intelligence and AI for Energy-Efficient Industry 4.0 Systems
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
