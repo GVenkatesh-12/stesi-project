@@ -107,7 +107,7 @@ const ConferenceTracksSection = () => {
         'Structural and functional materials',
         'Optical materials',
         'Sustainable materials',
-        'Sustainable Development Goals',
+        'Energy Storage Device Materials',
         'Green economy & Environmental Sustainability',
         'Global Climate Change Impacts & Sustainable Practices',
         'Sustainable consumption and production policies',
