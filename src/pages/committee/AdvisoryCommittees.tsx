@@ -13,7 +13,7 @@ const AdvisoryCommittees = () => {
   const nationalAdvisoryCommittee = [
     { name: "Dr. K. R. Niazi", title: "MNIT Jaipur" },
     { name: "Dr. Chandan Kumar", title: "IIT Guwahati" },
-    { name: "Dr. Rajib Dey", title: "NIT Silchar" },
+    { name: "Dr. Rajeeb Dey", title: "NIT Silchar" },
     { name: "Dr. Trapti Jain", title: "IIT Indore" },
     { name: "Dr. G. Lloyds Raja", title: "NIT Patna" },
     { name: "Dr. Rajive Tiwari", title: "MNIT Jaipur" },
