@@ -3,7 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ScrollToTop from "@/components/ScrollToTop"; // ✅ Import the scroll handler
+import ScrollToTop from "@/components/ScrollToTop";
+import NotificationBell from "@/components/NotificationBell";
 
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -38,7 +39,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop /> {/* ✅ Add this line inside BrowserRouter, but outside Routes */}
+        <ScrollToTop />
+        <NotificationBell />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

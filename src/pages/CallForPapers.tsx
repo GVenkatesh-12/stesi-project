@@ -106,6 +106,26 @@ const CallForPapers = () => {
         </div>
       </section>
 
+      {/* Call for Paper Flyer Download */}
+      <section className="py-8 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <Button size="lg" variant="conference" asChild>
+              <a href="/STESI-Call_for_Paper.pdf" download="STESI-Call_for_Paper.pdf" className="inline-flex items-center">
+                <Download className="h-5 w-5 mr-2" />
+                Download Call for Paper Flyer
+              </a>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Important Dates */}
       <section className="py-16 bg-gradient-to-b from-secondary/20 to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
