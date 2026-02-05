@@ -249,7 +249,7 @@ const Registration = () => {
                 </p>
                 <p className="text-sm text-muted-foreground flex items-start">
                   <span className="text-primary font-medium mr-2">2.</span>
-                  <span>One full author registration can present upto 2 papers</span>
+                  <span>One full author offline registration can present up to 2 papers</span>
                 </p>
               </div>
             </div>
