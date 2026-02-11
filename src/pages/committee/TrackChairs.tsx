@@ -64,8 +64,8 @@ const TrackChairs = () => {
     {
       id: 6,
       title: "Materials Science and Engineering",
-      chair: "Dr. Tejpal",
-      chairInstitution: "Manipal University Jaipur",
+      chair: "Dr. Krupali Donda",
+      chairInstitution: "Adani University",
       coChair: "Dr. Saurabh Kumar Pandey",
       coChairInstitution: "IIT Patna",
       gradient: "from-amber-50 to-amber-100 dark:from-amber-950 dark:to-amber-900",
