@@ -14,7 +14,7 @@ const Speakers = () => {
       organization: "Federal University of Technology - Paraná (UTFPR), Brazil",
       image: "/speaker1.png",
       bio: "Dr. André Eugenio Lazzaretti is a distinguished researcher and professor at UTFPR, specializing in pattern recognition, machine learning, digital signal processing, embedded systems, and instrumentation. He has published extensively in top-tier journals and conferences, with over 100 peer-reviewed publications. His research focuses on developing innovative algorithms for signal processing applications, particularly in biomedical engineering and industrial automation. Dr. Lazzaretti has supervised numerous Ph.D. and M.Sc. students and has been actively involved in international research collaborations.",
-      topic: "Advances in Pattern Recognition and Machine Learning for Signal Processing",
+      topic: "AI for High-Frequency Power-Grid Data: Sensor Technologies, Data Quality, and Learning Frameworks",
       expertise: ["Pattern Recognition", "Machine Learning", "Digital Signal Processing", "Embedded Systems", "Instrumentation", "Biomedical Engineering"],
       awards: ["IEEE Senior Member", "Distinguished Researcher Award UTFPR", "Best Paper Award IEEE SPS", "Research Excellence Award"]
     },
