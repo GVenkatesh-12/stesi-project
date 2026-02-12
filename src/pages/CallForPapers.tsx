@@ -143,7 +143,20 @@ const CallForPapers = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'Paper Submission Deadline', date: 'February 15, 2026', color: 'text-red-500' },
+              {
+                title: 'Paper Submission Deadline',
+                date: (
+                  <span className="flex flex-col items-center justify-center leading-none gap-1">
+                    <s className="text-sm font-medium opacity-60">
+                      February 15, 2026
+                    </s>
+                    <span className="text-xl font-bold">February 28, 2026</span>
+                  </span>
+                ),
+                color: 'text-red-500',
+                headerClassName: 'pb-2',
+                contentClassName: 'pt-0',
+              },
               { title: 'Notification of Acceptance', date: 'April 15, 2026', color: 'text-orange-500' },
               { title: 'Camera Ready Submission', date: 'April 30, 2026', color: 'text-blue-500' },
               { title: 'Conference Dates', date: 'July 22-23, 2026', color: 'text-green-500' },
@@ -156,10 +169,10 @@ const CallForPapers = () => {
                 viewport={{ once: true }}
               >
                 <Card className="text-center bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader>
+                  <CardHeader className={item.headerClassName}>
                     <CardTitle className="text-lg">{item.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className={item.contentClassName}>
                     <div className={`text-2xl font-bold ${item.color}`}>
                       {item.date}
                     </div>

@@ -12,7 +12,12 @@ const ImportantDatesSection = () => {
     },
     {
       title: 'Last Date for Submission',
-      date: 'February 15, 2026',
+      date: (
+        <span className="flex flex-col items-center justify-center leading-tight">
+          <s className="text-sm font-medium opacity-60">February 15, 2026</s>
+          <span className="text-lg font-bold">February 28, 2026</span>
+        </span>
+      ),
       icon: Calendar,
       color: 'text-red-500',
     },

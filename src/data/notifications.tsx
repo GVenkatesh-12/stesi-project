@@ -4,10 +4,12 @@
  * Use a new id (higher than previous). The badge will show until the user opens the panel.
  */
 
+import type { ReactNode } from "react";
+
 export interface NotificationItem {
   id: number;
   title: string;
-  message: string;
+  message: ReactNode;
   date: string;
   link?: string;
   linkLabel?: string;
@@ -17,7 +19,13 @@ export const notifications: NotificationItem[] = [
   {
     id: 1,
     title: "Call for Papers Open",
-    message: "STESI 2026 is now accepting paper submissions. Submit your research by February 15, 2026.",
+    message: (
+      <>
+        STESI 2026 is now accepting paper submissions. Submit your research by{" "}
+        <s className="opacity-70">February 15, 2026</s>{" "}
+        <span className="font-semibold">February 28, 2026</span>.
+      </>
+    ),
     date: "Jan 31, 2026",
     link: "/call-for-papers",
     linkLabel: "View details",
