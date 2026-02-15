@@ -38,6 +38,10 @@ const SupportingCommittees = () => {
     {
       name: "Dr. Peeyush Garg",
       title: "Manipal University, Jaipur"
+    },
+    {
+      name: "Dr. Arun Kishor Johar",
+      title: "Manipal University Jaipur"
     }
   ];
 
