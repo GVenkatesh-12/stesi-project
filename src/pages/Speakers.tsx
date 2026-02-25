@@ -57,6 +57,16 @@ const Speakers = () => {
       topic: "Enhanced EV Safety and Battery Performance Optimization",
       expertise: ["Renewable Power Conversion Systems", "Energy Storage Optimization", "Physics-Inspired AI", "Smart Power Electronics", "Electric Vehicles", "Battery Performance", "Sustainable Energy Systems"],
       awards: ["Gold Medalist - Industrial Training", "POSOCO Power System Award", "Bhaskara Advanced Solar Energy Indo-US Fellowship", "National & International Technical Committee Service (since 2017)"]
+    },
+    {
+      name: "Dr. Shubhendu Bhasin",
+      title: "Professor",
+      organization: "Department of Electrical Engineering, Indian Institute of Technology Delhi",
+      image: "/speaker6.png",
+      bio: "Shubhendu Bhasin is currently a Professor in the Department of Electrical Engineering at IIT Delhi. He works in the area of nonlinear, adaptive, and learning-based control with robotics applications.",
+      topic: "Wearable Robotics for Human Assistance, Augmentation and Rehabilitation: Key Challenges and Opportunities",
+      expertise: ["Nonlinear Control", "Adaptive Control", "Reinforcement Learning Control", "Approximate Dynamic Programming", "Robotics", "Autonomous Systems", "Wearable Robotics", "Differential Games"],
+      awards: ["IEEE AESS Associate Editor - Guidance and Control Systems", "Ph.D. University of Florida", "113 Publications", "2500+ Citations", "h-index 24"]
     }
   ];
 
@@ -204,7 +214,7 @@ const Speakers = () => {
                           <img 
                             src={speaker.image} 
                             alt={speaker.name}
-                            className="w-full h-full object-cover rounded-lg"
+                            className="w-full h-full object-contain rounded-lg"
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
                               target.style.display = 'none';

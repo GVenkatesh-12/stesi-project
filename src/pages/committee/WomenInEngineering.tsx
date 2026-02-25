@@ -20,10 +20,6 @@ const WomenInEngineering = () => {
       title: "IIT Roorkee"
     },
     {
-      name: "Dr. Dipti Saxena",
-      title: "MNIT Jaipur"
-    },
-    {
       name: "Dr. Sunanda Sinha",
       title: "MNIT Jaipur"
     }
