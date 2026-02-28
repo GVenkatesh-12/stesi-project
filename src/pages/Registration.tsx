@@ -251,6 +251,10 @@ const Registration = () => {
                   <span className="text-primary font-medium mr-2">2.</span>
                   <span>One full author offline registration can present up to 2 papers</span>
                 </p>
+                <p className="text-sm text-muted-foreground flex items-start">
+                  <span className="text-primary font-medium mr-2">3.</span>
+                  <span>Accommodation is not included in registration and has to be managed by Participant.</span>
+                </p>
               </div>
             </div>
           </div>
