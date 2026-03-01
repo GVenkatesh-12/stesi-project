@@ -148,9 +148,9 @@ const CallForPapers = () => {
                 date: (
                   <span className="flex flex-col items-center justify-center leading-none gap-1">
                     <s className="text-sm font-medium opacity-60">
-                      February 15, 2026
+                      February 28, 2026
                     </s>
-                    <span className="text-xl font-bold">February 28, 2026</span>
+                    <span className="text-xl font-bold">Hard Deadline: March 15, 2026</span>
                   </span>
                 ),
                 color: 'text-red-500',

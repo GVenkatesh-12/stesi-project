@@ -21,22 +21,24 @@ export const notifications: NotificationItem[] = [
     title: "Call for Papers Open",
     message: (
       <>
-        STESI 2026 is now accepting paper submissions. Submit your research by{" "}
-        <s className="opacity-70">February 15, 2026</s>{" "}
-        <span className="font-semibold">February 28, 2026</span>.
+        STESI 2026 is now accepting paper submissions.
       </>
     ),
     date: "Jan 31, 2026",
     link: "/call-for-papers",
     linkLabel: "View details",
   },
-  // Add new notifications below. Use the next id (e.g. 2, 3, 4...).
-  // {
-  //   id: 2,
-  //   title: "Your announcement title",
-  //   message: "Your message here.",
-  //   date: "Jan 31, 2026",
-  //   link: "/optional-page",
-  //   linkLabel: "Learn more",
-  // },
+  {
+    id: 2,
+    title: "Paper Submission Deadline Extended",
+    message: (
+      <>
+        Good news! The paper submission deadline has been extended. The new{" "}
+        <span className="font-semibold">hard deadline is March 15, 2026</span>.
+      </>
+    ),
+    date: "March 01, 2026",
+    link: "/call-for-papers",
+    linkLabel: "Submit your paper",
+  },
 ];
