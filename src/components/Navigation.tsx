@@ -33,6 +33,7 @@ const Navigation = () => {
         { name: 'Patrons & General Chairs', path: '/committee/patrons-general-chairs' },
         { name: 'Organizing Committee', path: '/committee/organizing-committee' },
         { name: 'Advisory Committees', path: '/committee/advisory-committees' },
+        { name: 'Conference Oversight Committee', path: '/committee/conference-oversight-committee' },
         { name: 'Technical Program Committee', path: '/committee/technical-program-committee' },
         { name: 'Publication & Plenary Chairs', path: '/committee/publication-plenary-chairs' },
         { name: 'Supporting Committees', path: '/committee/supporting-committees' },

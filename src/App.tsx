@@ -25,6 +25,7 @@ import NotFound from "./pages/NotFound";
 import PatronsGeneralChairs from "./pages/committee/PatronsGeneralChairs";
 import OrganizingCommittee from "./pages/committee/OrganizingCommittee";
 import AdvisoryCommittees from "./pages/committee/AdvisoryCommittees";
+import ConferenceOversightCommittee from "./pages/committee/ConferenceOversightCommittee";
 import TechnicalProgramCommittee from "./pages/committee/TechnicalProgramCommittee";
 import PublicationPlenaryChairs from "./pages/committee/PublicationPlenaryChairs";
 import SupportingCommittees from "./pages/committee/SupportingCommittees";
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/committee/patrons-general-chairs" element={<PatronsGeneralChairs />} />
           <Route path="/committee/organizing-committee" element={<OrganizingCommittee />} />
           <Route path="/committee/advisory-committees" element={<AdvisoryCommittees />} />
+          <Route path="/committee/conference-oversight-committee" element={<ConferenceOversightCommittee />} />
           <Route path="/committee/technical-program-committee" element={<TechnicalProgramCommittee />} />
           <Route path="/committee/publication-plenary-chairs" element={<PublicationPlenaryChairs />} />
           <Route path="/committee/supporting-committees" element={<SupportingCommittees />} />
