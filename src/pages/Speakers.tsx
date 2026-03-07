@@ -67,6 +67,16 @@ const Speakers = () => {
       topic: "Wearable Robotics for Human Assistance, Augmentation and Rehabilitation: Key Challenges and Opportunities",
       expertise: ["Nonlinear Control", "Adaptive Control", "Reinforcement Learning Control", "Approximate Dynamic Programming", "Robotics", "Autonomous Systems", "Wearable Robotics", "Differential Games"],
       awards: ["IEEE AESS Associate Editor - Guidance and Control Systems", "Ph.D. University of Florida", "113 Publications", "2500+ Citations", "h-index 24"]
+    },
+    {
+      name: "Dr. Apurti Jain",
+      title: "Industry Speaker | Global Services Engineer - Inverter Controls",
+      organization: "GE Vernova, Chennai",
+      image: "/speaker7.png",
+      bio: "Apurti Jain (Member, IEEE) is currently employed in GE Power Conversion and Storage business unit as Global Services Engineer - Inverter Controls since Mid-2023. In this role, she is responsible for development and troubleshooting of inverter control of GE fleets deployed over the globe and has received multiple GE Impact Awards. She earned her Ph.D. in Electrical Engineering from IIT Roorkee in 2024. During her Ph.D., she worked in the DST-Funded International Project D-SIDES, which received the IEEE Smart Cities Award in 2022. She received the Best Paper Award at IEEE ETFG-2023 Conference (400+ papers accepted) and the Student Travel Award at IEEE PEDES 2022.",
+      topic: "Virtual Synchronous Generator",
+      expertise: ["Power System Dynamics", "Frequency Control and Stability", "Storage Applications in Smart Grids", "Control of Power Electronics Converters"],
+      awards: ["Member, IEEE", "Multiple GE Impact Awards", "Ph.D. IIT Roorkee (2024)", "IEEE Smart Cities Award 2022 (D-SIDES Project)", "Best Paper Award IEEE ETFG-2023", "Student Travel Award IEEE PEDES 2022"]
     }
   ];
 
