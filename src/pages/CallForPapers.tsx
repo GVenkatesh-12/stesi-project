@@ -147,13 +147,14 @@ const CallForPapers = () => {
                 title: 'Paper Submission Deadline',
                 date: (
                   <span className="flex flex-col items-center justify-center leading-none gap-1">
-                    <s className="text-sm font-medium opacity-60">
-                      February 28, 2026
-                    </s>
-                    <span className="text-xl font-bold">Hard Deadline: March 15, 2026</span>
+                    <span className="inline-block bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
+                      Closed
+                    </span>
+                    <s className="text-sm font-medium opacity-40">February 28, 2026</s>
+                    <s className="text-sm font-medium opacity-40">Hard Deadline: March 15, 2026</s>
                   </span>
                 ),
-                color: 'text-red-500',
+                color: 'text-gray-400',
                 headerClassName: 'pb-2',
                 contentClassName: 'pt-0',
               },

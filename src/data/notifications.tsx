@@ -41,4 +41,27 @@ export const notifications: NotificationItem[] = [
     link: "/call-for-papers",
     linkLabel: "Submit your paper",
   },
+  {
+    id: 3,
+    title: "Paper Submission Closed",
+    message: (
+      <>
+        Paper submissions for STESI 2026 are now{" "}
+        <span className="font-semibold text-red-600">closed</span>. Thank you to
+        everyone who submitted their work.
+      </>
+    ),
+    date: "March 16, 2026",
+  },
+  {
+    id: 4,
+    title: "Decision Notification",
+    message: (
+      <>
+        Acceptance decisions are expected to be communicated{" "}
+        <span className="font-semibold">tentatively by April 15, 2026</span>.
+      </>
+    ),
+    date: "March 16, 2026",
+  },
 ];

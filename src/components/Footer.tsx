@@ -19,8 +19,11 @@ const Footer = () => {
       event: 'Paper Submission',
       date: (
         <span className="inline-flex flex-col items-start gap-0.5">
-          <s className="opacity-70">February 28, 2026</s>
-          <span className="font-medium">Hard Deadline: March 15, 2026</span>
+          <span className="inline-block bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full w-fit">
+            Closed
+          </span>
+          <s className="opacity-40 text-sm">February 28, 2026</s>
+          <s className="opacity-40 text-sm">Hard Deadline: March 15, 2026</s>
         </span>
       ),
     },

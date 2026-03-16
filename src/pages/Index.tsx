@@ -14,6 +14,11 @@ const Index = () => {
       <SponsorsBanner />
       <CountdownSection />
       <ImportantDatesSection />
+      <div className="bg-white/80 dark:bg-black/40 border-y border-red-200 dark:border-red-800 py-3 text-center">
+        <span className="text-red-600 font-bold text-2xl">
+          Decision tentatively 15th April
+        </span>
+      </div>
       <ConferenceTracksSection />
       <Footer />
     </div>
