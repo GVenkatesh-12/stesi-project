@@ -16,17 +16,17 @@ const Index = () => {
       <ImportantDatesSection />
       <div className="bg-white/80 dark:bg-black/40 border-y border-red-200 dark:border-red-800 py-3 overflow-hidden">
         <div className="animate-marquee text-red-600 font-bold text-2xl">
-          <span className="mx-16">Decision tentatively 15th April</span>
+          <span className="mx-16">Notification of Acceptance: April 15, 2026 (tentative)</span>
           <span className="mx-16">●</span>
-          <span className="mx-16">Decision tentatively 15th April</span>
+          <span className="mx-16">Notification of Acceptance: April 15, 2026 (tentative)</span>
           <span className="mx-16">●</span>
-          <span className="mx-16">Decision tentatively 15th April</span>
+          <span className="mx-16">Notification of Acceptance: April 15, 2026 (tentative)</span>
           <span className="mx-16">●</span>
-          <span className="mx-16">Decision tentatively 15th April</span>
+          <span className="mx-16">Notification of Acceptance: April 15, 2026 (tentative)</span>
           <span className="mx-16">●</span>
-          <span className="mx-16">Decision tentatively 15th April</span>
+          <span className="mx-16">Notification of Acceptance: April 15, 2026 (tentative)</span>
           <span className="mx-16">●</span>
-          <span className="mx-16">Decision tentatively 15th April</span>
+          <span className="mx-16">Notification of Acceptance: April 15, 2026 (tentative)</span>
           <span className="mx-16">●</span>
         </div>
       </div>
