@@ -9,7 +9,7 @@ import { CheckCircle, Upload, FileText, Calendar, AlertCircle, Download } from '
 const CameraReady = () => {
   const timeline = [
     {
-      date: "April 15, 2026",
+      date: "April 25, 2026 Onwards",
       milestone: "Notification of Acceptance",
       description: "Authors receive notification of paper acceptance",
       status: "completed"

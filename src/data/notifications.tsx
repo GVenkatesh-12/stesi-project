@@ -59,7 +59,7 @@ export const notifications: NotificationItem[] = [
     message: (
       <>
         Acceptance decisions are expected to be communicated{" "}
-        <span className="font-semibold">tentatively by April 15, 2026</span>.
+        <span className="font-semibold">from April 25, 2026 onwards</span>.
       </>
     ),
     date: "March 16, 2026",

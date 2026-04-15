@@ -27,7 +27,7 @@ const Footer = () => {
         </span>
       ),
     },
-    { event: 'Notification of Acceptance', date: 'April 15, 2026' },
+    { event: 'Notification of Acceptance', date: 'April 25, 2026 Onwards' },
     { event: 'Camera Ready', date: 'April 30, 2026' },
     { event: 'Conference', date: 'July 22-23, 2026' },
     { event: 'Registration', date: 'May 5, 2026' },

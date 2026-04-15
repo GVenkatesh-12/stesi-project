@@ -26,7 +26,7 @@ const ImportantDatesSection = () => {
     },
     {
       title: 'Notification of Acceptance',
-      date: 'April 15, 2026',
+      date: 'April 25, 2026 Onwards',
       icon: CheckCircle,
       color: 'text-green-500',
     },
