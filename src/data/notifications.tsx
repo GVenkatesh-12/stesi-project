@@ -64,4 +64,19 @@ export const notifications: NotificationItem[] = [
     ),
     date: "March 16, 2026",
   },
+  {
+    id: 5,
+    title: "Registration is Now Open!",
+    message: (
+      <>
+        Registration for STESI 2026 is now{" "}
+        <span className="font-semibold text-green-600">open</span>. Complete
+        your camera-ready paper submission and registration before the deadline
+        on <span className="font-semibold">May 10, 2026</span>.
+      </>
+    ),
+    date: "April 24, 2026",
+    link: "/registration",
+    linkLabel: "Register now",
+  },
 ];
