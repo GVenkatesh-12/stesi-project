@@ -72,7 +72,7 @@ export const notifications: NotificationItem[] = [
         Registration for STESI 2026 is now{" "}
         <span className="font-semibold text-green-600">open</span>. Complete
         your camera-ready paper submission and registration before the deadline
-        on <span className="font-semibold">May 10, 2026</span>.
+        on <span className="font-semibold">May 30, 2026</span>.
       </>
     ),
     date: "April 24, 2026",
