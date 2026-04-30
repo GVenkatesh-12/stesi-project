@@ -32,13 +32,13 @@ const ImportantDatesSection = () => {
     },
     {
       title: 'Camera Ready Paper Submission',
-      date: 'April 30, 2026',
+      date: 'May 30, 2026',
       icon: Camera,
       color: 'text-purple-500',
     },
     {
-      title: 'Registration Starts',
-      date: 'May 5, 2026',
+      title: 'Registration Ends',
+      date: 'May 30, 2026',
       icon: UserPlus,
       color: 'text-orange-500',
     },

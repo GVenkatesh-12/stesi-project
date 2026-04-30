@@ -15,13 +15,13 @@ const CameraReady = () => {
       status: "completed"
     },
     {
-      date: "April 30, 2026",
+      date: "May 30, 2026",
       milestone: "Camera-Ready Submission Deadline",
       description: "Final versions of accepted papers must be submitted",
       status: "upcoming"
     },
     {
-      date: "Coming Soon",
+      date: "May 30, 2026",
       milestone: "Copyright Transfer",
       description: "IEEE copyright forms must be completed",
       status: "upcoming"
@@ -139,7 +139,7 @@ const CameraReady = () => {
             <div className="flex items-center justify-center space-x-4">
               <Badge variant="secondary" className="text-lg px-4 py-2">
                 <Calendar className="h-4 w-4 mr-2" />
-                Deadline: April 30, 2026
+                Deadline: May 30, 2026
               </Badge>
               <Badge variant="outline" className="text-lg px-4 py-2">
                 IEEE Format Required
