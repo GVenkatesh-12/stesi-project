@@ -32,6 +32,7 @@ const AcceptedPapers = () => {
                 A0 size (2.76×3.90 feet) POSTER TEMPLATE
               </a>
             </Button>
+            <hr className="mt-8 border-0 h-0.5 bg-neutral-400 dark:bg-neutral-600" />
           </motion.div>
         </div>
       </section>
