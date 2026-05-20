@@ -159,21 +159,21 @@ const Templates = () => {
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
               Paper Templates
             </h1>
-            <div className="relative w-full max-w-2xl mx-auto mb-8">
-              <Badge className="absolute -top-2 right-3 sm:right-4 z-10 bg-red-500 text-white text-[10px] sm:text-xs font-bold px-2 py-0.5 shadow-md animate-pulse">
-                NEW
-              </Badge>
+            <div className="w-full max-w-2xl mx-auto mb-8">
               <Button
                 size="lg"
                 variant="conference"
-                className="h-auto w-full min-h-[3.25rem] px-4 py-3 text-sm font-bold leading-snug whitespace-normal shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/30 sm:px-8 sm:py-4 sm:text-base md:text-lg"
+                className="relative h-auto w-full min-h-[3.25rem] overflow-visible px-4 py-3 text-sm font-bold leading-snug whitespace-normal shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/30 sm:px-8 sm:py-4 sm:text-base md:text-lg"
                 asChild
               >
                 <a
                   href="/STESI-2026 POSTER TEMPLATE.pptx"
                   download="STESI-2026 POSTER TEMPLATE.pptx"
-                  className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 whitespace-normal text-center"
+                  className="relative inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 whitespace-normal text-center"
                 >
+                  <Badge className="absolute -top-2.5 -right-2 z-10 bg-red-500 text-white text-[10px] sm:text-xs font-bold px-2 py-0.5 shadow-md animate-pulse pointer-events-none">
+                    NEW
+                  </Badge>
                   <Download className="h-5 w-5 shrink-0 animate-pulse" />
                   <span>A0 size (2.76×3.90 feet) POSTER TEMPLATE</span>
                 </a>
