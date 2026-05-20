@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -9,45 +9,104 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
+const NAV_BADGE_STORAGE_KEY = 'stesi_nav_badge_seen';
+
+function getSeenBadgeIds(): Record<string, number> {
+  try {
+    const raw = localStorage.getItem(NAV_BADGE_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+function setSeenBadgeId(path: string, badgeId: number): void {
+  try {
+    const seen = getSeenBadgeIds();
+    localStorage.setItem(
+      NAV_BADGE_STORAGE_KEY,
+      JSON.stringify({ ...seen, [path]: badgeId })
+    );
+  } catch {
+    // ignore
+  }
+}
+
+const NavLabel = ({ name, showBadge }: { name: string; showBadge?: boolean }) => (
+  <span className="inline-flex items-center gap-1.5">
+    {name}
+    {showBadge && (
+      <span className="relative flex h-2 w-2 shrink-0">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-75" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
+      </span>
+    )}
+  </span>
+);
+
+const navItems = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  {
+    name: 'Authors',
+    items: [
+      { name: 'Call for Papers', path: '/call-for-papers' },
+      { name: 'Special Sessions', path: '/special-sessions' },
+      { name: 'Camera-Ready Submission', path: '/camera-ready' },
+      { name: 'Templates', path: '/templates' },
+    ],
+  },
+  {
+    name: 'Committee',
+    items: [
+      { name: 'Patrons & General Chairs', path: '/committee/patrons-general-chairs' },
+      { name: 'Organizing Committee', path: '/committee/organizing-committee' },
+      { name: 'Advisory Committees', path: '/committee/advisory-committees' },
+      { name: 'Conference Oversight Committee', path: '/committee/conference-oversight-committee' },
+      { name: 'Technical Program Committee', path: '/committee/technical-program-committee' },
+      { name: 'Publication & Plenary Chairs', path: '/committee/publication-plenary-chairs' },
+      { name: 'Supporting Committees', path: '/committee/supporting-committees' },
+      { name: 'Women in Engineering', path: '/committee/women-in-engineering' },
+      { name: 'Track Chairs', path: '/committee/track-chairs' },
+    ],
+  },
+  { name: 'Registration', path: '/registration' },
+  { name: 'Speakers', path: '/speakers' },
+  // Bump badgeId to show the red badge again (e.g. 1 → 2)
+  { name: 'Accepted Papers', path: '/accepted-papers', badgeId: 1 },
+  { name: 'Venue', path: '/venue' },
+  { name: 'Contact', path: '/contact' },
+  { name: 'Sponsorship', path: '/sponsorship' },
+];
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [seenBadgeIds, setSeenBadgeIdsState] = useState(getSeenBadgeIds);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
 
-  const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    {
-      name: 'Authors',
-      items: [
-        { name: 'Call for Papers', path: '/call-for-papers' },
-        { name: 'Special Sessions', path: '/special-sessions' },
-        { name: 'Camera-Ready Submission', path: '/camera-ready' },
-        { name: 'Templates', path: '/templates' },
-      ],
-    },
-    {
-      name: 'Committee',
-      items: [
-        { name: 'Patrons & General Chairs', path: '/committee/patrons-general-chairs' },
-        { name: 'Organizing Committee', path: '/committee/organizing-committee' },
-        { name: 'Advisory Committees', path: '/committee/advisory-committees' },
-        { name: 'Conference Oversight Committee', path: '/committee/conference-oversight-committee' },
-        { name: 'Technical Program Committee', path: '/committee/technical-program-committee' },
-        { name: 'Publication & Plenary Chairs', path: '/committee/publication-plenary-chairs' },
-        { name: 'Supporting Committees', path: '/committee/supporting-committees' },
-        { name: 'Women in Engineering', path: '/committee/women-in-engineering' },
-        { name: 'Track Chairs', path: '/committee/track-chairs' },
-      ],
-    },
-    { name: 'Registration', path: '/registration' },
-    { name: 'Speakers', path: '/speakers' },
-    { name: 'Accepted Papers', path: '/accepted-papers' },
-    { name: 'Venue', path: '/venue' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Sponsorship', path: '/sponsorship' },
-  ];
+  const dismissBadge = (path: string, badgeId: number) => {
+    setSeenBadgeId(path, badgeId);
+    setSeenBadgeIdsState((prev) => ({ ...prev, [path]: badgeId }));
+  };
+
+  const shouldShowBadge = (path: string, badgeId?: number) =>
+    badgeId != null && (seenBadgeIds[path] ?? 0) !== badgeId;
+
+  const handleNavClick = (path: string, badgeId?: number) => {
+    if (badgeId != null) dismissBadge(path, badgeId);
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const item = navItems.find(
+      (navItem) => 'path' in navItem && navItem.path === location.pathname && navItem.badgeId != null
+    );
+    if (item && 'path' in item && item.badgeId != null) {
+      dismissBadge(item.path, item.badgeId);
+    }
+  }, [location.pathname]);
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border z-50">
@@ -96,13 +155,17 @@ const Navigation = () => {
                 ) : (
                   <Link
                     to={item.path}
+                    onClick={() => handleNavClick(item.path, item.badgeId)}
                     className={`text-sm font-medium transition-colors hover:text-primary ${
                       isActive(item.path) 
                         ? 'text-primary border-b-2 border-primary' 
                         : 'text-muted-foreground'
                     }`}
                   >
-                    {item.name}
+                    <NavLabel
+                      name={item.name}
+                      showBadge={shouldShowBadge(item.path, item.badgeId)}
+                    />
                   </Link>
                 )}
               </div>
@@ -150,9 +213,12 @@ const Navigation = () => {
                       className={`block text-sm font-medium transition-colors hover:text-primary ${
                         isActive(item.path) ? 'text-primary' : 'text-muted-foreground'
                       }`}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => handleNavClick(item.path, item.badgeId)}
                     >
-                      {item.name}
+                      <NavLabel
+                        name={item.name}
+                        showBadge={shouldShowBadge(item.path, item.badgeId)}
+                      />
                     </Link>
                   )}
                 </div>

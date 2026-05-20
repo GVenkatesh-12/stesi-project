@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Bell, ExternalLink, Megaphone } from "lucide-react";
 import {
   Popover,
@@ -101,16 +102,25 @@ export default function NotificationBell() {
                       <span className="text-xs text-muted-foreground">
                         {item.date}
                       </span>
-                      {item.link && (
-                        <a
-                          href={item.link}
-                          onClick={() => setOpen(false)}
-                          className="text-xs font-medium text-primary hover:underline inline-flex items-center gap-1"
-                        >
-                          {item.linkLabel ?? "View"}
-                          <ExternalLink className="h-3 w-3" />
-                        </a>
-                      )}
+                      {item.link &&
+                        (item.link.startsWith("/") ? (
+                          <Link
+                            to={item.link}
+                            onClick={() => setOpen(false)}
+                            className="text-xs font-medium text-primary hover:underline inline-flex items-center gap-1"
+                          >
+                            {item.linkLabel ?? "View"}
+                          </Link>
+                        ) : (
+                          <a
+                            href={item.link}
+                            onClick={() => setOpen(false)}
+                            className="text-xs font-medium text-primary hover:underline inline-flex items-center gap-1"
+                          >
+                            {item.linkLabel ?? "View"}
+                            <ExternalLink className="h-3 w-3" />
+                          </a>
+                        ))}
                     </div>
                   </div>
                 </li>

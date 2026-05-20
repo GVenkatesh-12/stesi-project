@@ -79,4 +79,20 @@ export const notifications: NotificationItem[] = [
     link: "/registration",
     linkLabel: "Register now",
   },
+  {
+    id: 6,
+    title: "Poster Template Uploaded",
+    message: (
+      <>
+        The official{" "}
+        <span className="font-semibold">
+          A0 size (2.76×3.90 feet) poster template
+        </span>{" "}
+        is now available for download.
+      </>
+    ),
+    date: "May 20, 2026",
+    link: "/accepted-papers",
+    linkLabel: "Download template",
+  },
 ];
