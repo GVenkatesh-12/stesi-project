@@ -22,7 +22,7 @@ const Index = () => {
         <div className="animate-marquee text-red-600 font-bold text-2xl">
           {Array.from({ length: 6 }).map((_, i) => (
             <Fragment key={i}>
-              <Link to="/accepted-papers" className="mx-16 hover:underline">
+              <Link to="/templates" className="mx-16 hover:underline">
                 {marqueeMessage}
               </Link>
               <span className="mx-16">●</span>

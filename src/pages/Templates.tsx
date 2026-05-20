@@ -146,7 +146,7 @@ const Templates = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-b from-primary/5 to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,6 +159,26 @@ const Templates = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
               Paper Templates
             </h1>
+            <div className="relative inline-block mb-8">
+              <Badge className="absolute -top-2 -right-2 z-10 bg-red-500 text-white text-xs font-bold px-2 py-0.5 shadow-md animate-pulse">
+                NEW
+              </Badge>
+              <Button
+                size="lg"
+                variant="conference"
+                className="h-auto w-full px-8 py-4 text-base font-bold shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/30 sm:w-auto sm:text-lg"
+                asChild
+              >
+                <a
+                  href="/STESI-2026 POSTER TEMPLATE.pptx"
+                  download="STESI-2026 POSTER TEMPLATE.pptx"
+                >
+                  <Download className="mr-2 h-5 w-5 animate-pulse" />
+                  A0 size (2.76×3.90 feet) POSTER TEMPLATE
+                </a>
+              </Button>
+            </div>
+            <hr className="mb-8 border-0 h-0.5 bg-neutral-400 dark:bg-neutral-600" />
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Download official IEEE templates and formatting guidelines for your STESI 2026 paper submission. Ensure your paper meets all requirements for successful publication.
             </p>

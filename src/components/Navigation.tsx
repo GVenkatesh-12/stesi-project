@@ -11,6 +11,20 @@ import {
 
 const NAV_BADGE_STORAGE_KEY = 'stesi_nav_badge_seen';
 
+type NavSubItem = {
+  name: string;
+  path: string;
+  badgeId?: number;
+};
+
+type NavItem =
+  | { name: string; path: string; badgeId?: number }
+  | { name: string; items: NavSubItem[] };
+
+function hasNavItems(item: NavItem): item is { name: string; items: NavSubItem[] } {
+  return 'items' in item;
+}
+
 function getSeenBadgeIds(): Record<string, number> {
   try {
     const raw = localStorage.getItem(NAV_BADGE_STORAGE_KEY);
@@ -44,7 +58,7 @@ const NavLabel = ({ name, showBadge }: { name: string; showBadge?: boolean }) =>
   </span>
 );
 
-const navItems = [
+const navItems: NavItem[] = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   {
@@ -53,7 +67,8 @@ const navItems = [
       { name: 'Call for Papers', path: '/call-for-papers' },
       { name: 'Special Sessions', path: '/special-sessions' },
       { name: 'Camera-Ready Submission', path: '/camera-ready' },
-      { name: 'Templates', path: '/templates' },
+      // Bump badgeId to show the red badge again (e.g. 2 → 3)
+      { name: 'Templates', path: '/templates', badgeId: 2 },
     ],
   },
   {
@@ -72,8 +87,7 @@ const navItems = [
   },
   { name: 'Registration', path: '/registration' },
   { name: 'Speakers', path: '/speakers' },
-  // Bump badgeId to show the red badge again (e.g. 1 → 2)
-  { name: 'Accepted Papers', path: '/accepted-papers', badgeId: 1 },
+  { name: 'Accepted Papers', path: '/accepted-papers' },
   { name: 'Venue', path: '/venue' },
   { name: 'Contact', path: '/contact' },
   { name: 'Sponsorship', path: '/sponsorship' },
@@ -100,11 +114,20 @@ const Navigation = () => {
   };
 
   useEffect(() => {
-    const item = navItems.find(
-      (navItem) => 'path' in navItem && navItem.path === location.pathname && navItem.badgeId != null
-    );
-    if (item && 'path' in item && item.badgeId != null) {
-      dismissBadge(item.path, item.badgeId);
+    for (const navItem of navItems) {
+      if ('path' in navItem && navItem.path === location.pathname && navItem.badgeId != null) {
+        dismissBadge(navItem.path, navItem.badgeId);
+        return;
+      }
+      if ('items' in navItem) {
+        const subItem = navItem.items.find(
+          (item) => item.path === location.pathname && item.badgeId != null
+        );
+        if (subItem) {
+          dismissBadge(subItem.path, subItem.badgeId!);
+          return;
+        }
+      }
     }
   }, [location.pathname]);
 
@@ -128,7 +151,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <div key={item.name}>
-                {item.items ? (
+                {hasNavItems(item) ? (
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button 
@@ -142,11 +165,15 @@ const Navigation = () => {
                     <DropdownMenuContent className="bg-card border border-border shadow-lg">
                       {item.items.map((subItem) => (
                         <DropdownMenuItem key={subItem.path} asChild>
-                          <Link 
+                          <Link
                             to={subItem.path}
+                            onClick={() => handleNavClick(subItem.path, subItem.badgeId)}
                             className="w-full px-3 py-2 hover:bg-accent hover:text-accent-foreground"
                           >
-                            {subItem.name}
+                            <NavLabel
+                              name={subItem.name}
+                              showBadge={shouldShowBadge(subItem.path, subItem.badgeId)}
+                            />
                           </Link>
                         </DropdownMenuItem>
                       ))}
@@ -191,7 +218,7 @@ const Navigation = () => {
             <div className="px-4 py-4 space-y-3">
               {navItems.map((item) => (
                 <div key={item.name}>
-                  {item.items ? (
+                  {hasNavItems(item) ? (
                     <div className="space-y-2">
                       <div className="font-medium text-foreground">{item.name}</div>
                       <div className="pl-4 space-y-2">
@@ -200,9 +227,12 @@ const Navigation = () => {
                             key={subItem.path}
                             to={subItem.path}
                             className="block text-sm text-muted-foreground hover:text-primary"
-                            onClick={() => setIsOpen(false)}
+                            onClick={() => handleNavClick(subItem.path, subItem.badgeId)}
                           >
-                            {subItem.name}
+                            <NavLabel
+                              name={subItem.name}
+                              showBadge={shouldShowBadge(subItem.path, subItem.badgeId)}
+                            />
                           </Link>
                         ))}
                       </div>

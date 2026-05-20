@@ -80,7 +80,7 @@ export const notifications: NotificationItem[] = [
     linkLabel: "Register now",
   },
   {
-    id: 6,
+    id: 7,
     title: "Poster Template Uploaded",
     message: (
       <>
@@ -88,11 +88,12 @@ export const notifications: NotificationItem[] = [
         <span className="font-semibold">
           A0 size (2.76×3.90 feet) poster template
         </span>{" "}
-        is now available for download.
+        is now available under{" "}
+        <span className="font-semibold">Authors → Templates</span>.
       </>
     ),
     date: "May 20, 2026",
-    link: "/accepted-papers",
+    link: "/templates",
     linkLabel: "Download template",
   },
 ];
