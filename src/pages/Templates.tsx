@@ -148,7 +148,7 @@ const Templates = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-b from-primary/5 to-background">
+      <section className="pt-24 pb-10 sm:pb-12 bg-gradient-to-b from-primary/5 to-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -156,62 +156,64 @@ const Templates = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
               Paper Templates
             </h1>
-            <div className="relative inline-block mb-8">
-              <Badge className="absolute -top-2 -right-2 z-10 bg-red-500 text-white text-xs font-bold px-2 py-0.5 shadow-md animate-pulse">
+            <div className="relative w-full max-w-2xl mx-auto mb-8">
+              <Badge className="absolute -top-2 right-3 sm:right-4 z-10 bg-red-500 text-white text-[10px] sm:text-xs font-bold px-2 py-0.5 shadow-md animate-pulse">
                 NEW
               </Badge>
               <Button
                 size="lg"
                 variant="conference"
-                className="h-auto w-full px-8 py-4 text-base font-bold shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/30 sm:w-auto sm:text-lg"
+                className="h-auto w-full min-h-[3.25rem] px-4 py-3 text-sm font-bold leading-snug whitespace-normal shadow-lg shadow-primary/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/30 sm:px-8 sm:py-4 sm:text-base md:text-lg"
                 asChild
               >
                 <a
                   href="/STESI-2026 POSTER TEMPLATE.pptx"
                   download="STESI-2026 POSTER TEMPLATE.pptx"
+                  className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 whitespace-normal text-center"
                 >
-                  <Download className="mr-2 h-5 w-5 animate-pulse" />
-                  A0 size (2.76×3.90 feet) POSTER TEMPLATE
+                  <Download className="h-5 w-5 shrink-0 animate-pulse" />
+                  <span>A0 size (2.76×3.90 feet) POSTER TEMPLATE</span>
                 </a>
               </Button>
             </div>
-            <hr className="mb-8 border-0 h-0.5 bg-neutral-400 dark:bg-neutral-600" />
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+            <hr className="mb-8 border-0 h-0.5 bg-neutral-400 dark:bg-neutral-600 max-w-2xl mx-auto" />
+            <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 px-1">
               Download official IEEE templates and formatting guidelines for your STESI 2026 paper submission. Ensure your paper meets all requirements for successful publication.
             </p>
-            <Badge variant="secondary" className="text-lg px-4 py-2">
-              IEEE Conference Format Required
-            </Badge>
-            {/* add a hyperlink with button to the official IEEE website */}
-            <Button variant="conference" className="mt-4" asChild>
-              <a href="https://www.ieee.org/conferences/publishing/templates" target="_blank" rel="noopener noreferrer">
-                Official IEEE Author Center
-              </a>
-            </Button>
+            <div className="flex flex-col items-center gap-3 sm:gap-4">
+              <Badge variant="secondary" className="text-sm sm:text-lg px-3 py-1.5 sm:px-4 sm:py-2 whitespace-normal text-center max-w-full">
+                IEEE Conference Format Required
+              </Badge>
+              <Button variant="conference" className="w-full sm:w-auto" asChild>
+                <a href="https://www.ieee.org/conferences/publishing/templates" target="_blank" rel="noopener noreferrer">
+                  Official IEEE Author Center
+                </a>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Templates Download */}
-      <section className="py-16">
+      <section className="py-10 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-12"
           >
-            <h2 className="text-3xl font-bold text-primary mb-4">Download Templates</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4">Download Templates</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Choose the template that best suits your writing environment. All templates are IEEE-compliant and regularly updated.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {templates.map((template, index) => (
               <motion.div
                 key={template.name}
@@ -228,15 +230,15 @@ const Templates = () => {
                     </Badge>
                   </div>
                 )}
-                <Card className={`h-full ${template.recommended ? 'border-primary shadow-lg' : 'border-border/50'} bg-gradient-card transition-all duration-300 hover:shadow-lg`}>
-                  <CardHeader className="text-center">
+                <Card className={`h-full overflow-hidden ${template.recommended ? 'border-primary shadow-lg' : 'border-border/50'} bg-gradient-card transition-all duration-300 hover:shadow-lg`}>
+                  <CardHeader className="text-center px-4 sm:px-6">
                     <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <FileText className="h-8 w-8 text-primary" />
                     </div>
-                    <CardTitle className="text-xl">{template.name}</CardTitle>
+                    <CardTitle className="text-lg sm:text-xl">{template.name}</CardTitle>
                     <p className="text-muted-foreground text-sm">{template.description}</p>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="space-y-4 px-4 sm:px-6">
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Format:</span>
                       <Badge variant="outline">{template.format}</Badge>
