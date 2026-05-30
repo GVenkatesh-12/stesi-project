@@ -48,7 +48,8 @@ const TechnicalProgramCommittee = () => {
     { name: "Dr. Chandan Kr. Shiva", affiliation: "SR University Warangal, India" },
     { name: "Dr. Vedik Baseti", affiliation: "SR University Warangal, India" },
     { name: "Dr. Apurti Jain", affiliation: "GE Vernova, Chennai, India" },
-    { name: "Dr. Sourav Basak", affiliation: "SR University, Warangal, India" }
+    { name: "Dr. Sourav Basak", affiliation: "SR University, Warangal, India" },
+    { name: "Dr. Shabbiruddin", affiliation: "Bihar Engineering University, Bihar, India" }
   ];
 
   const getCountryInfo = (affiliation: string) => {
