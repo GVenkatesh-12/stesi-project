@@ -30,7 +30,13 @@ const Footer = () => {
     { event: 'Notification of Acceptance', date: 'April 25, 2026 Onwards' },
     { event: 'Camera Ready', date: 'May 30, 2026' },
     { event: 'Conference', date: 'July 22-23, 2026' },
-    { event: 'Registration Ends', date: 'May 30, 2026' },
+    { event: 'Registration Ends', date: (
+        <span className="inline-flex flex-col items-start gap-0.5">
+          <s className="opacity-40 text-sm">May 30, 2026</s>
+          <span>June 15, 2026</span>
+        </span>
+      )
+    },
   ];
 
   return (

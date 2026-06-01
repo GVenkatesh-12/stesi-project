@@ -48,7 +48,7 @@ const Registration = () => {
       content: (
         <div className="space-y-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
           <p>
-            The authors will have to submit a camera-ready version as per the guidelines given on the conference website <strong>on or before 30th May 2026</strong>.
+            The authors will have to submit a camera-ready version as per the guidelines given on the conference website <strong>on or before <s>30th May 2026</s> 15th June 2026</strong>.
           </p>
           <div className="flex items-start gap-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
             <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
@@ -264,7 +264,9 @@ const Registration = () => {
 
           <div className="flex items-center gap-3 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-lg p-4">
             <CalendarClock className="h-5 w-5 text-rose-600 dark:text-rose-400 shrink-0" />
-            <span className="font-semibold text-rose-800 dark:text-rose-300">Deadline: May 30th, 2026</span>
+            <span className="font-semibold text-rose-800 dark:text-rose-300">
+              Deadline: <s className="opacity-60 font-medium">May 30th, 2026</s> June 15, 2026
+            </span>
           </div>
 
           <div className="bg-gradient-to-r from-rose-50 to-pink-50 dark:from-rose-950/40 dark:to-pink-950/40 border-2 border-rose-300 dark:border-rose-700 rounded-xl p-4 flex items-center justify-between gap-4 flex-wrap">

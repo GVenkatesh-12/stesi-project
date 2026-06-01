@@ -38,7 +38,12 @@ const ImportantDatesSection = () => {
     },
     {
       title: 'Registration Ends',
-      date: 'May 30, 2026',
+      date: (
+        <span className="flex flex-col items-center justify-center leading-tight gap-1">
+          <s className="text-sm font-medium opacity-40">May 30, 2026</s>
+          <span>June 15, 2026</span>
+        </span>
+      ),
       icon: UserPlus,
       color: 'text-orange-500',
     },
