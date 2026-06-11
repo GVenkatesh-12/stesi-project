@@ -14,6 +14,10 @@ const SponsorsBanner = () => {
       name: 'IEEE Power & Energy Society',
       logo: '/IEEE-PES-Logo.png',
     },
+    {
+      name: 'ANRF',
+      logo: '/ANRF-logo.png',
+    },
   ];
 
   return (
