@@ -9,7 +9,7 @@ import ConferenceTracksSection from '@/components/ConferenceTracksSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
-  const marqueeMessage = 'A0 size (2.76×3.90 feet) POSTER TEMPLATE UPLOADED';
+  const marqueeMessage = 'STESI PPT TEMPLATE UPLOADED';
 
   return (
     <div className="min-h-screen">

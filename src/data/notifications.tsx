@@ -81,23 +81,6 @@ export const notifications: NotificationItem[] = [
     linkLabel: "Register now",
   },
   {
-    id: 7,
-    title: "Poster Template Uploaded",
-    message: (
-      <>
-        The official{" "}
-        <span className="font-semibold">
-          A0 size (2.76×3.90 feet) poster template
-        </span>{" "}
-        is now available under{" "}
-        <span className="font-semibold">Authors → Templates</span>.
-      </>
-    ),
-    date: "May 20, 2026",
-    link: "/templates",
-    linkLabel: "Download template",
-  },
-  {
     id: 8,
     title: "Deadline Extended!",
     message: (
@@ -111,5 +94,22 @@ export const notifications: NotificationItem[] = [
     date: "June 01, 2026",
     link: "/registration",
     linkLabel: "Register now",
+  },
+  {
+    id: 9,
+    title: "PPT Template Uploaded",
+    message: (
+      <>
+        The official{" "}
+        <span className="font-semibold">
+          STESI PPT template
+        </span>{" "}
+        is now available under{" "}
+        <span className="font-semibold">Authors → Templates</span>.
+      </>
+    ),
+    date: "June 16, 2026",
+    link: "/templates",
+    linkLabel: "Download template",
   },
 ];
