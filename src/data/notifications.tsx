@@ -73,7 +73,8 @@ export const notifications: NotificationItem[] = [
         <span className="font-semibold text-green-600">open</span>. Complete
         your camera-ready paper submission and registration before the deadline
         on <s><span className="font-semibold">May 30, 2026</span></s>{" "}
-        <span className="font-semibold">June 15, 2026</span>.
+        <s><span className="font-semibold">June 15, 2026</span></s>{" "}
+        <span className="font-semibold">June 22, 2026</span>.
       </>
     ),
     date: "April 24, 2026",
@@ -87,7 +88,7 @@ export const notifications: NotificationItem[] = [
       <>
         The registration and camera-ready paper submission deadline has been
         extended to{" "}
-        <span className="font-semibold">June 15, 2026</span>. Complete your
+        <span className="font-semibold">June 22, 2026</span>. Complete your
         submission and registration before the new deadline.
       </>
     ),

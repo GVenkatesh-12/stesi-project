@@ -32,7 +32,7 @@ const ImportantDatesSection = () => {
     },
     {
       title: 'Camera Ready Paper Submission',
-      date: 'May 30, 2026',
+      date: 'June 22, 2026',
       icon: Camera,
       color: 'text-purple-500',
     },
