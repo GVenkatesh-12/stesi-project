@@ -48,7 +48,7 @@ const Registration = () => {
       content: (
         <div className="space-y-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
           <p>
-            The authors will have to submit a camera-ready version as per the guidelines given on the conference website <strong>on or before <s>30th May 2026</s> 15th June 2026</strong>.
+            The authors will have to submit a camera-ready version as per the guidelines given on the conference website <strong>on or before <s>15th June 2026</s> 22nd June 2026</strong>.
           </p>
           <div className="flex items-start gap-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
             <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
@@ -265,7 +265,7 @@ const Registration = () => {
           <div className="flex items-center gap-3 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-lg p-4">
             <CalendarClock className="h-5 w-5 text-rose-600 dark:text-rose-400 shrink-0" />
             <span className="font-semibold text-rose-800 dark:text-rose-300">
-              Deadline: <s className="opacity-60 font-medium">May 30th, 2026</s> June 15, 2026
+              Deadline: <s className="opacity-60 font-medium">15th June 2026</s> June 22, 2026
             </span>
           </div>
 
@@ -322,10 +322,10 @@ const Registration = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full shadow-lg shadow-green-500/25"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-full shadow-lg shadow-red-500/25"
             >
               <Sparkles className="h-6 w-6 animate-pulse" />
-              <span className="text-lg sm:text-xl font-bold tracking-wide">Registration is Now Open!</span>
+              <span className="text-lg sm:text-xl font-bold tracking-wide">Registration is Closed!</span>
               <Sparkles className="h-6 w-6 animate-pulse" />
             </motion.div>
           </motion.div>

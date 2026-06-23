@@ -113,4 +113,17 @@ export const notifications: NotificationItem[] = [
     link: "/templates",
     linkLabel: "Download template",
   },
+  {
+    id: 10,
+    title: "Registration Closed",
+    message: (
+      <>
+        Registration is now{" "}
+        <span className="font-semibold text-red-600">CLOSED</span>. The list of accepted and registered papers shall be updated soon.
+      </>
+    ),
+    date: "June 23, 2026",
+    link: "/accepted-papers",
+    linkLabel: "View papers page",
+  },
 ];
