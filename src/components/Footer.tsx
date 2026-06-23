@@ -32,8 +32,11 @@ const Footer = () => {
     { event: 'Conference', date: 'July 22-23, 2026' },
     { event: 'Registration Ends', date: (
         <span className="inline-flex flex-col items-start gap-0.5">
-          <s className="opacity-40 text-sm">May 30, 2026</s>
-          <span>June 15, 2026</span>
+          <span className="inline-block bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full w-fit">
+            Closed
+          </span>
+          <s className="opacity-40 text-sm">June 15, 2026</s>
+          <s className="opacity-40 text-sm">June 22, 2026</s>
         </span>
       )
     },

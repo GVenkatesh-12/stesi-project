@@ -325,7 +325,7 @@ const Registration = () => {
               className="inline-flex items-center gap-3 bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-full shadow-lg shadow-red-500/25"
             >
               <Sparkles className="h-6 w-6 animate-pulse" />
-              <span className="text-lg sm:text-xl font-bold tracking-wide">Registration is Closed!</span>
+              <span className="text-lg sm:text-xl font-bold tracking-wide">Registration Closed!</span>
               <Sparkles className="h-6 w-6 animate-pulse" />
             </motion.div>
           </motion.div>
