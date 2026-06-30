@@ -126,4 +126,18 @@ export const notifications: NotificationItem[] = [
     link: "/accepted-papers",
     linkLabel: "View papers page",
   },
+  {
+    id: 11,
+    title: "Accepted Papers Uploaded",
+    message: (
+      <>
+        The list of{" "}
+        <span className="font-semibold">accepted and registered papers</span>{" "}
+        has been uploaded.
+      </>
+    ),
+    date: "June 30, 2026",
+    link: "/accepted-papers",
+    linkLabel: "Download list",
+  },
 ];

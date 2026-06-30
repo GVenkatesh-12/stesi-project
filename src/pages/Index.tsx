@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 const Index = () => {
   const marqueeItems = [
     { text: 'REGISTRATION CLOSED', link: '/registration' },
-    { text: 'LIST OF ACCEPTED AND REGISTERED PAPERS SHALL BE UPDATED SOON', link: '/accepted-papers' }
+    { text: 'LIST OF ACCEPTED AND REGISTERED PAPERS IS UPLOADED', link: '/accepted-papers' }
   ];
 
   return (
