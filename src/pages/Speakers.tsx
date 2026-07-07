@@ -41,7 +41,7 @@ const Speakers = () => {
     {
       name: "Dr. Almoataz Youssef Abdelaziz Mohamed",
       title: "Professor",
-      organization: "Future University in Egypt, Cairo, Egypt",
+      organization: "Ain Shams University, Egypt, Future University in Egypt, Cairo, Egypt",
       image: "/speaker4.png",
       bio: "Almoataz Youssef Abdelaziz Mohamed is a leading expert in applications of artificial intelligence, evolutionary and heuristic optimization techniques applied to power systems operation, planning, and control. He has published extensively in top-tier power systems journals and has been recognized for his innovative approaches to power system optimization. His research has revolutionized power system management through AI integration, particularly in renewable energy integration and smart grid applications. Dr. Mohamed has supervised numerous graduate students and has been involved in several international research collaborations.",
       topic: "AI and Evolutionary Optimization in Power System Operation and Control",
@@ -49,14 +49,14 @@ const Speakers = () => {
       awards: ["Power Systems Excellence Award", "AI in Energy Innovation Prize", "Best Researcher Award", "IEEE Senior Member", "Outstanding Contribution to Power Systems"]
     },
     {
-      name: "Dr. Pallavi Bhardwaj",
-      title: "Assistant Professor",
-      organization: "Department of Electrical Engineering, IIT Gandhinagar",
-      image: "/speaker5.png",
-      bio: "Dr. Pallavi Bharadwaj is an Electrical Engineering faculty member at IIT Gandhinagar and formerly served at Aalborg University, Denmark. She completed her postdoctoral research at MIT in 2021 following a Ph.D. from IISc Bengaluru in 2019. A Gold Medalist in industrial training, she has garnered several accolades including the POSOCO Power System Award and the Bhaskara Advanced Solar Energy Indo-US Fellowship. Since 2017 she has been active on multiple national and international technical committees and is passionate about sustainability, focusing on optimized engineering solutions for global energy needs. Her research interests span renewable power conversion systems, energy storage optimization, and physics-inspired AI for smart power electronics aimed at net-zero transitions.",
-      topic: "Enhanced EV Safety and Battery Performance Optimization",
-      expertise: ["Renewable Power Conversion Systems", "Energy Storage Optimization", "Physics-Inspired AI", "Smart Power Electronics", "Electric Vehicles", "Battery Performance", "Sustainable Energy Systems"],
-      awards: ["Gold Medalist - Industrial Training", "POSOCO Power System Award", "Bhaskara Advanced Solar Energy Indo-US Fellowship", "National & International Technical Committee Service (since 2017)"]
+      name: "Dr. Rajeeb Dey",
+      title: "Associate Professor",
+      organization: "Department of Electrical Engineering, National Institute of Technology Silchar",
+      image: "/speaker8.png",
+      bio: "Dr. Rajeeb Dey is an Associate Professor in the Department of Electrical Engineering at NIT Silchar and works with the Systems & Control Engineering research group. He completed his B.Tech. in Electrical Engineering from NERIST, M.Tech. in Control System Engineering from IIT Kharagpur, and Ph.D. in Engineering from Jadavpur University, followed by postdoctoral research at CINVESTAV-IPN, Mexico. His research interests include control theory and applications, biomedical engineering, network control systems, cyber-physical systems, and modeling of socio-psychological systems. He has contributed widely through journal and conference publications, books, book chapters, patents, funded projects, and doctoral and postgraduate supervision.",
+      topic: "Bridging the Physical and Digital System: The Next Frontier in Control",
+      expertise: ["Control Theory & Applications", "Biomedical Engineering", "Network Control Systems", "Cyber-Physical Systems", "Systems & Control Engineering", "Modeling of Socio-Psychological Systems"],
+      awards: ["Senior Member IEEE", "Fellow of The Institution of Engineers (India)", "TWAS Postdoctoral Fellowship", "Associate Editor - IEEE Access", "Editor - Scientific Reports", "General Secretary ACDOS (IFAC affiliated)", "2 Patents", "78 Publications", "5 Doctoral Students Guided"]
     },
     {
       name: "Dr. Shubhendu Bhasin",
