@@ -12,6 +12,7 @@ import { notifications } from "@/data/notifications";
 import { cn } from "@/lib/utils";
 
 const STORAGE_KEY = "stesi_notification_last_seen_id";
+const documentLinkPattern = /\.(pdf|docx|pptx|zip)$/i;
 
 function getLastSeenId(): number {
   try {
@@ -89,42 +90,50 @@ export default function NotificationBell() {
           </div>
           <ScrollArea className="max-h-[min(70vh,320px)]">
             <ul className="divide-y">
-              {[...notifications].reverse().map((item) => (
-                <li key={item.id} className="px-4 py-3 hover:bg-muted/30 transition-colors">
-                  <div className="space-y-1">
-                    <p className="font-medium text-sm text-foreground leading-tight">
-                      {item.title}
-                    </p>
-                    <p className="text-xs text-muted-foreground leading-snug">
-                      {item.message}
-                    </p>
-                    <div className="flex items-center justify-between gap-2 pt-1">
-                      <span className="text-xs text-muted-foreground">
-                        {item.date}
-                      </span>
-                      {item.link &&
-                        (item.link.startsWith("/") ? (
-                          <Link
-                            to={item.link}
-                            onClick={() => setOpen(false)}
-                            className="text-xs font-medium text-primary hover:underline inline-flex items-center gap-1"
-                          >
-                            {item.linkLabel ?? "View"}
-                          </Link>
-                        ) : (
-                          <a
-                            href={item.link}
-                            onClick={() => setOpen(false)}
-                            className="text-xs font-medium text-primary hover:underline inline-flex items-center gap-1"
-                          >
-                            {item.linkLabel ?? "View"}
-                            <ExternalLink className="h-3 w-3" />
-                          </a>
-                        ))}
+              {[...notifications].reverse().map((item) => {
+                const isDocumentLink =
+                  item.link &&
+                  documentLinkPattern.test(
+                    decodeURIComponent(item.link).split(/[?#]/)[0]
+                  );
+
+                return (
+                  <li key={item.id} className="px-4 py-3 hover:bg-muted/30 transition-colors">
+                    <div className="space-y-1">
+                      <p className="font-medium text-sm text-foreground leading-tight">
+                        {item.title}
+                      </p>
+                      <p className="text-xs text-muted-foreground leading-snug">
+                        {item.message}
+                      </p>
+                      <div className="flex items-center justify-between gap-2 pt-1">
+                        <span className="text-xs text-muted-foreground">
+                          {item.date}
+                        </span>
+                        {item.link &&
+                          (item.link.startsWith("/") && !isDocumentLink ? (
+                            <Link
+                              to={item.link}
+                              onClick={() => setOpen(false)}
+                              className="text-xs font-medium text-primary hover:underline inline-flex items-center gap-1"
+                            >
+                              {item.linkLabel ?? "View"}
+                            </Link>
+                          ) : (
+                            <a
+                              href={item.link}
+                              onClick={() => setOpen(false)}
+                              className="text-xs font-medium text-primary hover:underline inline-flex items-center gap-1"
+                            >
+                              {item.linkLabel ?? "View"}
+                              {!isDocumentLink && <ExternalLink className="h-3 w-3" />}
+                            </a>
+                          ))}
+                      </div>
                     </div>
-                  </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           </ScrollArea>
         </PopoverContent>

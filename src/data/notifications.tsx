@@ -140,4 +140,17 @@ export const notifications: NotificationItem[] = [
     link: "/accepted-papers",
     linkLabel: "Download list",
   },
+  {
+    id: 12,
+    title: "Program Schedule Uploaded",
+    message: (
+      <>
+        The <span className="font-semibold">STESI 2026 program schedule</span>{" "}
+        is now available.
+      </>
+    ),
+    date: "July 09, 2026",
+    link: "/program%20schedule_STESI2026.pdf",
+    linkLabel: "Download schedule",
+  },
 ];

@@ -9,6 +9,8 @@ const acceptedPapersFile = {
   name: 'Accepted and Registered papers.pdf',
 };
 
+const showAcceptedPapersDownload = false;
+
 const AcceptedPapers = () => {
   return (
     <div className="min-h-screen">
@@ -31,23 +33,25 @@ const AcceptedPapers = () => {
             <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               The list of accepted and registered papers for STESI 2026 has been uploaded.
             </p>
-            <div className="mx-auto flex max-w-2xl flex-col items-center rounded-lg border border-primary/15 bg-background/80 p-6 shadow-card sm:p-8">
-              <Button
-                size="lg"
-                variant="conference"
-                className="h-auto w-full px-4 py-3 text-sm font-bold leading-snug whitespace-normal sm:w-auto sm:px-8 sm:text-base"
-                asChild
-              >
-                <a
-                  href={acceptedPapersFile.href}
-                  download={acceptedPapersFile.name}
-                  className="inline-flex flex-wrap items-center justify-center gap-2 text-center"
+            {showAcceptedPapersDownload && (
+              <div className="mx-auto flex max-w-2xl flex-col items-center rounded-lg border border-primary/15 bg-background/80 p-6 shadow-card sm:p-8">
+                <Button
+                  size="lg"
+                  variant="conference"
+                  className="h-auto w-full px-4 py-3 text-sm font-bold leading-snug whitespace-normal sm:w-auto sm:px-8 sm:text-base"
+                  asChild
                 >
-                  <Download className="h-5 w-5 shrink-0" />
-                  <span>Download Accepted and Registered Papers</span>
-                </a>
-              </Button>
-            </div>
+                  <a
+                    href={acceptedPapersFile.href}
+                    download={acceptedPapersFile.name}
+                    className="inline-flex flex-wrap items-center justify-center gap-2 text-center"
+                  >
+                    <Download className="h-5 w-5 shrink-0" />
+                    <span>Download Accepted and Registered Papers</span>
+                  </a>
+                </Button>
+              </div>
+            )}
           </motion.div>
         </div>
       </section>
