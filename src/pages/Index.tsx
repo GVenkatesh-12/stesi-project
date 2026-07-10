@@ -2,15 +2,19 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
+import ScheduleDownloadsSection from '@/components/ScheduleDownloadsSection';
 import SponsorsBanner from '@/components/SponsorsBanner';
 import CountdownSection from '@/components/CountdownSection';
 import ImportantDatesSection from '@/components/ImportantDatesSection';
 import ConferenceTracksSection from '@/components/ConferenceTracksSection';
 import Footer from '@/components/Footer';
 
+const documentLinkPattern = /\.(pdf|docx|pptx|zip)$/i;
+
 const Index = () => {
   const marqueeItems = [
-    { text: 'REGISTRATION CLOSED', link: '/registration' },
+    { text: 'PROGRAM SCHEDULE IS UPLOADED', link: '/program%20schedule_STESI2026.pdf' },
+    { text: 'TECHNICAL SESSION SCHEDULE IS UPLOADED', link: '/Detail_Technical%20Session_STESI2026.pdf' },
     { text: 'LIST OF ACCEPTED AND REGISTERED PAPERS IS UPLOADED', link: '/accepted-papers' }
   ];
 
@@ -18,6 +22,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <HeroSection />
+      <ScheduleDownloadsSection />
       <SponsorsBanner />
       <CountdownSection />
       <ImportantDatesSection />
@@ -25,11 +30,21 @@ const Index = () => {
         <div className="animate-marquee text-red-600 font-bold text-2xl">
           {Array.from({ length: 8 }).map((_, i) => {
             const item = marqueeItems[i % marqueeItems.length];
+            const isDocumentLink = documentLinkPattern.test(
+              decodeURIComponent(item.link).split(/[?#]/)[0]
+            );
+
             return (
               <Fragment key={i}>
-                <Link to={item.link} className="mx-16 hover:underline">
-                  {item.text}
-                </Link>
+                {isDocumentLink ? (
+                  <a href={item.link} className="mx-16 hover:underline">
+                    {item.text}
+                  </a>
+                ) : (
+                  <Link to={item.link} className="mx-16 hover:underline">
+                    {item.text}
+                  </Link>
+                )}
                 <span className="mx-16">●</span>
               </Fragment>
             );

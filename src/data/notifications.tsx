@@ -153,4 +153,20 @@ export const notifications: NotificationItem[] = [
     link: "/program%20schedule_STESI2026.pdf",
     linkLabel: "Download schedule",
   },
+  {
+    id: 13,
+    title: "Technical Session Schedule Uploaded",
+    message: (
+      <>
+        The{" "}
+        <span className="font-semibold">
+          STESI 2026 technical session schedule
+        </span>{" "}
+        is now available.
+      </>
+    ),
+    date: "July 10, 2026",
+    link: "/Detail_Technical%20Session_STESI2026.pdf",
+    linkLabel: "Download schedule",
+  },
 ];

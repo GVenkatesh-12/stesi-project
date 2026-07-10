@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { CalendarDays, Download } from 'lucide-react';
 
 interface TimeLeft {
   months: number;
@@ -10,11 +8,6 @@ interface TimeLeft {
   hours: number;
   minutes: number;
 }
-
-const programScheduleFile = {
-  href: '/program%20schedule_STESI2026.pdf',
-  name: 'program schedule_STESI2026.pdf',
-};
 
 const CountdownSection = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ months: 0, days: 0, hours: 0, minutes: 0 });
@@ -95,40 +88,6 @@ const CountdownSection = () => {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          viewport={{ once: true }}
-          className="mx-auto flex max-w-3xl flex-col items-center gap-5 rounded-lg border border-primary/15 bg-background/85 px-5 py-7 text-center shadow-card backdrop-blur-sm sm:px-8"
-        >
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-            <CalendarDays className="h-6 w-6" />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-primary sm:text-2xl">
-              Program Schedule Available
-            </h3>
-            <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-              View the STESI 2026 session plan, timings, and program details.
-            </p>
-          </div>
-          <Button
-            size="lg"
-            variant="conference"
-            className="h-auto w-full px-4 py-3 text-sm font-bold leading-snug whitespace-normal sm:w-auto sm:px-8 sm:text-base"
-            asChild
-          >
-            <a
-              href={programScheduleFile.href}
-              download={programScheduleFile.name}
-              className="inline-flex flex-wrap items-center justify-center gap-2 text-center"
-            >
-              <Download className="h-5 w-5 shrink-0" />
-              <span>Download Program Schedule</span>
-            </a>
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
