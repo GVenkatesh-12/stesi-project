@@ -1,12 +1,163 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Download, MapPin, Calendar, User, ExternalLink } from 'lucide-react';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { Download, Eye, MapPin, Calendar, User, ExternalLink } from 'lucide-react';
+
+const keynoteLinksFile = "/links%20of%20keynote%20speakers.xlsx";
+const urlPattern = /^https?:\/\/\S+$/i;
+
+type KeynoteLinkCell = {
+  value: string;
+  colSpan: number;
+  rowSpan: number;
+  isHeader: boolean;
+};
 
 const Speakers = () => {
+  const [isLinksPreviewOpen, setIsLinksPreviewOpen] = useState(false);
+  const [keynoteLinksRows, setKeynoteLinksRows] = useState<KeynoteLinkCell[][]>([]);
+  const [isLoadingLinks, setIsLoadingLinks] = useState(false);
+  const [linksPreviewError, setLinksPreviewError] = useState("");
+
+  useEffect(() => {
+    if (!isLinksPreviewOpen || keynoteLinksRows.length > 0) {
+      return;
+    }
+
+    let isMounted = true;
+
+    async function loadKeynoteLinks() {
+      setIsLoadingLinks(true);
+      setLinksPreviewError("");
+
+      try {
+        const [xlsx, response] = await Promise.all([
+          import("xlsx"),
+          fetch(keynoteLinksFile),
+        ]);
+
+        if (!response.ok) {
+          throw new Error("Unable to load the keynote speaker links file.");
+        }
+
+        const data = await response.arrayBuffer();
+        const workbook = xlsx.read(data, { type: "array" });
+        const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+        const range = xlsx.utils.decode_range(firstSheet["!ref"] ?? "A1:A1");
+        const merges = firstSheet["!merges"] ?? [];
+        const occupiedCells = new Set<string>();
+        const skippedCells = new Set<string>();
+
+        for (let rowIndex = range.s.r; rowIndex <= range.e.r; rowIndex += 1) {
+          for (let colIndex = range.s.c; colIndex <= range.e.c; colIndex += 1) {
+            const cellAddress = xlsx.utils.encode_cell({ r: rowIndex, c: colIndex });
+            const cellValue = firstSheet[cellAddress]?.v;
+
+            if (cellValue !== undefined && cellValue !== null && String(cellValue).trim()) {
+              occupiedCells.add(cellAddress);
+            }
+          }
+        }
+
+        const visibleMerges = merges.filter((merge) => {
+          const startAddress = xlsx.utils.encode_cell(merge.s);
+          return occupiedCells.has(startAddress);
+        });
+
+        const minRow = Math.min(
+          ...Array.from(occupiedCells).map((address) => xlsx.utils.decode_cell(address).r)
+        );
+        const maxRow = Math.max(
+          ...Array.from(occupiedCells).map((address) => xlsx.utils.decode_cell(address).r)
+        );
+        const minCol = Math.min(
+          ...Array.from(occupiedCells).map((address) => xlsx.utils.decode_cell(address).c)
+        );
+        const maxCol = Math.max(
+          ...Array.from(occupiedCells).map((address) => xlsx.utils.decode_cell(address).c)
+        );
+
+        const mergeByStart = new Map<string, { colSpan: number; rowSpan: number }>();
+        visibleMerges.forEach((merge) => {
+          const startAddress = xlsx.utils.encode_cell(merge.s);
+          mergeByStart.set(startAddress, {
+            colSpan: merge.e.c - merge.s.c + 1,
+            rowSpan: merge.e.r - merge.s.r + 1,
+          });
+
+          for (let rowIndex = merge.s.r; rowIndex <= merge.e.r; rowIndex += 1) {
+            for (let colIndex = merge.s.c; colIndex <= merge.e.c; colIndex += 1) {
+              const cellAddress = xlsx.utils.encode_cell({ r: rowIndex, c: colIndex });
+              if (cellAddress !== startAddress) {
+                skippedCells.add(cellAddress);
+              }
+            }
+          }
+        });
+
+        const rows: KeynoteLinkCell[][] = [];
+        for (let rowIndex = minRow; rowIndex <= maxRow; rowIndex += 1) {
+          const row: KeynoteLinkCell[] = [];
+
+          for (let colIndex = minCol; colIndex <= maxCol; colIndex += 1) {
+            const cellAddress = xlsx.utils.encode_cell({ r: rowIndex, c: colIndex });
+
+            if (skippedCells.has(cellAddress)) {
+              continue;
+            }
+
+            const merge = mergeByStart.get(cellAddress);
+            const cell = firstSheet[cellAddress];
+            row.push({
+              value: cell ? String(xlsx.utils.format_cell(cell)).trim() : "",
+              colSpan: merge?.colSpan ?? 1,
+              rowSpan: merge?.rowSpan ?? 1,
+              isHeader: rowIndex === minRow,
+            });
+          }
+
+          rows.push(row);
+        }
+
+        if (isMounted) {
+          setKeynoteLinksRows(rows);
+        }
+      } catch {
+        if (isMounted) {
+          setLinksPreviewError("Could not preview this spreadsheet. Please download the file to view it.");
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoadingLinks(false);
+        }
+      }
+    }
+
+    loadKeynoteLinks();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [isLinksPreviewOpen, keynoteLinksRows.length]);
+
   const keynoteSpeakers = [
     {
       name: "Dr. André Eugenio Lazzaretti",
@@ -186,15 +337,113 @@ const Speakers = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Learn from world-renowned experts and thought leaders in artificial intelligence, machine learning, power systems, and sustainable energy at STESI 2026.
             </p>
-            <Button asChild size="lg" className="mt-8">
-              <a href="/links%20of%20keynote%20speakers.xlsx" download>
-                <Download className="mr-2 h-5 w-5" />
-                Download Keynote Speaker Links
-              </a>
-            </Button>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button
+                type="button"
+                size="lg"
+                variant="outline"
+                onClick={() => setIsLinksPreviewOpen(true)}
+              >
+                <Eye className="mr-2 h-5 w-5" />
+                View Keynote Speaker Links
+              </Button>
+              <Button asChild size="lg">
+                <a href={keynoteLinksFile} download>
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Keynote Speaker Links
+                </a>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
+
+      <Dialog open={isLinksPreviewOpen} onOpenChange={setIsLinksPreviewOpen}>
+        <DialogContent className="max-h-[calc(100vh-2rem)] w-[calc(100vw-2rem)] max-w-7xl p-0 overflow-hidden">
+          <DialogHeader className="px-6 pt-6">
+            <DialogTitle>Keynote Speaker Links</DialogTitle>
+          </DialogHeader>
+          <div className="px-6 pb-6">
+            <div className="max-h-[70vh] overflow-auto rounded-lg border bg-background shadow-sm">
+              {isLoadingLinks ? (
+                <div className="flex min-h-64 items-center justify-center p-6 text-sm text-muted-foreground">
+                  Loading spreadsheet preview...
+                </div>
+              ) : linksPreviewError ? (
+                <div className="flex min-h-64 items-center justify-center p-6 text-center text-sm text-muted-foreground">
+                  {linksPreviewError}
+                </div>
+              ) : keynoteLinksRows.length > 0 ? (
+                <Table className="min-w-[980px] table-fixed border-collapse xl:min-w-0">
+                  <colgroup>
+                    <col className="w-[10%]" />
+                    <col className="w-[16%]" />
+                    <col className="w-[26%]" />
+                    <col className="w-[18%]" />
+                    <col className="w-[30%]" />
+                  </colgroup>
+                  <TableHeader className="sticky top-0 z-10 bg-muted">
+                    <TableRow>
+                      {keynoteLinksRows[0].map((cell, index) => (
+                        <TableHead
+                          key={index}
+                          colSpan={cell.colSpan}
+                          rowSpan={cell.rowSpan}
+                          className="border border-border px-4 py-3 font-semibold text-foreground whitespace-normal"
+                        >
+                          {cell.value || `Column ${index + 1}`}
+                        </TableHead>
+                      ))}
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {keynoteLinksRows.slice(1).map((row, rowIndex) => (
+                      <TableRow key={rowIndex}>
+                        {row.map((cell, cellIndex) => (
+                          <TableCell
+                            key={cellIndex}
+                            colSpan={cell.colSpan}
+                            rowSpan={cell.rowSpan}
+                            className="border border-border px-4 py-3 align-middle"
+                          >
+                            {urlPattern.test(cell.value) ? (
+                                <a
+                                  href={cell.value}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="inline-flex max-w-full items-start gap-1 whitespace-normal break-all text-primary hover:underline"
+                                >
+                                  <span>{cell.value}</span>
+                                  <ExternalLink className="mt-1 h-3 w-3 shrink-0" />
+                                </a>
+                              ) : (
+                                <span className="whitespace-normal break-words">
+                                  {cell.value}
+                                </span>
+                              )}
+                          </TableCell>
+                        ))}
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              ) : (
+                <div className="flex min-h-64 items-center justify-center p-6 text-sm text-muted-foreground">
+                  No links found in the spreadsheet.
+                </div>
+              )}
+            </div>
+            <div className="mt-4 flex justify-end">
+              <Button asChild>
+                <a href={keynoteLinksFile} download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Download File
+                </a>
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Keynote Speakers */}
       <section className="py-16">

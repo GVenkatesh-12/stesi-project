@@ -179,7 +179,7 @@ export const notifications: NotificationItem[] = [
       </>
     ),
     date: "July 18, 2026",
-    link: "/links%20of%20keynote%20speakers.xlsx",
-    linkLabel: "Download links",
+    link: "/speakers",
+    linkLabel: "View links",
   },
 ];
