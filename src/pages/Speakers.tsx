@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { MapPin, Calendar, User, ExternalLink } from 'lucide-react';
+import { Download, MapPin, Calendar, User, ExternalLink } from 'lucide-react';
 
 const Speakers = () => {
   const keynoteSpeakers = [
@@ -186,6 +186,12 @@ const Speakers = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Learn from world-renowned experts and thought leaders in artificial intelligence, machine learning, power systems, and sustainable energy at STESI 2026.
             </p>
+            <Button asChild size="lg" className="mt-8">
+              <a href="/links%20of%20keynote%20speakers.xlsx" download>
+                <Download className="mr-2 h-5 w-5" />
+                Download Keynote Speaker Links
+              </a>
+            </Button>
           </motion.div>
         </div>
       </section>

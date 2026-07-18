@@ -169,4 +169,17 @@ export const notifications: NotificationItem[] = [
     link: "/Detail_Technical%20Session_STESI2026.pdf",
     linkLabel: "Download schedule",
   },
+  {
+    id: 14,
+    title: "Keynote Speaker Links Uploaded",
+    message: (
+      <>
+        The <span className="font-semibold">keynote speaker links</span> file is
+        now available for download.
+      </>
+    ),
+    date: "July 18, 2026",
+    link: "/links%20of%20keynote%20speakers.xlsx",
+    linkLabel: "Download links",
+  },
 ];

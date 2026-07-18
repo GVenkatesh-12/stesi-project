@@ -12,7 +12,7 @@ import { notifications } from "@/data/notifications";
 import { cn } from "@/lib/utils";
 
 const STORAGE_KEY = "stesi_notification_last_seen_id";
-const documentLinkPattern = /\.(pdf|docx|pptx|zip)$/i;
+const documentLinkPattern = /\.(pdf|docx|pptx|xlsx|zip)$/i;
 
 function getLastSeenId(): number {
   try {
