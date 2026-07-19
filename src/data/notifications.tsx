@@ -170,16 +170,19 @@ export const notifications: NotificationItem[] = [
     linkLabel: "Download schedule",
   },
   {
-    id: 14,
-    title: "Keynote Speaker Links Uploaded",
+    id: 15,
+    title: "Keynote and Oral Session Links Uploaded",
     message: (
       <>
-        The <span className="font-semibold">keynote speaker links</span> file is
-        now available for download.
+        The{" "}
+        <span className="font-semibold">
+          links of keynote and oral session
+        </span>{" "}
+        file has been uploaded.
       </>
     ),
-    date: "July 18, 2026",
-    link: "/speakers",
-    linkLabel: "View links",
+    date: "July 19, 2026",
+    link: "/Links%20of%20Keynote%20and%20Oral%20sessions.pdf",
+    linkLabel: "Open links",
   },
 ];
