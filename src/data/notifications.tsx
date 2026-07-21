@@ -185,4 +185,20 @@ export const notifications: NotificationItem[] = [
     link: "/Links%20of%20Keynote%20and%20Oral%20sessions.pdf",
     linkLabel: "Open links",
   },
+  {
+    id: 16,
+    title: "Room-Wise Presentation Schedule Uploaded",
+    message: (
+      <>
+        The{" "}
+        <span className="font-semibold">
+          room-wise presentation schedule
+        </span>{" "}
+        is now available.
+      </>
+    ),
+    date: "July 21, 2026",
+    link: "/paper-id_list_venue.pdf",
+    linkLabel: "Download schedule",
+  },
 ];

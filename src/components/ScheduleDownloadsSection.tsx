@@ -19,6 +19,14 @@ const scheduleFiles = [
       'from-violet-600 via-purple-600 to-blue-700 hover:from-violet-700 hover:via-purple-600 hover:to-blue-800',
   },
   {
+    label: 'Room-Wise Presentation Schedule',
+    href: '/paper-id_list_venue.pdf',
+    fileName: 'paper-id_list_venue.pdf',
+    opensInNewTab: false,
+    className:
+      'from-emerald-600 via-teal-600 to-indigo-700 hover:from-emerald-700 hover:via-teal-600 hover:to-indigo-800',
+  },
+  {
     label: 'Keynote and Oral Session Links',
     href: '/Links%20of%20Keynote%20and%20Oral%20sessions.pdf',
     opensInNewTab: true,
