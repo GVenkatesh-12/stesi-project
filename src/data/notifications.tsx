@@ -201,4 +201,30 @@ export const notifications: NotificationItem[] = [
     link: "/paper-id_list_venue.pdf",
     linkLabel: "Download schedule",
   },
+  {
+    id: 17,
+    title: "Best Paper Uploaded",
+    message: (
+      <>
+        The <span className="font-semibold">STESI 2026 Best Paper</span>{" "}
+        announcement is now available.
+      </>
+    ),
+    date: "July 28, 2026",
+    link: "/Best%20Paper_STESI2026.pdf",
+    linkLabel: "Download best paper",
+  },
+  {
+    id: 18,
+    title: "Best Poster Uploaded",
+    message: (
+      <>
+        The <span className="font-semibold">STESI 2026 Best Poster</span>{" "}
+        announcement is now available.
+      </>
+    ),
+    date: "July 28, 2026",
+    link: "/Best%20Poster_STESI2026.pdf",
+    linkLabel: "Download best poster",
+  },
 ];
