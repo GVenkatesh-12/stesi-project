@@ -5,6 +5,19 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 const TechnicalProgramCommittee = () => {
+  const tpcChairs = [
+    { name: "Dr. Vinay Kumar Jadoun", affiliation: "MIT MAHE, Karnataka" },
+    { name: "Dr. Arvind R. Singh", affiliation: "Sichuan Technology and Business University, China" },
+    { name: "Dr. Subho Paul", affiliation: "IIT BHU" },
+    { name: "Dr. Karuna Kiran", affiliation: "NIT Agartala" },
+    { name: "Dr. Sourav Basak", affiliation: "SR University" },
+    { name: "Dr. Satyendra Pratap Singh", affiliation: "Poornima University" },
+    { name: "Dr. Om Hari Gupta", affiliation: "NIT Jamshedpur" },
+    { name: "Dr. Satyabrata Roy", affiliation: "Manipal University Jaipur" },
+    { name: "Dr. Ashvinee Deo Meshram", affiliation: "Manipal University Jaipur" },
+    { name: "Dr. Anuradha Tomar", affiliation: "Delhi University" }
+  ];
+
   const technicalCommittee = [
     { name: "Dr. Almoataz Y. Abdelaziz", affiliation: "Future University in Egypt, Cairo, Egypt" },
     { name: "Dr. Gulshan Sharma", affiliation: "University of Johannesburg, South Africa" },
@@ -105,13 +118,52 @@ const TechnicalProgramCommittee = () => {
               Technical Program Committee
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Meet our distinguished international technical program committee members who ensure the highest quality of research presentations and technical content at STESI 2026.
+              Meet our distinguished technical program committee chairs and international members who ensure the highest quality of research presentations and technical content at STESI 2027.
             </p>
           </motion.div>
         </div>
       </section>
 
+      {/* TPC Chairs Section */}
       <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">
+              Technical Program Committee Chairs
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            {tpcChairs.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center pb-2 pt-6">
+                    <CardTitle className="text-sm font-bold leading-tight mb-2">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto bg-primary/10 text-primary text-xs">TPC Chair</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center pb-6">
+                    <p className="text-xs text-muted-foreground">{member.affiliation}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}

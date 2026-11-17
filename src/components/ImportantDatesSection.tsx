@@ -6,46 +6,39 @@ const ImportantDatesSection = () => {
   const dates = [
     {
       title: 'First Call for Papers',
-      date: 'September 1, 2025',
+      date: 'December 1, 2026',
       icon: FileText,
       color: 'text-blue-500',
     },
     {
       title: 'Last Date for Submission',
-      date: (
-        <span className="flex flex-col items-center justify-center leading-tight gap-1">
-          <span className="inline-block bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
-            Closed
-          </span>
-          <s className="text-sm font-medium opacity-40">February 28, 2026</s>
-          <s className="text-sm font-medium opacity-40">Hard Deadline: March 15, 2026</s>
-        </span>
-      ),
+      date: 'March 15, 2027',
       icon: Calendar,
-      color: 'text-gray-400',
+      color: 'text-red-500',
     },
     {
       title: 'Notification of Acceptance',
-      date: 'April 25, 2026 Onwards',
+      date: 'April 15, 2027',
       icon: CheckCircle,
       color: 'text-green-500',
     },
     {
-      title: 'Camera Ready Paper Submission',
-      date: 'June 22, 2026',
+      title: 'Camera Ready Submission',
+      date: 'April 30, 2027',
       icon: Camera,
       color: 'text-purple-500',
     },
     {
       title: 'Registration Ends',
-      date: (
-        <span className="flex flex-col items-center justify-center leading-tight gap-1">
-          <s className="text-sm font-medium opacity-40">May 30, 2026</s>
-          <span>June 15, 2026</span>
-        </span>
-      ),
+      date: 'July 5, 2027',
       icon: UserPlus,
       color: 'text-orange-500',
+    },
+    {
+      title: 'Conference Dates',
+      date: 'August 5-6, 2027',
+      icon: Clock,
+      color: 'text-emerald-500',
     },
   ];
 
@@ -63,11 +56,11 @@ const ImportantDatesSection = () => {
             Important Dates
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Stay updated with all the key deadlines and conference schedules
+            Stay updated with all the key deadlines and conference schedules for STESI 2027
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {dates.map((item, index) => {
             const IconComponent = item.icon;
             return (

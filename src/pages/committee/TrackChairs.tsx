@@ -8,7 +8,7 @@ const TrackChairs = () => {
   const tracks = [
     {
       id: 1,
-      title: "Smart Grids & Green Energy",
+      title: "Advanced Power Electronics and Energy Conversion Systems",
       chair: "Dr. Bishwajit Dey",
       chairInstitution: "Manipal University Jaipur",
       coChair: "Dr. Aniruddha Bhattacharya",
@@ -19,7 +19,7 @@ const TrackChairs = () => {
     },
     {
       id: 2,
-      title: "Smart Technologies for Industries",
+      title: "Renewable Energy Systems, Integration and Energy Storage",
       chair: "Dr. Neeraj Kanwar",
       chairInstitution: "Manipal University Jaipur",
       coChair: "Dr. Gulshan Sharma",
@@ -30,7 +30,7 @@ const TrackChairs = () => {
     },
     {
       id: 3,
-      title: "IOT and Automation",
+      title: "Smart Grids, Microgrids and Distributed Energy Systems",
       chair: "Dr. Divya Rishi Shrivastava",
       chairInstitution: "Manipal University Jaipur",
       coChair: "Dr. Ravi Bhushan",
@@ -41,20 +41,20 @@ const TrackChairs = () => {
     },
     {
       id: 4,
-      title: "Signal Processing & Intelligent Systems",
+      title: "Hydrogen Energy Systems and Power-to-X Technologies",
       chair: "Dr. Peeyush Garg",
       chairInstitution: "Manipal University Jaipur",
       coChair: "Dr. Arvind R. Singh",
-      coChairInstitution: "Hanjiang Normal University, China",
+      coChairInstitution: "Sichuan Technology and Business University, China",
       gradient: "from-indigo-50 to-indigo-100 dark:from-indigo-950 dark:to-indigo-900",
       accent: "border-indigo-200 dark:border-indigo-800",
       badgeColor: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
     },
     {
       id: 5,
-      title: "Advanced Computing and Intelligent Technologies",
+      title: "Electric Mobility, Vehicle-to-Grid & Transportation Electrification",
       chair: "Dr. Mahipal Bhukya",
-      chairInstitution: " Manipal Institute of Technology, Bangalore",
+      chairInstitution: "Manipal Institute of Technology, Bangalore",
       coChair: "Dr. Jyoti Grover",
       coChairInstitution: "MNIT, Jaipur",
       gradient: "from-red-50 to-red-100 dark:from-red-950 dark:to-red-900",
@@ -63,7 +63,7 @@ const TrackChairs = () => {
     },
     {
       id: 6,
-      title: "Materials Science and Engineering",
+      title: "Artificial Intelligence, Digitalization and IoT for Energy Systems",
       chair: "Dr. Krupali Donda",
       chairInstitution: "Adani University",
       coChair: "Dr. Saurabh Kumar Pandey",
@@ -74,7 +74,7 @@ const TrackChairs = () => {
     },
     {
       id: 7,
-      title: "Energy Policy, Regulation, and Electricity Markets",
+      title: "Power System Planning, Operation, Stability and Resilience",
       chair: "Dr. Dipti Saxena",
       chairInstitution: "MNIT Jaipur",
       coChair: "Dr. Sunanda Sinha",

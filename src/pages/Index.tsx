@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
-import ScheduleDownloadsSection from '@/components/ScheduleDownloadsSection';
 import SponsorsBanner from '@/components/SponsorsBanner';
 import CountdownSection from '@/components/CountdownSection';
 import ImportantDatesSection from '@/components/ImportantDatesSection';
@@ -13,16 +12,16 @@ const documentLinkPattern = /\.(pdf|docx|pptx|zip)$/i;
 
 const Index = () => {
   const marqueeItems = [
-    { text: 'PROGRAM SCHEDULE IS UPLOADED', link: '/program%20schedule_STESI2026.pdf' },
-    { text: 'TECHNICAL SESSION SCHEDULE IS UPLOADED', link: '/Detail_Technical%20Session_STESI2026.pdf' },
-    { text: 'LIST OF ACCEPTED AND REGISTERED PAPERS IS UPLOADED', link: '/accepted-papers' }
+    { text: 'STESI 2027 — 2ND INTERNATIONAL CONFERENCE (5TH & 6TH AUGUST 2027)', link: '/about' },
+    { text: 'FIRST CALL FOR PAPERS: 1ST DECEMBER 2026', link: '/call-for-papers' },
+    { text: 'PAPER SUBMISSION DEADLINE: 15TH MARCH 2027', link: '/call-for-papers' },
+    { text: 'VIEW STESI 2026 PHOTO GALLERY & PROCEEDINGS', link: '/stesi-2026' }
   ];
 
   return (
     <div className="min-h-screen">
       <Navigation />
       <HeroSection />
-      <ScheduleDownloadsSection />
       <SponsorsBanner />
       <CountdownSection />
       <ImportantDatesSection />

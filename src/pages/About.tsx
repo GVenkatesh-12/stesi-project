@@ -81,17 +81,17 @@ const About = () => {
             className="text-center"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              About STESI 2026
+              About STESI 2027
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
-              International Conference on Smart Technologies for Energy, Sustainability & Industry
+              2nd International Conference on Smart Technologies for Energy, Sustainability & Industry
             </p>
             <div className="relative bg-gradient-to-r from-primary/10 to-conference-accent/10 rounded-lg p-6 border border-primary/20 overflow-hidden">
               {/* Shiny animation overlay */}
               <div className="absolute inset-0 -top-2 -left-2 -right-2 -bottom-2 bg-gradient-to-r from-transparent via-white/80 to-transparent transform -skew-x-12 animate-shine"></div>
               <p className="relative text-lg sm:text-xl font-bold text-primary text-center z-10">
                 <span className="text-2xl sm:text-3xl">"</span>
-                Innovative Smart Technologies Driving Energy Transition, Sustainable Development, and Industrial Transformation
+                Green Hydrogen and Intelligent Energy Systems: Powering Sustainable Energy and Future Mobility
                 <span className="text-2xl sm:text-3xl">"</span>
               </p>
             </div>
@@ -115,10 +115,10 @@ const About = () => {
               </h2>
               <div className="space-y-4 leading-relaxed">
                 <p>
-                  The aim of this conference is to present a unified platform for advanced and multi-disciplinary research towards design of smart power and automated systems. As global energy systems transition toward sustainability, the integration of renewable energy sources, electric vehicles (EVs), and battery energy storage systems (BESS) is becoming increasingly crucial.
+                  To forge interactions among active researchers and thought leaders, the Department of Electrical Engineering, Faculty of Science, Technology and Architecture, Manipal University Jaipur, is organizing the 2nd multidisciplinary International Conference on Smart Technologies for Energy, Sustainability & Industry (STESI 2027) on 5th–6th August 2027.
                 </p>
                 <p>
-                  This conference will provide a platform for exploring emerging technologies, strategies, and policies that enhance grid resilience, efficiency, and reliability. To forge interactions among active researchers, the department of Electrical Engineering, Faculty of Science, Technology and Architecture, Manipal University Jaipur, is organizing a multidisciplinary International Conference on Smart Technologies for Energy, Sustainability & Industry (STESI 2026) on 22nd-23rd July 2026.
+                  This year's theme, <em>Green Hydrogen and Intelligent Energy Systems: Powering Sustainable Energy and Future Mobility</em>, explores the transformative potential of green hydrogen and intelligent energy systems in accelerating the global transition toward clean, secure, and sustainable energy. It brings together innovations in renewable energy integration, hydrogen production and storage, smart grids, energy storage, power system intelligence, electric vehicles, and advanced charging infrastructure. The theme emphasises interdisciplinary research and emerging technologies that enable decarbonised power generation, resilient energy networks, and sustainable mobility for a cleaner, net-zero future.
                 </p>
               </div>
               </div>
@@ -134,8 +134,8 @@ const About = () => {
               <h3 className="text-2xl font-bold text-primary mb-4 text-center">Conference Details</h3>
               <div className="space-y-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-conference-secondary">22nd-23rd</div>
-                  <div className="text-sm text-muted-foreground">July 2026</div>
+                  <div className="text-3xl font-bold text-conference-secondary">5th–6th</div>
+                  <div className="text-sm text-muted-foreground">August 2027</div>
                 </div>
                 <div className="text-center">
                   <div className="text-xl font-bold text-conference-secondary">Manipal University Jaipur</div>
@@ -144,6 +144,10 @@ const About = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-conference-secondary">7</div>
                   <div className="text-sm text-muted-foreground">Conference Tracks</div>
+                </div>
+                <div className="text-center pt-2 border-t border-border/50">
+                  <div className="text-sm font-semibold text-primary">Mode of Presentation</div>
+                  <div className="text-xs text-muted-foreground mt-0.5">Offline (Online for international authors only)</div>
                 </div>
               </div>
             </motion.div>

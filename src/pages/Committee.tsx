@@ -3,68 +3,87 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Mail, User } from 'lucide-react';
+
 
 const Committee = () => {
   const chiefPatrons = [
     {
-      name: "Shri S. Vaitheeswaran",
-      title: "Chairperson MUJ"
+      name: "Lt. Gen. (Dr.) M. D. Venkatesh",
+      title: "Chairperson, Manipal University Jaipur"
     }
   ];
 
   const patrons = [
     {
       name: "Dr. N. N. Sharma",
-      title: "President MUJ"
+      title: "President, Manipal University Jaipur"
     }
   ];
 
   const coPatrons = [
     {
-      name: "Dr. Karunakar A Kotegar",
-      title: "Pro President MUJ"
+      name: "Cmd. (Dr.) Anil Rana",
+      title: "Pro-President, Manipal University Jaipur"
     },
     {
       name: "Dr. Amit Soni",
-      title: "Registrar MUJ"
+      title: "Registrar, Manipal University Jaipur"
     },
     {
       name: "Dr. Nitu Bhatnagar",
-      title: "Provost MUJ"
+      title: "Provost, Manipal University Jaipur"
     }
+  ];
+
+  const honoraryGeneralChairs = [
+    { name: "Prof. Bhim Singh", affiliation: "IIT Delhi" },
+    { name: "Prof. Prerna Gaur", affiliation: "NSUT Delhi" },
+    { name: "Prof. Akshay Rathore", affiliation: "SIT, Singapore" },
+    { name: "Prof. C. Y. Chung", affiliation: "IEEE PES" },
+    { name: "Prof. Ayman EL-Refaie", affiliation: "IEEE IAS" },
   ];
 
   const generalChairs = [
     {
       name: "Dr. Kuldip Singh Sangwan",
-      title: "Dean-FoSTA, MUJ"
+      title: "Dean - FoSTA, Manipal University Jaipur"
     },
     {
       name: "Dr. Ravi Kant Gupta",
-      title: "Associate Dean-SoE, MUJ"
+      title: "Associate Dean, SoE, Manipal University Jaipur"
     }
   ];
 
   const programChair = [
     {
       name: "Dr. Neeraj Kanwar",
-      title: "HoD-EE, MUJ"
+      title: "HoD EE, Manipal University Jaipur"
     }
   ];
 
-  const organizingSecretaries = [
+  const organisingChairs = [
     {
       name: "Dr. Neeraj Kanwar",
-      title: "EE-MUJ"
+      title: "Manipal University Jaipur"
     },
     {
       name: "Dr. Bishwajit Dey",
-      title: "EE-MUJ"
+      title: "Manipal University Jaipur"
+    }
+  ];
+
+  const conferenceSecretaries = [
+    {
+      name: "Dr. Bishwajit Dey",
+      title: "Manipal University Jaipur"
     },
     {
-      name: "Dr. Divya Rishi Shrivastava",
-      title: "EE-MUJ"
+      name: "Dr. Sunanda Sinha",
+      title: "MNIT Jaipur"
+    },
+    {
+      name: "Dr. Manoj Debnath",
+      title: "SOA Bhubaneswar"
     }
   ];
 
@@ -85,13 +104,13 @@ const Committee = () => {
               Committee
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Meet the distinguished experts leading STESI 2026, bringing together top researchers and industry leaders from around the world.
+              Meet the distinguished academic leaders, researchers, and chairs guiding STESI 2027.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Chief Patrons */}
+      {/* Chief Patron */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -114,14 +133,11 @@ const Committee = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-2">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto">Chief Patron</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>
@@ -154,14 +170,11 @@ const Committee = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-2">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto">Patron</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>
@@ -184,7 +197,7 @@ const Committee = () => {
             <h2 className="text-3xl font-bold text-primary mb-4">Co-Patrons</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
             {coPatrons.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -194,14 +207,11 @@ const Committee = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-2">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto">Co-Patron</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>
@@ -211,8 +221,45 @@ const Committee = () => {
         </div>
       </section>
 
-      {/* General Chairs */}
+      {/* Honorary General Chairs */}
       <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">Honorary General Chairs</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+            {honoraryGeneralChairs.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-base font-bold mb-2">{member.name}</CardTitle>
+                    <Badge variant="outline" className="mx-auto">Honorary Chair</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center pb-6">
+                    <p className="text-xs text-muted-foreground">{member.affiliation}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* General Chairs */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -224,7 +271,7 @@ const Committee = () => {
             <h2 className="text-3xl font-bold text-primary mb-4">General Chairs</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 max-w-2xl mx-auto">
             {generalChairs.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -234,14 +281,11 @@ const Committee = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-2">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto">General Chair</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>
@@ -252,7 +296,7 @@ const Committee = () => {
       </section>
 
       {/* Program Chair */}
-      <section className="py-16">
+      <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -274,14 +318,11 @@ const Committee = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-2">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto">Program Chair</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>
@@ -291,7 +332,44 @@ const Committee = () => {
         </div>
       </section>
 
-      {/* Organizing Secretaries/Conveners */}
+      {/* Organising Chairs / Conveners */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-primary mb-4">Organising Chairs / Conveners</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 max-w-2xl mx-auto">
+            {organisingChairs.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-2">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto">Organising Chair</Badge>
+                  </CardHeader>
+                  <CardContent className="text-center pb-6">
+                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Conference Secretaries */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -301,11 +379,11 @@ const Committee = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-primary mb-4">Organizing Secretary/Conveners</h2>
+            <h2 className="text-3xl font-bold text-primary mb-4">Conference Secretaries</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {organizingSecretaries.map((member, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
+            {conferenceSecretaries.map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 40 }}
@@ -314,14 +392,11 @@ const Committee = () => {
                 viewport={{ once: true }}
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">{member.name}</CardTitle>
-                    <Badge variant="secondary" className="mx-auto">Organizing Secretary</Badge>
+                  <CardHeader className="text-center pt-6">
+                    <CardTitle className="text-lg mb-2">{member.name}</CardTitle>
+                    <Badge variant="secondary" className="mx-auto">Secretary</Badge>
                   </CardHeader>
-                  <CardContent className="text-center">
+                  <CardContent className="text-center pb-6">
                     <p className="text-sm text-muted-foreground">{member.title}</p>
                   </CardContent>
                 </Card>

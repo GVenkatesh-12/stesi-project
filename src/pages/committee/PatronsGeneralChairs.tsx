@@ -6,22 +6,22 @@ import { Badge } from '@/components/ui/badge';
 
 const PatronsGeneralChairs = () => {
   const chiefPatron = {
-    name: "Sh. S. Vaitheeswaran",
+    name: "Lt. Gen. (Dr.) M. D. Venkatesh",
     title: "Chairperson, Manipal University Jaipur"
   };
 
   const patron = {
-    name: "Prof. N. N. Sharma",
+    name: "Dr. N. N. Sharma",
     title: "President, Manipal University Jaipur"
   };
 
   const coPatrons = [
     {
-      name: "Prof. Karunakar A Kotegar",
+      name: "Cmd. (Dr.) Anil Rana",
       title: "Pro-President, Manipal University Jaipur"
     },
     {
-      name: "Prof. Amit Soni",
+      name: "Dr. Amit Soni",
       title: "Registrar, Manipal University Jaipur"
     },
     {
@@ -32,7 +32,7 @@ const PatronsGeneralChairs = () => {
 
   const generalChairs = [
     {
-      name: "Prof. Kuldip Singh Sangwan",
+      name: "Dr. Kuldip Singh Sangwan",
       title: "Dean - FoSTA, Manipal University Jaipur"
     },
     {
@@ -58,7 +58,7 @@ const PatronsGeneralChairs = () => {
               Patrons & General Chairs
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Meet the distinguished leaders and visionaries who guide STESI 2026 with their expertise and leadership.
+              Meet the distinguished leaders and visionaries who guide STESI 2027 with their expertise and leadership.
             </p>
           </motion.div>
         </div>

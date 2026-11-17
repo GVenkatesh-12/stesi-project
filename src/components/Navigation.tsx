@@ -67,8 +67,7 @@ const navItems: NavItem[] = [
       { name: 'Call for Papers', path: '/call-for-papers' },
       { name: 'Special Sessions', path: '/special-sessions' },
       { name: 'Camera-Ready Submission', path: '/camera-ready' },
-      // Bump badgeId to show the red badge again (e.g. 2 → 3)
-      { name: 'Templates', path: '/templates', badgeId: 2 },
+      { name: 'Templates', path: '/templates' },
     ],
   },
   {
@@ -87,7 +86,7 @@ const navItems: NavItem[] = [
   },
   { name: 'Registration', path: '/registration' },
   { name: 'Speakers', path: '/speakers' },
-  { name: 'Accepted Papers', path: '/accepted-papers' },
+  { name: 'STESI 2026', path: '/stesi-2026' },
   { name: 'Venue', path: '/venue' },
   { name: 'Contact', path: '/contact' },
   { name: 'Sponsorship', path: '/sponsorship' },
