@@ -505,8 +505,8 @@ const Stesi2026 = () => {
                 <div className="text-xs text-muted-foreground font-medium mt-0.5">Tracks & Special Sessions</div>
               </div>
               <div className="p-3.5 rounded-xl bg-card border border-border/60 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-extrabold text-primary">40</div>
-                <div className="text-xs text-muted-foreground font-medium mt-0.5">High-Res Gallery Photos</div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-primary">150+</div>
+                <div className="text-xs text-muted-foreground font-medium mt-0.5">Accepted & Published Papers</div>
               </div>
             </div>
           </motion.div>
@@ -672,7 +672,7 @@ const Stesi2026 = () => {
                   </div>
                   <h4 className="font-bold text-foreground text-base">Photo Gallery</h4>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Explore 40 high-resolution photos capturing keynotes, sessions, and awards.
+                    Keynote addresses, technical sessions, poster exhibits, and networking moments.
                   </p>
                 </Card>
 
@@ -715,13 +715,13 @@ const Stesi2026 = () => {
               <div className="text-center max-w-2xl mx-auto mb-6">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-2">
                   <Camera className="h-3.5 w-3.5" />
-                  <span>40 Curated Conference Moments</span>
+                  <span>Conference Gallery</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
                   Glimpses of STESI 2026
                 </h2>
                 <p className="text-muted-foreground text-sm sm:text-base mt-2">
-                  High-resolution photo highlights from keynote sessions, technical oral presentations, poster evaluations, award ceremonies, and banquet networking.
+                  Moments from keynote sessions, technical oral presentations, poster evaluations, award ceremonies, and banquet networking.
                 </p>
               </div>
 
@@ -747,12 +747,9 @@ const Stesi2026 = () => {
                       />
                     </div>
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
-                      <span className="text-xs font-semibold text-white/95 bg-black/50 backdrop-blur px-2.5 py-1 rounded-md">
-                        Photo {index + 1} of {galleryPhotos.length}
-                      </span>
-                      <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white hover:bg-white/30 transition-colors">
-                        <Maximize2 className="h-4 w-4" />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                      <div className="w-10 h-10 rounded-full bg-black/60 backdrop-blur border border-white/20 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
+                        <Maximize2 className="h-5 w-5" />
                       </div>
                     </div>
                   </motion.div>
@@ -1026,8 +1023,8 @@ const Stesi2026 = () => {
               className="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-10"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="bg-black/60 px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium backdrop-blur border border-white/10">
-                Photo {activePhotoIndex + 1} of {galleryPhotos.length}
+              <div className="bg-black/60 px-3.5 py-1.5 rounded-full text-xs font-medium backdrop-blur border border-white/10">
+                {activePhotoIndex + 1} / {galleryPhotos.length}
               </div>
               <div className="flex items-center gap-2">
                 <a
