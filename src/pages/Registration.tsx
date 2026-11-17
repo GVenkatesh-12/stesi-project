@@ -91,14 +91,6 @@ const Registration = () => {
                 <h2 className="text-xl sm:text-2xl font-bold text-foreground">
                   Online Registration Portal Coming Soon
                 </h2>
-                <p className="text-sm sm:text-base text-muted-foreground max-w-xl">
-                  The payment gateway and registration confirmation form will go live on <strong>May 5, 2027</strong> upon completion of the paper review and notification cycle.
-                </p>
-                <div className="pt-2">
-                  <Badge variant="secondary" className="px-3 py-1 text-xs">
-                    Opening: May 5, 2027
-                  </Badge>
-                </div>
               </div>
             </CardContent>
           </Card>
