@@ -334,23 +334,19 @@ const Speakers = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
               Plenary Speakers
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Learn from world-renowned experts and thought leaders in artificial intelligence, machine learning, power systems, and sustainable energy at STESI 2026.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
+              Learn from world-renowned experts and thought leaders in green hydrogen, power systems, and sustainable energy at STESI 2027.
             </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Button
-                type="button"
-                size="lg"
-                variant="outline"
-                onClick={() => setIsLinksPreviewOpen(true)}
-              >
-                <Eye className="mr-2 h-5 w-5" />
-                View Keynote Speaker Links
-              </Button>
-              <Button asChild size="lg">
-                <a href={keynoteLinksFile} download>
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Keynote Speaker Links
+
+            {/* Coming Soon Notice */}
+            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold text-sm sm:text-base mb-6">
+              <span>STESI 2027 Keynote Lineup — Coming Soon</span>
+            </div>
+
+            <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button asChild size="lg" variant="outline">
+                <a href="/stesi-2026">
+                  View STESI 2026 Photo Gallery & Archive
                 </a>
               </Button>
             </div>
@@ -455,10 +451,13 @@ const Speakers = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            {/* <h2 className="text-3xl font-bold text-primary mb-4">Keynote Speakers</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our keynote speakers are industry pioneers who will share cutting-edge insights and future directions in artificial intelligence, machine learning, and power systems.
-            </p> */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold mb-3">
+              Past Edition Highlights
+            </div>
+            <h2 className="text-3xl font-bold text-primary mb-3">Keynote Speakers of STESI 2026</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
+              STESI 2026 featured world-leading authorities across smart grids, artificial intelligence, control systems, and renewable energy.
+            </p>
           </motion.div>
 
           <div className="space-y-12">

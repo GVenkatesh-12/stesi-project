@@ -87,7 +87,7 @@ const navItems: NavItem[] = [
   },
   { name: 'Registration', path: '/registration' },
   { name: 'Speakers', path: '/speakers' },
-  { name: 'Accepted Papers', path: '/accepted-papers' },
+  { name: 'STESI 2026', path: '/stesi-2026' },
   { name: 'Venue', path: '/venue' },
   { name: 'Contact', path: '/contact' },
   { name: 'Sponsorship', path: '/sponsorship' },

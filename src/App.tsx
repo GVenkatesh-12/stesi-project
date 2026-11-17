@@ -19,6 +19,7 @@ import Contact from "./pages/Contact";
 import Sponsorship from "./pages/Sponsorship";
 import CameraReady from "./pages/CameraReady";
 import Templates from "./pages/Templates";
+import Stesi2026 from "./pages/Stesi2026";
 import NotFound from "./pages/NotFound";
 
 // Committee pages
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/venue" element={<Venue />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
+          <Route path="/stesi-2026" element={<Stesi2026 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

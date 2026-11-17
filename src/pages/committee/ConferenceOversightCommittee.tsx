@@ -28,7 +28,7 @@ const ConferenceOversightCommittee = () => {
               Conference Oversight Committee
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Meet the distinguished members providing oversight and guidance for STESI 2026.
+              Meet the distinguished members providing oversight and guidance for STESI 2027.
             </p>
           </motion.div>
         </div>

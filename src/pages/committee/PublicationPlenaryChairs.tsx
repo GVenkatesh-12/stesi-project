@@ -8,32 +8,23 @@ import { Badge } from '@/components/ui/badge';
 const PublicationPlenaryChairs = () => {
   const publicationCommittee = [
     {
-      name: "Dr. Rajeeb Dey",
-      title: "NIT Silchar"
-    },
-    {
-      name: "Dr. Kapil Pareek",
-      title: "MNIT Jaipur"
-    },
-    {
-      name: "Dr. Arvind R Singh",
-      title: "Hanjian Normal University, China"
-    },
-    {
-      name: "Dr. Neeraj Kanwar",
+      name: "Dr. Pulakraj Aryan",
       title: "Manipal University Jaipur"
     },
     {
-      name: "Dr. Bishwajit Dey",
-      title: "Manipal University Jaipur"
+      name: "Dr. Srikant Misra",
+      title: "GIET Gunupur"
+    }
+  ];
+
+  const specialSessionChairs = [
+    {
+      name: "Dr. Saurav Raj",
+      title: "NIT Raipur"
     },
     {
-      name: "Dr. Satish Sharma",
-      title: "MNIT Jaipur"
-    },
-    {
-      name: "Dr. Manoj Debnath",
-      title: "Siksha 'O' Anusandhan Odisha"
+      name: "Dr. Chandan Kr. Shiva",
+      title: "SR University"
     }
   ];
 
@@ -72,7 +63,7 @@ const PublicationPlenaryChairs = () => {
               Publication & Plenary Chairs
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Meet the experts responsible for ensuring high-quality publications and organizing impactful plenary sessions at STESI 2026.
+              Meet the experts responsible for ensuring high-quality publications and organizing impactful plenary sessions at STESI 2027.
             </p>
           </motion.div>
         </div>

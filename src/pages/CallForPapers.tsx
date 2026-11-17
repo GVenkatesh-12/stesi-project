@@ -74,13 +74,13 @@ const CallForPapers = () => {
   ];
 
   const tracks = [
-    'Smart Grids & Green Energy',
-    'Smart Technologies for Industries',
-    'IOT and Automation',
-    'Signal Processing & Intelligent Systems',
-    'Advanced Computing and Intelligent Technologies ',
-    'Materials Science and Engineering',
-    'Energy Policy, Regulation, and Electricity Markets',
+    'Advanced Power Electronics and Energy Conversion Systems',
+    'Renewable Energy Systems, Integration and Energy Storage',
+    'Smart Grids, Microgrids and Distributed Energy Systems',
+    'Hydrogen Energy Systems and Power-to-X Technologies',
+    'Electric Mobility, Vehicle-to-Grid and Intelligent Transportation Electrification',
+    'Artificial Intelligence, Digitalization and IoT for Energy Systems',
+    'Power System Planning, Operation, Stability and Resilience',
   ];
 
   return (
@@ -100,7 +100,7 @@ const CallForPapers = () => {
               Call for Papers
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Submit your research contributions to STESI 2026 and join the global community of researchers advancing Smart Technologies for Energy, Sustainability & Industry.
+              Submit your research contributions to STESI 2027 and join the global community of researchers advancing Smart Technologies for Energy, Sustainability & Industry.
             </p>
           </motion.div>
         </div>
@@ -145,22 +145,12 @@ const CallForPapers = () => {
             {[
               {
                 title: 'Paper Submission Deadline',
-                date: (
-                  <span className="flex flex-col items-center justify-center leading-none gap-1">
-                    <span className="inline-block bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-0.5 rounded-full">
-                      Closed
-                    </span>
-                    <s className="text-sm font-medium opacity-40">February 28, 2026</s>
-                    <s className="text-sm font-medium opacity-40">Hard Deadline: March 15, 2026</s>
-                  </span>
-                ),
-                color: 'text-gray-400',
-                headerClassName: 'pb-2',
-                contentClassName: 'pt-0',
+                date: 'March 15, 2027',
+                color: 'text-red-500',
               },
-              { title: 'Notification of Acceptance', date: 'April 25, 2026 Onwards', color: 'text-orange-500' },
-              { title: 'Camera Ready Submission', date: 'June 22, 2026', color: 'text-blue-500' },
-              { title: 'Conference Dates', date: 'July 22-23, 2026', color: 'text-green-500' },
+              { title: 'Notification of Acceptance', date: 'April 15, 2027', color: 'text-orange-500' },
+              { title: 'Camera Ready Submission', date: 'April 30, 2027', color: 'text-blue-500' },
+              { title: 'Conference Dates', date: 'August 5-6, 2027', color: 'text-green-500' },
             ].map((item, index) => (
               <motion.div
                 key={item.title}
@@ -170,10 +160,10 @@ const CallForPapers = () => {
                 viewport={{ once: true }}
               >
                 <Card className="text-center bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
-                  <CardHeader className={item.headerClassName}>
+                  <CardHeader>
                     <CardTitle className="text-lg">{item.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className={item.contentClassName}>
+                  <CardContent>
                     <div className={`text-2xl font-bold ${item.color}`}>
                       {item.date}
                     </div>

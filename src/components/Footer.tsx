@@ -9,37 +9,18 @@ const Footer = () => {
     { name: 'About', path: '/about' },
     { name: 'Call for Papers', path: '/call-for-papers' },
     { name: 'Registration', path: '/registration' },
+    { name: 'STESI 2026 Archive', path: '/stesi-2026' },
     { name: 'Speakers', path: '/speakers' },
     { name: 'Venue', path: '/venue' },
     { name: 'Contact', path: '/contact' },
   ];
 
   const importantDates = [
-    {
-      event: 'Paper Submission',
-      date: (
-        <span className="inline-flex flex-col items-start gap-0.5">
-          <span className="inline-block bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full w-fit">
-            Closed
-          </span>
-          <s className="opacity-40 text-sm">February 28, 2026</s>
-          <s className="opacity-40 text-sm">Hard Deadline: March 15, 2026</s>
-        </span>
-      ),
-    },
-    { event: 'Notification of Acceptance', date: 'April 25, 2026 Onwards' },
-    { event: 'Camera Ready', date: 'June 22, 2026' },
-    { event: 'Conference', date: 'July 22-23, 2026' },
-    { event: 'Registration Ends', date: (
-        <span className="inline-flex flex-col items-start gap-0.5">
-          <span className="inline-block bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full w-fit">
-            Closed
-          </span>
-          <s className="opacity-40 text-sm">June 15, 2026</s>
-          <s className="opacity-40 text-sm">June 22, 2026</s>
-        </span>
-      )
-    },
+    { event: 'Paper Submission', date: 'March 15, 2027' },
+    { event: 'Notification of Acceptance', date: 'April 15, 2027' },
+    { event: 'Camera Ready', date: 'April 30, 2027' },
+    { event: 'Registration Ends', date: 'July 5, 2027' },
+    { event: 'Conference Dates', date: 'August 5-6, 2027' },
   ];
 
   return (
@@ -53,10 +34,10 @@ const Footer = () => {
               {/* <div className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">iS</span>
               </div> */}
-                              <span className="text-xl font-bold">STESI 2026</span>
+                              <span className="text-xl font-bold">STESI 2027</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-            International Conference on Smart Technologies for Energy, Sustainability & Industry
+            2nd International Conference on Smart Technologies for Energy, Sustainability & Industry
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">

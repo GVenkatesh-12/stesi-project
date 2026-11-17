@@ -11,55 +11,37 @@ const AdvisoryCommittees = () => {
   ];
 
   const nationalAdvisoryCommittee = [
-    { name: "Dr. K. R. Niazi", title: "MNIT Jaipur" },
     { name: "Dr. Chandan Kumar", title: "IIT Guwahati" },
     { name: "Dr. Rajeeb Dey", title: "NIT Silchar" },
     { name: "Dr. Trapti Jain", title: "IIT Indore" },
-    { name: "Dr. G. Lloyds Raja", title: "NIT Patna" },
     { name: "Dr. Rajive Tiwari", title: "MNIT Jaipur" },
-    { name: "Dr. Dwijasish Das", title: "IIT Mandi" },
-    { name: "Dr. Saurav Raj", title: "NIT Raipur" },
-    { name: "Dr. Korra Balu", title: "NIT Calicut" },
-    { name: "Dr. Ravi Bhushan", title: "NIT Jamshedpur" },
-    { name: "Dr. Ravi Raushan", title: "NIT Surathkal" },
-    { name: "Dr. Rohit Babu", title: "MMUT Gorakhpur" },
-    { name: "Dr. Ramesh Devarapalli", title: "IOC Bhubaneswar" },
-    { name: "Dr. Om Hari Gupta", title: "NIT Jamshedpur" },
-    { name: "Dr. Manoj Kumawat", title: "NIT Delhi" },
-    { name: "Dr. Shashikant Sharma", title: "IIIT Ranchi" },
-    { name: "Dr. Amit Garg", title: "IIIT Kota" },
-    { name: "Dr. Kailash Sharma", title: "NIT Jalandhar" },
-    { name: "Dr. Saheli Ray", title: "NIT Silchar" },
-    { name: "Dr. Sadhan Gope", title: "NIT Silchar" },
-    { name: "Dr. Surya Prakash", title: "NIT Jamshedpur" },
-    { name: "Dr. Sudipta Chakraborty", title: "NIT Silchar" },
-    { name: "Mr. Hemant Kr. Sharma", title: "DRDO, Delhi" },
-    { name: "Dr. Chandan Kr. Shiva", title: "SR University Warangal" },
-    { name: "Dr. Vedik Baseti", title: "SR University Warangal" }
+    { name: "Dr. Anil Swarnkar", title: "MNIT Jaipur" },
+    { name: "Dr. Sanjib Ganguly", title: "IIT Guwahati" },
+    { name: "Dr. Ashish Shrivastava", title: "Shri Vishwakarma Skill University, Gurugram" }
   ];
 
   const internationalAdvisoryCommittee = [
-    { name: "Dr. Rajesh Kumar", title: "University of Johannesburg, South Africa" },
-    { name: "Dr. Akshay Kumar Rathore", title: "National University of Singapore (NUS), Singapore" },
     { name: "Dr. Almoataz Youssef Abdelaziz", title: "Ain Shams University, Egypt" },
     { name: "Dr. Dipti Srinivasan", title: "National University of Singapore (NUS), Singapore" },
-    { name: "Dr. Lalit Goel", title: "Nanyang Technological University (NTU), Singapore" },
-    { name: "Dr. Ramesh Bansal", title: "University in Sharjah, United Arab Emirates" },
-    { name: "Dr. Biplab Sikdar", title: "National University of Singapore (NUS), Singapore" },
-    { name: "Dr. Mohan Lal Kolhe", title: "University of Agder, Norway" },
     { name: "Dr. Kashem Muttaqi", title: "University of Wollongong, Australia" },
-    { name: "Dr. Vinod Khadkikar", title: "Khalifa University, United Arab Emirates" },
+    { name: "Dr. Bikash Pal", title: "Imperial College London, UK" },
+    { name: "Dr. Akshay Kumar Rathore", title: "National University of Singapore (NUS), Singapore" },
+    { name: "Dr. Mohan Lal Kolhe", title: "University of Agder, Norway" },
     { name: "Dr. Anurag Sharma", title: "Newcastle University, Singapore" },
-    { name: "Dr. Celia Shahnaz", title: "Bangladesh University of Engineering and Technology, Bangladesh" }
+    { name: "Dr. Gulshan Sharma", title: "University of Johannesburg, South Africa" },
+    { name: "Dr. Hasmat Malik", title: "Universiti Teknologi Malaysia (UTM), Malaysia" },
+    { name: "Dr. Fausto Pedro Garcia Marquez", title: "University of Castilla-La Mancha, Spain" },
+    { name: "Dr. Arvind R. Singh", title: "Sichuan Technology and Business University, China" }
   ];
 
   const steeringCommittee = [
-    { name: "Dr. V. Ramgopal Rao", title: "Group Vice-Chancellor, BITS Pilani, Jhunjhunu (Dist) Rajasthan" },
-    { name: "Dr. Vivek Shrivastava", title: "NIT Uttarakhand" },
-    { name: "Dr. Nikhil Gupta", title: "MNIT Jaipur" },
-    { name: "Dr. Sanjib Ganguly", title: "IIT Guwahati" },
-    { name: "Dr. Prerna Gaur", title: " Netaji Subhash University of Technology, New Delhi" },
-    { name: "Dr. Dipti Srinivasan", title: "National University of Singapore (NUS), Singapore" }
+    { name: "Prof. K.R. Niazi", title: "MNIT Jaipur" },
+    { name: "Prof. Nilanjan Sen Roy", title: "IIT Delhi" },
+    { name: "Prof. Subhendu Bhasin", title: "IIT Delhi" },
+    { name: "Dr. Sanjoy Parida", title: "IIT Patna" },
+    { name: "Prof. Rajesh Kumar", title: "MNIT Jaipur" },
+    { name: "Prof. Nikhil Gupta", title: "MNIT Jaipur" },
+    { name: "Prof. Rajeeb Dey", title: "NIT Silchar" }
   ];
 
   return (
@@ -78,7 +60,7 @@ const AdvisoryCommittees = () => {
               Advisory Committees
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Meet the distinguished advisory committees providing strategic guidance and expertise to ensure the success of STESI 2026.
+              Meet the distinguished advisory committees providing strategic guidance and expertise to ensure the success of STESI 2027.
             </p>
           </motion.div>
         </div>

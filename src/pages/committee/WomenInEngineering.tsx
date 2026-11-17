@@ -22,6 +22,10 @@ const WomenInEngineering = () => {
     {
       name: "Dr. Sunanda Sinha",
       title: "MNIT Jaipur"
+    },
+    {
+      name: "Dr. Karuna Kiran",
+      title: "NIT Agartala"
     }
   ];
 
@@ -41,7 +45,7 @@ const WomenInEngineering = () => {
               Women in Engineering
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Celebrating and supporting the contributions of women in engineering and technology at STESI 2026.
+              Celebrating and supporting the contributions of women in engineering and technology at STESI 2027.
             </p>
           </motion.div>
         </div>

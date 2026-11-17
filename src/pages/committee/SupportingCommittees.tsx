@@ -7,56 +7,29 @@ import { Badge } from '@/components/ui/badge';
 
 const SupportingCommittees = () => {
   const publicityCommittee = [
-    {
-      name: "Dr. R. C. Bansal",
-      title: "University of Sharjah, UAE"
-    },
-    {
-      name: "Dr. Aneesh Prabhakar",
-      title: "MNIT Jaipur"
-    },
-    {
-      name: "Dr. Vinay Kumar Jadoun",
-      title: "Manipal Institute of Technology, Manipal, Karnataka"
-    },
-    {
-      name: "Dr. Parul Mathuria",
-      title: "MNIT Jaipur"
-    },
-    {
-      name: "Dr. Jupitara Hazarika",
-      title: "NIT Silchar"
-    },
-    {
-      name: "Dr. Gulshan Sharma",
-      title: "University of Johannesburg, South Africa"
-    },
-    {
-      name: "Dr. Senthil Krishnamurthy",
-      title: "Cape Peninsula University of Technology, Cape Town, South Africa"
-    },
-    {
-      name: "Dr. Peeyush Garg",
-      title: "Manipal University, Jaipur"
-    },
-    {
-      name: "Dr. Arun Kishor Johar",
-      title: "Manipal University Jaipur"
-    }
+    { name: "Dr. Peeyush Garg", title: "Manipal University Jaipur" },
+    { name: "Dr. Gaurav Kansal", title: "Manipal University Jaipur" },
+    { name: "Dr. Ravita Lamba", title: "IIT Roorkee" },
+    { name: "Dr. G Lloyds Raja", title: "NIT Patna" },
+    { name: "Dr. Mahipal Bukya", title: "MIT, Bangalore" },
+    { name: "Dr. Kailash Sharma", title: "MNIT Jaipur" },
+    { name: "Dr. Sourabh Kr. Pandey", title: "IIT Patna" },
+    { name: "Dr. Gulshan Sharma", title: "University of Johannesburg, South Africa" },
+    { name: "Dr. Senthil Krishnamurthy", title: "Cape Peninsula University of Technology, Cape Town, South Africa" },
+    { name: "Dr. Souvik Ganguli", title: "Thapar University, Patiala" },
+    { name: "Dr. Abhisek Pal", title: "Thapar University, Patiala" },
+    { name: "Dr. Subhodip Saha", title: "NSUT, Delhi" },
+    { name: "Dr. Vivek Prakash", title: "Banasthali Vidyapeeth" }
   ];
 
   const specialSessionChairs = [
     {
-      name: "Dr. Vedik Basetti",
-      title: "SR University, Warangal"
+      name: "Dr. Saurav Raj",
+      title: "NIT Raipur"
     },
     {
       name: "Dr. Chandan Kr. Shiva",
-      title: "SR University, Warangal"
-    },
-    {
-      name: "Dr. Pulakraj Aryan",
-      title: "Manipal University Jaipur"
+      title: "SR University"
     }
   ];
 
@@ -76,7 +49,7 @@ const SupportingCommittees = () => {
               Supporting Committees
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Meet the dedicated teams that provide essential support and ensure the smooth operation of STESI 2026.
+              Meet the dedicated teams that provide essential support and ensure the smooth operation of STESI 2027.
             </p>
           </motion.div>
         </div>
@@ -94,7 +67,7 @@ const SupportingCommittees = () => {
             <h2 className="text-3xl font-bold text-primary mb-4">
               Publicity Committee
             </h2>
-            <p className="text-muted-foreground">Promoting STESI 2026 and reaching out to the global research community</p>
+            <p className="text-muted-foreground">Promoting STESI 2027 and reaching out to the global research community</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">

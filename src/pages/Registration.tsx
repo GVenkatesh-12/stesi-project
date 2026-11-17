@@ -48,7 +48,7 @@ const Registration = () => {
       content: (
         <div className="space-y-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
           <p>
-            The authors will have to submit a camera-ready version as per the guidelines given on the conference website <strong>on or before <s>15th June 2026</s> 22nd June 2026</strong>.
+            The authors will have to submit a camera-ready version as per the guidelines given on the conference website <strong>on or before April 30, 2027</strong>.
           </p>
           <div className="flex items-start gap-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
             <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 mt-0.5 shrink-0" />
@@ -94,7 +94,7 @@ const Registration = () => {
           <div className="space-y-3">
             <div className="flex items-start gap-2">
               <CheckCircle2 className="h-4 w-4 text-emerald-500 mt-1 shrink-0" />
-              <span>At least one author must register with <strong>Full Author Registration</strong> and present the paper at STESI 2026 for it to be considered for IEEE Xplore publication.</span>
+              <span>At least one author must register with <strong>Full Author Registration</strong> and present the paper at STESI 2027 for it to be considered for publication.</span>
             </div>
             <div className="flex items-start gap-2">
               <CheckCircle2 className="h-4 w-4 text-emerald-500 mt-1 shrink-0" />
@@ -184,10 +184,10 @@ const Registration = () => {
               <li>Continue following the on-screen prompts.</li>
               <li>You'll receive online and email confirmation after setup.</li>
               <li>After <em>"File has been converted successfully"</em>, download the PDF from the <strong>"Action"</strong> Tab in the Dashboard.</li>
-              <li>Download the PDF file of your paper from PDF eXpressPlus website and upload it via the CMT Portal for Camera Ready Paper Submission of STESI-2026 at{' '}
-                <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FSTESI2026" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-violet-600 hover:bg-violet-700 text-white font-semibold text-sm px-3 py-1 rounded-md shadow-sm hover:shadow transition-all duration-200">
+              <li>Download the PDF file of your paper from PDF eXpressPlus website and upload it via the CMT Portal for Camera Ready Paper Submission of STESI-2027 at{' '}
+                <a href="https://cmt3.research.microsoft.com/STESI2027" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 bg-violet-600 hover:bg-violet-700 text-white font-semibold text-sm px-3 py-1 rounded-md shadow-sm hover:shadow transition-all duration-200">
                   <ShieldCheck className="h-3.5 w-3.5" />
-                  Microsoft CMT Portal — STESI 2026
+                  Microsoft CMT Portal — STESI 2027
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
@@ -265,7 +265,7 @@ const Registration = () => {
           <div className="flex items-center gap-3 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-lg p-4">
             <CalendarClock className="h-5 w-5 text-rose-600 dark:text-rose-400 shrink-0" />
             <span className="font-semibold text-rose-800 dark:text-rose-300">
-              Deadline: <s className="opacity-60 font-medium">15th June 2026</s> June 22, 2026
+              Registration Starts: May 5, 2027 • Registration Deadline: July 5, 2027
             </span>
           </div>
 
@@ -315,18 +315,18 @@ const Registration = () => {
               Registration
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Secure your spot at STESI 2026. Choose from our flexible registration options and join the premier conference on Smart Technologies for Energy, Sustainability & Industry.
+              Join us at STESI 2027. Review registration categories, fee structures, and the step-by-step submission process below.
             </p>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-full shadow-lg shadow-red-500/25"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-3.5 rounded-full shadow-lg shadow-emerald-500/25"
             >
-              <Sparkles className="h-6 w-6 animate-pulse" />
-              <span className="text-lg sm:text-xl font-bold tracking-wide">Registration Closed!</span>
-              <Sparkles className="h-6 w-6 animate-pulse" />
+              <Sparkles className="h-5 w-5 animate-pulse" />
+              <span className="text-base sm:text-lg font-bold tracking-wide">Registration Starts: May 5, 2027</span>
+              <Sparkles className="h-5 w-5 animate-pulse" />
             </motion.div>
           </motion.div>
         </div>
@@ -404,156 +404,81 @@ const Registration = () => {
             </p>
           </motion.div>
 
-          <div className="overflow-x-auto bg-white mb-3 rounded-lg shadow-lg border border-gray-200 max-w-5xl mx-auto">
-            <Table className="mb-8">
+          <div className="overflow-x-auto bg-white mb-3 rounded-lg shadow-lg border border-gray-200 max-w-4xl mx-auto">
+            <Table className="mb-4">
               <TableHeader>
                 <TableRow className="bg-primary hover:bg-primary">
-                  <TableHead className="text-left font-bold text-white text-base py-3 px-4 border-r border-white/20">
+                  <TableHead className="text-left font-bold text-white text-base py-3.5 px-6 border-r border-white/20">
                     Participant Category
                   </TableHead>
-                  <TableHead className="text-center font-bold text-white text-base py-3 px-3 border-r border-white/20" colSpan={2}>
+                  <TableHead className="text-center font-bold text-white text-base py-3.5 px-6 border-r border-white/20">
                     IEEE Member
                   </TableHead>
-                  <TableHead className="text-center font-bold text-white text-base py-3 px-3" colSpan={2}>
-                    Non IEEE Member
-                  </TableHead>
-                </TableRow>
-                <TableRow className="bg-primary/90 hover:bg-primary/90">
-                  <TableHead className="text-left font-semibold text-white py-2 px-4 border-r border-white/20"></TableHead>
-                  <TableHead className="text-center font-semibold text-white py-2 px-3 border-r border-white/20">
-                    Online
-                  </TableHead>
-                  <TableHead className="text-center font-semibold text-white py-2 px-3 border-r border-white/20">
-                    Offline
-                  </TableHead>
-                  <TableHead className="text-center font-semibold text-white py-2 px-3 border-r border-white/20">
-                    Online
-                  </TableHead>
-                  <TableHead className="text-center font-semibold text-white py-2 px-3">
-                    Offline
+                  <TableHead className="text-center font-bold text-white text-base py-3.5 px-6">
+                    Non-IEEE Member
                   </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {/* Indian Participants Section */}
                 <TableRow className="bg-gradient-to-r from-blue-100 to-blue-200 hover:from-blue-200 hover:to-blue-300">
-                  <TableCell colSpan={5} className="text-center text-base font-bold text-blue-900 py-3 px-4 border-b-2 border-blue-400">
-                    Indian Participants
+                  <TableCell colSpan={3} className="text-center text-base font-bold text-blue-900 py-3 px-4 border-b-2 border-blue-400">
+                    Indian Participants (Offline Mode)
                   </TableCell>
                 </TableRow>
                 
                 <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-white">
-                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
-                    Student
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3.5 px-4 border-r border-gray-300">
+                    Student Member
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
-                    ₹6,000
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
+                  <TableCell className="text-center font-bold text-primary text-base py-3.5 px-4 border-r border-gray-300">
                     ₹8,000
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3 border-r border-gray-300">
-                    ₹8,000
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3">
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3.5 px-4">
                     ₹10,000
                   </TableCell>
                 </TableRow>
                 
                 <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-gray-50">
-                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3.5 px-4 border-r border-gray-300">
                     Academician
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
+                  <TableCell className="text-center font-bold text-primary text-base py-3.5 px-4 border-r border-gray-300">
                     ₹11,000
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3.5 px-4">
                     ₹13,000
                   </TableCell>
                 </TableRow>
                 
                 <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-white">
-                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
-                    Industry
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3.5 px-4 border-r border-gray-300">
+                    Industry Professional
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
+                  <TableCell className="text-center font-bold text-primary text-base py-3.5 px-4 border-r border-gray-300">
                     ₹13,000
                   </TableCell>
-                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3.5 px-4">
                     ₹15,000
-                  </TableCell>
-                </TableRow>
-                
-                <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-gray-50">
-                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
-                    Attendee
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-gray-500 text-base py-3 px-3 border-r border-gray-300">
-                    -
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
-                    ₹2,000
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-gray-500 text-base py-3 px-3 border-r border-gray-300">
-                    -
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3">
-                    ₹5,000
                   </TableCell>
                 </TableRow>
 
                 {/* Foreign Participants Section */}
                 <TableRow className="bg-gradient-to-r from-green-100 to-green-200 hover:from-green-200 hover:to-green-300">
-                  <TableCell colSpan={5} className="text-center text-base font-bold text-green-900 py-3 px-4 border-b-2 border-green-400">
-                    Foreign Participants
+                  <TableCell colSpan={3} className="text-center text-base font-bold text-green-900 py-3 px-4 border-b-2 border-green-400">
+                    International Participants (Online / Offline)
                   </TableCell>
                 </TableRow>
                 
                 <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-white">
-                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
-                    Student
+                  <TableCell className="font-semibold text-gray-900 pl-6 py-3.5 px-4 border-r border-gray-300">
+                    International Author / Participant
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
-                    $100
+                  <TableCell className="text-center font-bold text-primary text-base py-3.5 px-4 border-r border-gray-300">
+                    $200 USD
                   </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
-                    $120
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3 border-r border-gray-300">
-                    $120
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3">
-                    $150
-                  </TableCell>
-                </TableRow>
-                
-                <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-gray-50">
-                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
-                    Academician
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
-                    $200
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3 border-r border-gray-300" colSpan={2}>
-                    $250
-                  </TableCell>
-                </TableRow>
-                
-                <TableRow className="hover:bg-gray-100 border-b border-gray-300 bg-white">
-                  <TableCell className="font-semibold text-gray-900 pl-6 py-3 px-4 border-r border-gray-300">
-                    Attendee
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-gray-500 text-base py-3 px-3 border-r border-gray-300">
-                    -
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-primary text-base py-3 px-3 border-r border-gray-300">
-                    $50
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-gray-500 text-base py-3 px-3 border-r border-gray-300">
-                    -
-                  </TableCell>
-                  <TableCell className="text-center font-bold text-gray-800 text-base py-3 px-3">
-                    $100
+                  <TableCell className="text-center font-bold text-gray-800 text-base py-3.5 px-4">
+                    $300 USD
                   </TableCell>
                 </TableRow>
               </TableBody>
