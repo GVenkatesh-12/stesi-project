@@ -6,8 +6,6 @@ import {
   Megaphone,
   CheckCheck,
   Calendar,
-  Sparkles,
-  ArrowRight,
   ChevronRight,
   X,
 } from "lucide-react";
@@ -17,7 +15,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { notifications, NotificationItem } from "@/data/notifications";
 import { cn } from "@/lib/utils";
@@ -43,7 +40,7 @@ function setLastSeenId(id: number): void {
 }
 
 const categoryStyles: Record<
-  NotificationItem["category"],
+  string,
   { badge: string; text: string }
 > = {
   Announcement: {
@@ -63,8 +60,8 @@ const categoryStyles: Record<
     text: "text-emerald-600 dark:text-emerald-400",
   },
   Archive: {
-    badge: "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20",
-    text: "text-rose-600 dark:text-rose-400",
+    badge: "bg-primary/10 text-primary border-primary/20",
+    text: "text-primary",
   },
 };
 
@@ -102,28 +99,19 @@ export default function NotificationBell() {
         <PopoverTrigger asChild>
           <Button
             variant="outline"
+            size="icon"
             className={cn(
-              "relative h-12 px-4 rounded-full border border-border/80 bg-background/95 shadow-xl backdrop-blur-md",
+              "relative h-12 w-12 rounded-full border border-border/80 bg-background/95 shadow-xl backdrop-blur-md",
               "hover:bg-primary/10 hover:border-primary/40 hover:scale-105 active:scale-95",
-              "transition-all duration-300 flex items-center gap-2.5 group"
+              "transition-all duration-300 flex items-center justify-center group"
             )}
             aria-label="View announcements"
           >
-            <div className="relative flex items-center justify-center">
-              <Bell className="h-5 w-5 text-primary group-hover:rotate-12 transition-transform duration-300" strokeWidth={2} />
-              {hasUnread && (
-                <span className="absolute -top-1.5 -right-1.5 flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
-                </span>
-              )}
-            </div>
-            <span className="text-xs font-semibold text-foreground hidden sm:inline-block">
-              Updates
-            </span>
+            <Bell className="h-5 w-5 text-primary group-hover:rotate-12 transition-transform duration-300" strokeWidth={2} />
             {hasUnread && (
-              <span className="text-[11px] font-bold bg-primary text-primary-foreground px-1.5 py-0.2 rounded-full">
-                {unreadCount}
+              <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
               </span>
             )}
           </Button>
@@ -133,21 +121,18 @@ export default function NotificationBell() {
           side="top"
           align="end"
           sideOffset={14}
-          className="w-[min(calc(100vw-2rem),400px)] p-0 border border-border/80 shadow-2xl rounded-2xl overflow-hidden bg-card/95 backdrop-blur-xl animate-in fade-in-0 zoom-in-95 duration-200"
+          className="w-[min(calc(100vw-2rem),360px)] p-0 border border-border/80 shadow-2xl rounded-2xl overflow-hidden bg-card/95 backdrop-blur-xl animate-in fade-in-0 zoom-in-95 duration-200"
         >
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-border/60 bg-muted/40 px-4 py-3.5">
+          <div className="flex items-center justify-between border-b border-border/60 bg-muted/40 px-4 py-3">
             <div className="flex items-center gap-2">
               <div className="p-1.5 rounded-lg bg-primary/10 text-primary">
                 <Megaphone className="h-4 w-4" />
               </div>
-              <div>
-                <h3 className="font-bold text-sm text-foreground">Announcements</h3>
-                <p className="text-[11px] text-muted-foreground">STESI 2027 Updates</p>
-              </div>
+              <h3 className="font-bold text-sm text-foreground">Announcements</h3>
             </div>
 
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1">
               {hasUnread && (
                 <Button
                   variant="ghost"
@@ -182,7 +167,7 @@ export default function NotificationBell() {
                   documentLinkPattern.test(
                     decodeURIComponent(item.link).split(/[?#]/)[0]
                   );
-                const categoryStyle = categoryStyles[item.category];
+                const categoryStyle = (item.category && categoryStyles[item.category]) || categoryStyles.Archive;
 
                 return (
                   <div
@@ -199,14 +184,16 @@ export default function NotificationBell() {
                     <div className="space-y-2 pr-3">
                       {/* Top category pill & date */}
                       <div className="flex items-center gap-2 text-xs">
-                        <span
-                          className={cn(
-                            "px-2 py-0.5 rounded-full text-[10px] font-semibold border",
-                            categoryStyle.badge
-                          )}
-                        >
-                          {item.category}
-                        </span>
+                        {item.category && (
+                          <span
+                            className={cn(
+                              "px-2 py-0.5 rounded-full text-[10px] font-semibold border",
+                              categoryStyle.badge
+                            )}
+                          >
+                            {item.category}
+                          </span>
+                        )}
                         <span className="text-[11px] text-muted-foreground flex items-center gap-1">
                           <Calendar className="h-3 w-3" />
                           {item.date}
@@ -259,24 +246,6 @@ export default function NotificationBell() {
               })}
             </div>
           </ScrollArea>
-
-          {/* Footer Callout */}
-          <div className="p-3 border-t border-border/60 bg-muted/30 flex items-center justify-between text-xs">
-            <span className="text-muted-foreground text-[11px]">
-              August 5–6, 2027 • Jaipur
-            </span>
-            <Link
-              to="/call-for-papers"
-              onClick={() => {
-                markAllAsRead();
-                setOpen(false);
-              }}
-              className="font-semibold text-primary hover:underline flex items-center gap-1"
-            >
-              <span>Call for Papers</span>
-              <ArrowRight className="h-3 w-3" />
-            </Link>
-          </div>
         </PopoverContent>
       </Popover>
     </div>
