@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { User, Users } from 'lucide-react';
+
 
 const OrganizingCommittee = () => {
   const programChair = {
@@ -125,9 +125,6 @@ const OrganizingCommittee = () => {
             >
               <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
                 <CardHeader className="text-center pt-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <User className="h-8 w-8 text-primary" />
-                  </div>
                   <CardTitle className="text-xl mb-3">{programChair.name}</CardTitle>
                   <Badge variant="secondary" className="mx-auto bg-red-100 text-red-800">Program Chair</Badge>
                 </CardHeader>
@@ -166,9 +163,6 @@ const OrganizingCommittee = () => {
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
                   <CardHeader className="text-center pt-6">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="h-8 w-8 text-primary" />
-                    </div>
                     <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-blue-100 text-blue-800">Organising Chair</Badge>
                   </CardHeader>
@@ -208,9 +202,6 @@ const OrganizingCommittee = () => {
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
                   <CardHeader className="text-center pt-6">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-primary" />
-                    </div>
                     <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-indigo-100 text-indigo-800">Secretary</Badge>
                   </CardHeader>
@@ -250,9 +241,6 @@ const OrganizingCommittee = () => {
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
                   <CardHeader className="text-center pt-6">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-primary" />
-                    </div>
                     <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-green-100 text-green-800">Finance Chair</Badge>
                   </CardHeader>
@@ -292,9 +280,6 @@ const OrganizingCommittee = () => {
               >
                 <Card className="h-full bg-gradient-card border border-border/50 shadow-card hover:shadow-lg transition-all duration-300">
                   <CardHeader className="text-center pt-6">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-primary" />
-                    </div>
                     <CardTitle className="text-lg mb-3">{member.name}</CardTitle>
                     <Badge variant="secondary" className="mx-auto bg-orange-100 text-orange-800">Hospitality & Logistics</Badge>
                   </CardHeader>

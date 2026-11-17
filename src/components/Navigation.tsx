@@ -67,8 +67,7 @@ const navItems: NavItem[] = [
       { name: 'Call for Papers', path: '/call-for-papers' },
       { name: 'Special Sessions', path: '/special-sessions' },
       { name: 'Camera-Ready Submission', path: '/camera-ready' },
-      // Bump badgeId to show the red badge again (e.g. 2 → 3)
-      { name: 'Templates', path: '/templates', badgeId: 2 },
+      { name: 'Templates', path: '/templates' },
     ],
   },
   {

@@ -1,14 +1,25 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Bell, ExternalLink, Megaphone } from "lucide-react";
+import {
+  Bell,
+  ExternalLink,
+  Megaphone,
+  CheckCheck,
+  Calendar,
+  Sparkles,
+  ArrowRight,
+  ChevronRight,
+  X,
+} from "lucide-react";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { notifications } from "@/data/notifications";
+import { notifications, NotificationItem } from "@/data/notifications";
 import { cn } from "@/lib/utils";
 
 const STORAGE_KEY = "stesi_notification_last_seen_id";
@@ -31,6 +42,32 @@ function setLastSeenId(id: number): void {
   }
 }
 
+const categoryStyles: Record<
+  NotificationItem["category"],
+  { badge: string; text: string }
+> = {
+  Announcement: {
+    badge: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
+    text: "text-blue-600 dark:text-blue-400",
+  },
+  "Call for Papers": {
+    badge: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20",
+    text: "text-purple-600 dark:text-purple-400",
+  },
+  "Important Dates": {
+    badge: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20",
+    text: "text-amber-600 dark:text-amber-400",
+  },
+  Registration: {
+    badge: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
+    text: "text-emerald-600 dark:text-emerald-400",
+  },
+  Archive: {
+    badge: "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20",
+    text: "text-rose-600 dark:text-rose-400",
+  },
+};
+
 export default function NotificationBell() {
   const [open, setOpen] = useState(false);
   const [lastSeenId, setLastSeenIdState] = useState(getLastSeenId);
@@ -38,16 +75,20 @@ export default function NotificationBell() {
   const maxId = notifications.length
     ? Math.max(...notifications.map((n) => n.id))
     : 0;
-  const hasUnread = maxId > lastSeenId;
 
-  // Re-read from storage when popover opens (e.g. another tab might have updated)
+  const unreadCount = notifications.filter((n) => n.id > lastSeenId).length;
+  const hasUnread = unreadCount > 0;
+
   useEffect(() => {
     if (open) setLastSeenIdState(getLastSeenId());
   }, [open]);
 
   const handleOpenChange = (isOpen: boolean) => {
     setOpen(isOpen);
-    if (isOpen && maxId > 0) {
+  };
+
+  const markAllAsRead = () => {
+    if (maxId > 0) {
       setLastSeenId(maxId);
       setLastSeenIdState(maxId);
     }
@@ -61,81 +102,181 @@ export default function NotificationBell() {
         <PopoverTrigger asChild>
           <Button
             variant="outline"
-            size="icon"
             className={cn(
-              "h-12 w-12 rounded-full border-2 bg-background/95 shadow-lg backdrop-blur-sm",
-              "hover:bg-primary/10 hover:border-primary/30 hover:scale-105",
-              "transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary"
+              "relative h-12 px-4 rounded-full border border-border/80 bg-background/95 shadow-xl backdrop-blur-md",
+              "hover:bg-primary/10 hover:border-primary/40 hover:scale-105 active:scale-95",
+              "transition-all duration-300 flex items-center gap-2.5 group"
             )}
             aria-label="View announcements"
           >
-            <Bell className="h-5 w-5 text-primary" strokeWidth={2} />
+            <div className="relative flex items-center justify-center">
+              <Bell className="h-5 w-5 text-primary group-hover:rotate-12 transition-transform duration-300" strokeWidth={2} />
+              {hasUnread && (
+                <span className="absolute -top-1.5 -right-1.5 flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
+                </span>
+              )}
+            </div>
+            <span className="text-xs font-semibold text-foreground hidden sm:inline-block">
+              Updates
+            </span>
             {hasUnread && (
-              <span
-                className="absolute -right-0.5 -top-0.5 h-3 w-3 rounded-full bg-destructive ring-2 ring-background"
-                aria-hidden
-              />
+              <span className="text-[11px] font-bold bg-primary text-primary-foreground px-1.5 py-0.2 rounded-full">
+                {unreadCount}
+              </span>
             )}
           </Button>
         </PopoverTrigger>
+
         <PopoverContent
           side="top"
           align="end"
-          sideOffset={12}
-          className="w-[min(calc(100vw-2rem),380px)] p-0 border shadow-xl rounded-xl overflow-hidden"
+          sideOffset={14}
+          className="w-[min(calc(100vw-2rem),400px)] p-0 border border-border/80 shadow-2xl rounded-2xl overflow-hidden bg-card/95 backdrop-blur-xl animate-in fade-in-0 zoom-in-95 duration-200"
         >
-          <div className="sticky top-0 z-10 flex items-center gap-2 border-b bg-muted/50 px-4 py-3">
-            <Megaphone className="h-5 w-5 text-primary shrink-0" />
-            <h3 className="font-semibold text-foreground">Announcements</h3>
+          {/* Header */}
+          <div className="flex items-center justify-between border-b border-border/60 bg-muted/40 px-4 py-3.5">
+            <div className="flex items-center gap-2">
+              <div className="p-1.5 rounded-lg bg-primary/10 text-primary">
+                <Megaphone className="h-4 w-4" />
+              </div>
+              <div>
+                <h3 className="font-bold text-sm text-foreground">Announcements</h3>
+                <p className="text-[11px] text-muted-foreground">STESI 2027 Updates</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-1.5">
+              {hasUnread && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={markAllAsRead}
+                  className="h-7 px-2 text-xs text-muted-foreground hover:text-foreground flex items-center gap-1"
+                  title="Mark all as read"
+                >
+                  <CheckCheck className="h-3.5 w-3.5" />
+                  <span>Mark read</span>
+                </Button>
+              )}
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setOpen(false)}
+                className="h-7 w-7 rounded-full text-muted-foreground hover:text-foreground"
+                aria-label="Close"
+              >
+                <X className="h-4 w-4" />
+              </Button>
+            </div>
           </div>
-          <ScrollArea className="max-h-[min(70vh,320px)]">
-            <ul className="divide-y">
+
+          {/* Notifications Scroll Area */}
+          <ScrollArea className="max-h-[min(70vh,380px)]">
+            <div className="divide-y divide-border/40">
               {[...notifications].reverse().map((item) => {
+                const isUnread = item.id > lastSeenId;
                 const isDocumentLink =
                   item.link &&
                   documentLinkPattern.test(
                     decodeURIComponent(item.link).split(/[?#]/)[0]
                   );
+                const categoryStyle = categoryStyles[item.category];
 
                 return (
-                  <li key={item.id} className="px-4 py-3 hover:bg-muted/30 transition-colors">
-                    <div className="space-y-1">
-                      <p className="font-medium text-sm text-foreground leading-tight">
-                        {item.title}
-                      </p>
-                      <p className="text-xs text-muted-foreground leading-snug">
-                        {item.message}
-                      </p>
-                      <div className="flex items-center justify-between gap-2 pt-1">
-                        <span className="text-xs text-muted-foreground">
+                  <div
+                    key={item.id}
+                    className={cn(
+                      "p-4 transition-colors relative hover:bg-muted/40",
+                      isUnread && "bg-primary/[0.03]"
+                    )}
+                  >
+                    {isUnread && (
+                      <span className="absolute top-4 right-4 h-2 w-2 rounded-full bg-primary" />
+                    )}
+
+                    <div className="space-y-2 pr-3">
+                      {/* Top category pill & date */}
+                      <div className="flex items-center gap-2 text-xs">
+                        <span
+                          className={cn(
+                            "px-2 py-0.5 rounded-full text-[10px] font-semibold border",
+                            categoryStyle.badge
+                          )}
+                        >
+                          {item.category}
+                        </span>
+                        <span className="text-[11px] text-muted-foreground flex items-center gap-1">
+                          <Calendar className="h-3 w-3" />
                           {item.date}
                         </span>
-                        {item.link &&
-                          (item.link.startsWith("/") && !isDocumentLink ? (
+                      </div>
+
+                      {/* Title & Message */}
+                      <h4 className="font-semibold text-sm text-foreground leading-snug">
+                        {item.title}
+                      </h4>
+                      <div className="text-xs text-muted-foreground leading-relaxed">
+                        {item.message}
+                      </div>
+
+                      {/* Action Link Button */}
+                      {item.link && (
+                        <div className="pt-1">
+                          {item.link.startsWith("/") && !isDocumentLink ? (
                             <Link
                               to={item.link}
-                              onClick={() => setOpen(false)}
-                              className="text-xs font-medium text-primary hover:underline inline-flex items-center gap-1"
+                              onClick={() => {
+                                markAllAsRead();
+                                setOpen(false);
+                              }}
+                              className="text-xs font-semibold text-primary hover:text-primary/80 inline-flex items-center gap-1 group/link"
                             >
-                              {item.linkLabel ?? "View"}
+                              <span>{item.linkLabel ?? "Learn more"}</span>
+                              <ChevronRight className="h-3.5 w-3.5 group-hover/link:translate-x-0.5 transition-transform" />
                             </Link>
                           ) : (
                             <a
                               href={item.link}
-                              onClick={() => setOpen(false)}
-                              className="text-xs font-medium text-primary hover:underline inline-flex items-center gap-1"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => {
+                                markAllAsRead();
+                                setOpen(false);
+                              }}
+                              className="text-xs font-semibold text-primary hover:text-primary/80 inline-flex items-center gap-1 group/link"
                             >
-                              {item.linkLabel ?? "View"}
-                              {!isDocumentLink && <ExternalLink className="h-3 w-3" />}
+                              <span>{item.linkLabel ?? "Open link"}</span>
+                              <ExternalLink className="h-3 w-3" />
                             </a>
-                          ))}
-                      </div>
+                          )}
+                        </div>
+                      )}
                     </div>
-                  </li>
+                  </div>
                 );
               })}
-            </ul>
+            </div>
           </ScrollArea>
+
+          {/* Footer Callout */}
+          <div className="p-3 border-t border-border/60 bg-muted/30 flex items-center justify-between text-xs">
+            <span className="text-muted-foreground text-[11px]">
+              August 5–6, 2027 • Jaipur
+            </span>
+            <Link
+              to="/call-for-papers"
+              onClick={() => {
+                markAllAsRead();
+                setOpen(false);
+              }}
+              className="font-semibold text-primary hover:underline flex items-center gap-1"
+            >
+              <span>Call for Papers</span>
+              <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
         </PopoverContent>
       </Popover>
     </div>
