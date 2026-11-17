@@ -242,3 +242,227 @@ All colors MUST be HSL.
   animation: marquee 40s linear infinite;
 }
 
+/* STESI 2027 landing page */
+.stesi-hero {
+  background-image:
+    radial-gradient(circle at 82% 18%, hsl(183 85% 48% / 0.28), transparent 23rem),
+    radial-gradient(circle at 18% 88%, hsl(265 90% 65% / 0.26), transparent 26rem),
+    linear-gradient(125deg, #061737 0%, #092c59 49%, #132451 100%);
+}
+
+.stesi-hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(hsl(190 80% 90% / 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(190 80% 90% / 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+.stesi-hero__glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(2px);
+  opacity: 0.8;
+}
+
+.stesi-hero__glow--cyan {
+  top: 12%;
+  right: -9rem;
+  width: 25rem;
+  height: 25rem;
+  background: radial-gradient(circle, hsl(181 91% 57% / 0.36), transparent 66%);
+}
+
+.stesi-hero__glow--violet {
+  bottom: -11rem;
+  left: -8rem;
+  width: 28rem;
+  height: 28rem;
+  background: radial-gradient(circle, hsl(269 92% 70% / 0.31), transparent 67%);
+}
+
+.stesi-hero__orbit {
+  position: absolute;
+  border: 1px solid hsl(180 90% 90% / 0.13);
+  border-radius: 9999px;
+  transform: rotate(-24deg);
+}
+
+.stesi-hero__orbit--one {
+  right: -11rem;
+  top: 15%;
+  width: 39rem;
+  height: 16rem;
+}
+
+.stesi-hero__orbit--two {
+  bottom: -7rem;
+  left: 7%;
+  width: 30rem;
+  height: 12rem;
+}
+
+.stesi-hero__gradient-text {
+  background: linear-gradient(100deg, #8ff4ff 0%, #b6f6c6 44%, #ffe27a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stesi-hero__year-card {
+  background-image: linear-gradient(145deg, hsl(213 85% 18% / 0.88), hsl(244 62% 26% / 0.84));
+}
+
+.stesi-hero__university-logo {
+  top: 6rem;
+  left: 2rem;
+}
+
+.stesi-hero__edition-badge {
+  top: 6rem;
+  right: 2rem;
+}
+
+.stesi-hero__scroll {
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 639px) {
+  .stesi-hero__university-logo {
+    top: 5.25rem;
+    left: 1.25rem;
+  }
+
+  .stesi-hero__edition-badge {
+    top: 11.25rem;
+    right: auto;
+    left: 1.25rem;
+  }
+}
+
+/* STESI 2026 retrospective */
+.stesi-archive {
+  background:
+    radial-gradient(circle at 4% 22%, hsl(191 95% 87% / 0.78), transparent 25rem),
+    radial-gradient(circle at 96% 45%, hsl(270 100% 93% / 0.9), transparent 30rem),
+    linear-gradient(180deg, #f8fcff 0%, #f8fbff 45%, #fefbff 100%);
+}
+
+.stesi-archive__hero {
+  background:
+    radial-gradient(circle at 17% 28%, hsl(191 100% 78% / 0.68), transparent 20rem),
+    radial-gradient(circle at 83% 22%, hsl(275 100% 82% / 0.55), transparent 24rem),
+    radial-gradient(circle at 58% 100%, hsl(49 100% 80% / 0.6), transparent 20rem),
+    linear-gradient(135deg, #eaf8ff 0%, #f5efff 48%, #fff7e4 100%);
+  border-bottom: 1px solid hsl(221 83% 89% / 0.9);
+}
+
+.stesi-archive__beam {
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  border: 2px solid hsl(249 85% 65% / 0.15);
+  border-radius: 9999px;
+}
+
+.stesi-archive__beam--left {
+  left: -18rem;
+  bottom: -18rem;
+  box-shadow: 0 0 0 2rem hsl(191 85% 60% / 0.05), 0 0 0 5rem hsl(191 85% 60% / 0.04);
+}
+
+.stesi-archive__beam--right {
+  right: -19rem;
+  top: -18rem;
+  box-shadow: 0 0 0 2rem hsl(280 90% 65% / 0.05), 0 0 0 5rem hsl(280 90% 65% / 0.04);
+}
+
+.stesi-archive__dot-field {
+  position: absolute;
+  inset: 0;
+  opacity: 0.38;
+  background-image: radial-gradient(hsl(233 77% 52% / 0.26) 1px, transparent 1px);
+  background-size: 20px 20px;
+  mask-image: linear-gradient(90deg, transparent, black 24%, black 76%, transparent);
+}
+
+.stesi-archive__title {
+  background: linear-gradient(100deg, #163aa9 0%, #5d2fa4 47%, #047b9a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.archive-stat {
+  background: hsl(0 0% 100% / 0.78);
+  border-color: hsl(0 0% 100% / 0.92);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.archive-stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px -18px hsl(226 72% 40% / 0.35);
+}
+
+.archive-stat:nth-child(1) .font-extrabold { color: #176d9c; }
+.archive-stat:nth-child(2) .font-extrabold { color: #7850b8; }
+.archive-stat:nth-child(3) .font-extrabold { color: #c46b22; }
+.archive-stat:nth-child(4) .font-extrabold { color: #16876e; }
+
+.archive-tabs {
+  background: hsl(0 0% 100% / 0.8);
+  border: 1px solid hsl(0 0% 100% / 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.archive-tabs [data-state='active'] {
+  background: linear-gradient(112deg, #2855bc, #613ca5 56%, #177c9d) !important;
+  box-shadow: 0 9px 18px -11px hsl(240 56% 37% / 0.75);
+}
+
+.archive-feature-card {
+  background: linear-gradient(130deg, hsl(196 100% 98% / 0.93), hsl(0 0% 100% / 0.9) 48%, hsl(271 100% 98% / 0.92));
+}
+
+.archive-track-card {
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.archive-track-card:hover {
+  transform: translateY(-4px);
+  border-color: hsl(205 90% 79%) !important;
+  box-shadow: 0 18px 28px -20px hsl(226 72% 40% / 0.45);
+}
+
+.archive-action-card {
+  position: relative;
+  overflow: hidden;
+  border-width: 1px;
+}
+
+.archive-action-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  border-radius: 999px;
+}
+
+.archive-action-card:nth-child(1)::before { background: #1f9bc2; }
+.archive-action-card:nth-child(2)::before { background: #8158c7; }
+.archive-action-card:nth-child(3)::before { background: #dd8e27; }
+
+.archive-action-card:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 639px) {
+  .stesi-hero__orbit--one {
+    right: -18rem;
+  }
+}
+

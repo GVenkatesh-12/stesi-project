@@ -453,59 +453,62 @@ const Stesi2026 = () => {
   }, [isLinksPreviewOpen, keynoteLinksRows.length]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="stesi-archive min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-28 pb-12 bg-gradient-to-b from-primary/15 via-background to-background border-b border-border/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="stesi-archive__hero relative isolate overflow-hidden pt-28 pb-16 sm:pb-20">
+        <div className="stesi-archive__beam stesi-archive__beam--left" aria-hidden="true" />
+        <div className="stesi-archive__beam stesi-archive__beam--right" aria-hidden="true" />
+        <div className="stesi-archive__dot-field" aria-hidden="true" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-semibold mb-4 border border-primary/20">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/70 text-indigo-700 text-xs sm:text-sm font-semibold mb-5 border border-white/80 shadow-lg shadow-indigo-300/20 backdrop-blur-sm">
               <Sparkles className="h-4 w-4" />
               <span>Official Conference Archive & Retrospective</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary mb-3 font-heading tracking-tight">
+            <h1 className="stesi-archive__title text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-3 font-heading tracking-tight">
               STESI 2026 Archive
             </h1>
-            <p className="text-lg sm:text-xl text-foreground/90 max-w-3xl mx-auto font-medium leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-800 max-w-3xl mx-auto font-semibold leading-relaxed">
               1st International Conference on Smart Technologies for Energy, Sustainability & Industry
             </p>
-            <p className="text-sm sm:text-base text-muted-foreground mt-2 flex items-center justify-center gap-2 flex-wrap">
+            <p className="text-sm sm:text-base text-slate-600 mt-3 flex items-center justify-center gap-2 flex-wrap">
               <span className="flex items-center gap-1.5">
-                <Calendar className="h-4 w-4 text-primary" />
+                <Calendar className="h-4 w-4 text-indigo-600" />
                 July 22–23, 2026
               </span>
               <span>•</span>
               <span className="flex items-center gap-1.5">
-                <MapPin className="h-4 w-4 text-primary" />
+                <MapPin className="h-4 w-4 text-cyan-600" />
                 Manipal University Jaipur, Rajasthan, India
               </span>
               <span>•</span>
-              <Badge variant="secondary" className="font-semibold text-xs">
+              <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100 font-semibold text-xs border border-emerald-200">
                 IEEE Technically Sponsored
               </Badge>
             </p>
 
             {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto mt-8">
-              <div className="p-3.5 rounded-xl bg-card border border-border/60 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-extrabold text-primary">400+</div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto mt-9">
+              <div className="archive-stat p-3.5 rounded-2xl border shadow-lg backdrop-blur-sm">
+                <div className="text-2xl sm:text-3xl font-extrabold">400+</div>
                 <div className="text-xs text-muted-foreground font-medium mt-0.5">Submissions Received</div>
               </div>
-              <div className="p-3.5 rounded-xl bg-card border border-border/60 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-extrabold text-primary">7</div>
+              <div className="archive-stat p-3.5 rounded-2xl border shadow-lg backdrop-blur-sm">
+                <div className="text-2xl sm:text-3xl font-extrabold">7</div>
                 <div className="text-xs text-muted-foreground font-medium mt-0.5">Global Keynote Experts</div>
               </div>
-              <div className="p-3.5 rounded-xl bg-card border border-border/60 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-extrabold text-primary">6 + 7</div>
+              <div className="archive-stat p-3.5 rounded-2xl border shadow-lg backdrop-blur-sm">
+                <div className="text-2xl sm:text-3xl font-extrabold">6 + 7</div>
                 <div className="text-xs text-muted-foreground font-medium mt-0.5">Tracks & Special Sessions</div>
               </div>
-              <div className="p-3.5 rounded-xl bg-card border border-border/60 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-extrabold text-primary">150+</div>
+              <div className="archive-stat p-3.5 rounded-2xl border shadow-lg backdrop-blur-sm">
+                <div className="text-2xl sm:text-3xl font-extrabold">150+</div>
                 <div className="text-xs text-muted-foreground font-medium mt-0.5">Accepted & Published Papers</div>
               </div>
             </div>
@@ -514,35 +517,35 @@ const Stesi2026 = () => {
       </section>
 
       {/* Main Tabs Navigation Section */}
-      <section className="py-10 sm:py-14">
+      <section className="relative py-10 sm:py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
             <div className="flex justify-center mb-10">
-              <TabsList className="grid w-full max-w-2xl grid-cols-2 sm:grid-cols-4 p-1.5 bg-muted/80 backdrop-blur rounded-xl border border-border/60 shadow-sm h-auto gap-1">
+              <TabsList className="archive-tabs grid w-full max-w-2xl grid-cols-2 sm:grid-cols-4 p-1.5 rounded-2xl shadow-xl h-auto gap-1">
                 <TabsTrigger
                   value="overview"
-                  className="flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs sm:text-sm font-semibold data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
+                  className="flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs sm:text-sm font-semibold data-[state=active]:text-primary-foreground transition-all"
                 >
                   <BookOpen className="h-4 w-4" />
                   <span>Overview</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="gallery"
-                  className="flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs sm:text-sm font-semibold data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
+                  className="flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs sm:text-sm font-semibold data-[state=active]:text-primary-foreground transition-all"
                 >
                   <Camera className="h-4 w-4" />
                   <span>Photo Gallery</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="proceedings"
-                  className="flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs sm:text-sm font-semibold data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
+                  className="flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs sm:text-sm font-semibold data-[state=active]:text-primary-foreground transition-all"
                 >
                   <FileText className="h-4 w-4" />
                   <span>Proceedings</span>
                 </TabsTrigger>
                 <TabsTrigger
                   value="speakers"
-                  className="flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs sm:text-sm font-semibold data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all"
+                  className="flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs sm:text-sm font-semibold data-[state=active]:text-primary-foreground transition-all"
                 >
                   <Mic className="h-4 w-4" />
                   <span>Keynote Speakers</span>
@@ -562,7 +565,7 @@ const Stesi2026 = () => {
               </div>
 
               {/* Overview Narrative Card */}
-              <Card className="border border-border/60 bg-gradient-card shadow-sm overflow-hidden">
+              <Card className="archive-feature-card border border-sky-100 bg-white/80 shadow-xl overflow-hidden rounded-[1.5rem]">
                 <div className="p-6 sm:p-8 space-y-6">
                   <div className="space-y-3">
                     <Badge variant="outline" className="text-primary border-primary/30 uppercase tracking-wider text-xs">
@@ -647,7 +650,7 @@ const Stesi2026 = () => {
                       desc: 'Substation security, secure industrial protocols, cloud data platforms, resilient control architectures.',
                     },
                   ].map((track) => (
-                    <Card key={track.num} className="bg-card border border-border/60 p-5">
+                    <Card key={track.num} className="archive-track-card bg-white/80 border border-white/80 p-5 rounded-2xl">
                       <Badge variant="outline" className="mb-2 text-xs font-semibold text-primary border-primary/30">
                         {track.num}
                       </Badge>
@@ -662,7 +665,7 @@ const Stesi2026 = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
                 <Card
                   onClick={() => handleTabChange('gallery')}
-                  className="cursor-pointer group hover:border-primary/50 transition-all p-5 bg-card hover:shadow-md"
+                  className="archive-action-card cursor-pointer group transition-all p-5 bg-white/85 rounded-2xl border-white hover:shadow-xl"
                 >
                   <div className="flex items-center justify-between mb-3">
                     <div className="p-2.5 rounded-lg bg-primary/10 text-primary">
@@ -678,7 +681,7 @@ const Stesi2026 = () => {
 
                 <Card
                   onClick={() => handleTabChange('proceedings')}
-                  className="cursor-pointer group hover:border-primary/50 transition-all p-5 bg-card hover:shadow-md"
+                  className="archive-action-card cursor-pointer group transition-all p-5 bg-white/85 rounded-2xl border-white hover:shadow-xl"
                 >
                   <div className="flex items-center justify-between mb-3">
                     <div className="p-2.5 rounded-lg bg-primary/10 text-primary">
@@ -694,7 +697,7 @@ const Stesi2026 = () => {
 
                 <Card
                   onClick={() => handleTabChange('speakers')}
-                  className="cursor-pointer group hover:border-primary/50 transition-all p-5 bg-card hover:shadow-md"
+                  className="archive-action-card cursor-pointer group transition-all p-5 bg-white/85 rounded-2xl border-white hover:shadow-xl"
                 >
                   <div className="flex items-center justify-between mb-3">
                     <div className="p-2.5 rounded-lg bg-primary/10 text-primary">
@@ -784,7 +787,7 @@ const Stesi2026 = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.35, delay: index * 0.05 }}
                     >
-                      <Card className="h-full flex flex-col justify-between overflow-hidden border border-border/60 bg-gradient-card shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                      <Card className="archive-document-card h-full flex flex-col justify-between overflow-hidden border border-white/80 bg-white/85 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-2xl">
                         <div className={`h-2.5 w-full bg-gradient-to-r ${item.color}`} />
                         <CardContent className="p-6 flex flex-col flex-1 justify-between gap-6">
                           <div className="space-y-3">
@@ -926,7 +929,7 @@ const Stesi2026 = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.06 }}
                   >
-                    <Card className="h-full bg-card border border-border/70 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden">
+                    <Card className="h-full bg-white/85 border border-white/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden rounded-2xl">
                       <div className="p-6 space-y-5">
                         {/* Speaker Header with Avatar & Details */}
                         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
