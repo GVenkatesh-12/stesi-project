@@ -101,13 +101,13 @@ export default function NotificationBell() {
             variant="outline"
             size="icon"
             className={cn(
-              "relative h-12 w-12 rounded-full border border-border/80 bg-background/95 shadow-xl backdrop-blur-md",
-              "hover:bg-primary/10 hover:border-primary/40 hover:scale-105 active:scale-95",
+              "relative h-12 w-12 rounded-full border border-border bg-card text-primary shadow-xl",
+              "hover:bg-accent hover:text-accent-foreground hover:border-primary/50 hover:shadow-2xl hover:scale-105 active:scale-95",
               "transition-all duration-300 flex items-center justify-center group"
             )}
             aria-label="View announcements"
           >
-            <Bell className="h-5 w-5 text-primary group-hover:rotate-12 transition-transform duration-300" strokeWidth={2} />
+            <Bell className="h-5 w-5 text-primary group-hover:text-accent-foreground group-hover:rotate-12 transition-all duration-300" strokeWidth={2} />
             {hasUnread && (
               <span className="absolute -top-1 -right-1 flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
