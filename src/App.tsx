@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
+import RouteMeta from "@/components/RouteMeta";
 import NotificationBell from "@/components/NotificationBell";
 
 import Index from "./pages/Index";
@@ -42,6 +43,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <RouteMeta />
         <NotificationBell />
         <Routes>
           <Route path="/" element={<Index />} />
