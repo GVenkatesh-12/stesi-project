@@ -214,7 +214,11 @@ const Registration = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="font-bold text-primary">•</span>
-                    <span><strong>Multiple Papers:</strong> One full author offline registration allows presentation of up to 2 accepted papers.</span>
+                    <span><strong>Maximum Paper Limit:</strong> Each author may submit a maximum of two papers, irrespective of their authorship position (first author, co-author, or corresponding author).</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="font-bold text-primary">•</span>
+                    <span><strong>Discounted Registration for the Second Paper:</strong> If an author registers two papers, the registration fee for the second paper will be 50% of the applicable registration fee.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="font-bold text-primary">•</span>

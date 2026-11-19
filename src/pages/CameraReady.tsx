@@ -73,8 +73,8 @@ const CameraReady = () => {
       icon: ShieldCheck
     },
     {
-      title: "Author Registration",
-      description: "At least one author must register with Full Registration and present the paper.",
+      title: "Author Registration & Multiple Papers",
+      description: "At least one author must register and present the paper. If registering two papers (max limit per author), the second paper fee is 50% of the applicable rate.",
       icon: Upload
     }
   ];
@@ -82,6 +82,7 @@ const CameraReady = () => {
   const checklist = [
     "Paper follows official IEEE two-column conference format",
     "Length is strictly between 4 and 6 pages (including figures and references)",
+    "Maximum limit of two papers per author across all authorship roles is respected",
     "All reviewer comments and feedback have been addressed",
     "All author names, affiliations, and emails are verified and up to date",
     "References follow IEEE citation format",

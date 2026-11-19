@@ -46,6 +46,7 @@ const CallForPapers = () => {
       category: "Submission Requirements",
       requirements: [
         "Submit via Microsoft CMT submission system",
+        "Maximum Paper Limit: Each author may submit a maximum of two papers, irrespective of their authorship position (first author, co-author, or corresponding author)",
         "Include complete references in IEEE citation style",
         "Minimum 15 references recommended not older than 5 years",
         "Abstract: 150-200 words maximum"
@@ -285,6 +286,40 @@ const CallForPapers = () => {
                   <p className="text-sm text-muted-foreground">
                     <strong>Note:</strong> Self-citations and common phrases are excluded from similarity calculations.
                   </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Paper Limit & Registration Policy */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <Card className="bg-gradient-card border border-border/50 shadow-card">
+              <CardHeader>
+                <div className="flex items-center space-x-3">
+                  <FileText className="h-6 w-6 text-primary" />
+                  <CardTitle className="text-xl text-primary">Paper Submission Limit & Registration Policy</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="space-y-3">
+                    <p className="text-muted-foreground">
+                      <strong>Maximum Paper Limit:</strong> Each author may submit a maximum of two papers, irrespective of their authorship position (first author, co-author, or corresponding author).
+                    </p>
+                    <p className="text-muted-foreground">
+                      <strong>Discounted Registration for the Second Paper:</strong> If an author registers two papers, the registration fee for the second paper will be 50% of the applicable registration fee.
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <Badge variant="secondary">Maximum 2 Papers Per Author</Badge>
+                    <Badge variant="outline" className="border-primary/40 text-primary">50% Registration Fee for Second Paper</Badge>
+                  </div>
                 </div>
               </CardContent>
             </Card>

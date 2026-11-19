@@ -74,8 +74,9 @@ const Templates = () => {
 
   const guidelines = [
     {
-      category: "Paper Structure",
+      category: "Paper Structure & Submission Limit",
       items: [
+        "Maximum 2 papers per author (irrespective of authorship position)",
         "Title should be concise and descriptive",
         "Abstract: 150-200 words maximum",
         "Introduction should clearly state the problem",
