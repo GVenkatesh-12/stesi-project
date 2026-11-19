@@ -13,7 +13,7 @@ const PublicationPlenaryChairs = () => {
     },
     {
       name: "Dr. Srikant Misra",
-      title: "GIET Gunupur"
+      title: "Jagadguru Kripalu University, Kataka"
     }
   ];
 
