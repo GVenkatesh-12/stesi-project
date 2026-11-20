@@ -165,7 +165,34 @@ const keynoteSpeakers = [
   },
 ];
 
-const proceedingsItems = [
+type ProceedingsItem = {
+  title: string;
+  category: string;
+  description: string;
+  href: string;
+  fileName: string;
+  badge: string;
+  badgeVariant: 'default' | 'secondary' | 'outline';
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+  opensInNewTab?: boolean;
+  buttonText?: string;
+};
+
+const proceedingsItems: ProceedingsItem[] = [
+  {
+    title: 'IEEE Xplore Digital Library Proceedings',
+    category: 'Publications',
+    description: 'Access the official published conference proceedings of STESI 2026 directly on the IEEE Xplore Digital Library.',
+    href: 'https://ieeexplore.ieee.org/xpl/conhome/11778087/proceeding',
+    fileName: 'ieee-xplore-proceedings',
+    badge: 'IEEE Xplore',
+    badgeVariant: 'default',
+    icon: Globe,
+    color: 'from-blue-600 to-indigo-700',
+    opensInNewTab: true,
+    buttonText: 'View on IEEE Xplore',
+  },
   {
     title: 'Best Paper Award',
     category: 'Awards',
@@ -173,7 +200,7 @@ const proceedingsItems = [
     href: '/Best%20Paper_STESI2026.pdf',
     fileName: 'Best Paper_STESI2026.pdf',
     badge: 'Honors',
-    badgeVariant: 'default' as const,
+    badgeVariant: 'default',
     icon: Award,
     color: 'from-amber-500 to-orange-600',
   },
@@ -493,10 +520,28 @@ const Stesi2026 = () => {
               </Badge>
             </p>
 
+            {/* Direct IEEE Xplore Link Button */}
+            <div className="mt-5 flex items-center justify-center">
+              <Button
+                asChild
+                className="bg-[#00629B] hover:bg-[#004e7c] text-white font-semibold text-xs sm:text-sm rounded-full px-5 py-2.5 h-auto shadow-md hover:shadow-lg transition-all gap-2"
+              >
+                <a
+                  href="https://ieeexplore.ieee.org/xpl/conhome/11778087/proceeding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Globe className="h-4 w-4" />
+                  <span>IEEE Xplore Conference Proceedings</span>
+                  <ExternalLink className="h-3.5 w-3.5 opacity-90" />
+                </a>
+              </Button>
+            </div>
+
             {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto mt-9">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto mt-8">
               <div className="archive-stat p-3.5 rounded-2xl border shadow-lg backdrop-blur-sm">
-                <div className="text-2xl sm:text-3xl font-extrabold">400+</div>
+                <div className="text-2xl sm:text-3xl font-extrabold">900+</div>
                 <div className="text-xs text-muted-foreground font-medium mt-0.5">Submissions Received</div>
               </div>
               <div className="archive-stat p-3.5 rounded-2xl border shadow-lg backdrop-blur-sm">
@@ -507,10 +552,21 @@ const Stesi2026 = () => {
                 <div className="text-2xl sm:text-3xl font-extrabold">6 + 7</div>
                 <div className="text-xs text-muted-foreground font-medium mt-0.5">Tracks & Special Sessions</div>
               </div>
-              <div className="archive-stat p-3.5 rounded-2xl border shadow-lg backdrop-blur-sm">
-                <div className="text-2xl sm:text-3xl font-extrabold">150+</div>
-                <div className="text-xs text-muted-foreground font-medium mt-0.5">Accepted & Published Papers</div>
-              </div>
+              <a
+                href="https://ieeexplore.ieee.org/xpl/conhome/11778087/proceeding"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="View STESI 2026 Proceedings on IEEE Xplore"
+                className="archive-stat p-3.5 rounded-2xl border shadow-lg backdrop-blur-sm group hover:border-blue-400 hover:bg-blue-50/50 transition-all block cursor-pointer"
+              >
+                <div className="text-2xl sm:text-3xl font-extrabold flex items-center justify-center gap-1.5 text-foreground group-hover:text-[#00629B] transition-colors">
+                  <span>200+</span>
+                  <ExternalLink className="h-4 w-4 text-[#00629B] opacity-70 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="text-xs text-muted-foreground font-medium mt-0.5 group-hover:text-[#00629B] transition-colors">
+                  Accepted & Published Papers
+                </div>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -575,7 +631,7 @@ const Stesi2026 = () => {
                       Pioneering Smart Technologies for a Sustainable Industrial Future
                     </h3>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                      The 1st International Conference on Smart Technologies for Energy, Sustainability & Industry (STESI 2026) brought together visionary scientists, researchers, industry practitioners, and policymakers on July 22–23, 2026 at Manipal University Jaipur. The conference served as a premier multidisciplinary platform addressing urgent technological challenges across clean energy transformation, artificial intelligence for electrical systems, smart microgrids, electric vehicle integration, robotics, and industrial automation.
+                      The 1st International Conference on Smart Technologies for Energy, Sustainability & Industry (STESI 2026) brought together visionary scientists, researchers, industry practitioners, and policymakers on July 22–23, 2026 at Manipal University Jaipur. The conference served as a premier multidisciplinary platform addressing urgent technological challenges across clean energy transformation, artificial intelligence for electrical systems, smart microgrids, electric vehicle integration, robotics, and industrial automation. All accepted and presented peer-reviewed research papers are officially published in the IEEE Xplore Digital Library.
                     </p>
                   </div>
 
@@ -691,7 +747,7 @@ const Stesi2026 = () => {
                   </div>
                   <h4 className="font-bold text-foreground text-base">Proceedings & Documents</h4>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Download Best Paper awards, schedules, accepted papers list, and session files.
+                    Access IEEE Xplore proceedings, Best Paper awards, schedules, accepted papers, and session files.
                   </p>
                 </Card>
 
@@ -775,6 +831,43 @@ const Stesi2026 = () => {
                 </p>
               </div>
 
+              {/* Featured IEEE Xplore Proceedings Banner */}
+              <div className="rounded-2xl p-6 sm:p-7 border border-blue-200/80 bg-gradient-to-r from-blue-50/90 via-sky-50/80 to-indigo-50/90 shadow-md">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <Badge className="bg-[#00629B] text-white hover:bg-[#004e7c] text-xs font-semibold px-2.5 py-0.5">
+                        IEEE Xplore Digital Library
+                      </Badge>
+                      <span className="text-xs font-semibold text-sky-800 bg-sky-100 px-2 py-0.5 rounded-md border border-sky-200">
+                        Official Proceedings Published
+                      </span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
+                      STESI 2026 Conference Proceedings on IEEE Xplore
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
+                      All accepted and presented peer-reviewed papers from the 1st International Conference on Smart Technologies for Energy, Sustainability & Industry are officially published and permanently indexed in the IEEE Xplore Digital Library.
+                    </p>
+                  </div>
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-[#00629B] hover:bg-[#004e7c] text-white font-semibold shadow-md shrink-0 rounded-xl gap-2"
+                  >
+                    <a
+                      href="https://ieeexplore.ieee.org/xpl/conhome/11778087/proceeding"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Globe className="h-4 w-4" />
+                      <span>Access IEEE Xplore</span>
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
               {/* Main Documents Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {proceedingsItems.map((item, index) => {
@@ -822,7 +915,7 @@ const Stesi2026 = () => {
                               >
                                 {item.opensInNewTab ? (
                                   <>
-                                    <span>Open Document</span>
+                                    <span>{item.buttonText || 'Open Document'}</span>
                                     <ExternalLink className="h-4 w-4" />
                                   </>
                                 ) : (
